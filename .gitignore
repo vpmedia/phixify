@@ -11,8 +11,7 @@
 /node_modules
 
 # files
-.phixify.local.json
-.phixify.local.*.json
+.phixify.json
 .DS_Store
 *.log
 *.tgz

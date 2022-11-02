@@ -10,5 +10,6 @@ import { writeJson } from "../tool/fileUtil.js";
 export const initConfigCommand = (options) => {
   const config = getConfig(options);
   delete config.phixify;
+  delete config.options;
   writeJson(config, config, "./.phixify.json");
 };
