@@ -8,7 +8,6 @@
 src/
 .husky/
 .idea/
-.babelrc.json
 .dockerignore
 .DS_Store
 .editorconfig
@@ -20,7 +19,6 @@ src/
 .npmignore
 .npmrc
 .phixify.json
-.phixify.local.json
 .prettierignore
 .prettierrc.json
 bitbucket-pipelines.yml

@@ -9,4 +9,3 @@ dist/
 node_modules/
 .DS_Store
 .phixify.json
-.phixify.local.json
