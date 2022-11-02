@@ -30,7 +30,7 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
 > When using the npm package locally:
 
     $ npm install --save-dev @vpmedia/phixify
-    $ ./node_modules/bin/phixify
+    $ ./node_modules/.bin/phixify
 
 > When using the npm package globally:
 
