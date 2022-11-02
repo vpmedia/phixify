@@ -57,6 +57,6 @@ At the moment only tested in MacOS platform.
 
 - Test in different platforms (Linux, Windows)
 
-### Credits
+## Credits
 
 @vpmedia/phixify is developed by Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
