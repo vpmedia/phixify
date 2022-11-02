@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2022": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["import", "prettier", "jest", "jsdoc"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:jsdoc/recommended"]
+}

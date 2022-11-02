@@ -1,0 +1,31 @@
+#
+# Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# version: 1.0.0
+# see: https://docs.npmjs.com/cli/v8/using-npm/developers#keeping-files-out-of-your-package
+#
+
+src/
+.husky/
+.idea/
+.babelrc.json
+.dockerignore
+.DS_Store
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitattributes
+.gitignore
+.lintstagedrc.json
+.npmignore
+.npmrc
+.phixify.json
+.phixify.local.json
+.prettierignore
+.prettierrc.json
+bitbucket-pipelines.yml
+docker-run.sh
+Dockerfile
+jest.config.js
+phixify.sh
+rollup.config.js

@@ -1,0 +1,12 @@
+#
+# Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# version: 1.0.0
+# see: https://git-scm.com/docs/gitattributes
+#
+
+# Automatically normalize line endings for all text-based files
+* text=auto
+* text eol=lf
+*.js text
+*.jsx text

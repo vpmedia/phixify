@@ -1,0 +1,12 @@
+#
+# Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
+# author: Andras Csizmadia <andras@vpmedia.hu>
+# version: 1.0.0
+# see: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+#
+
+dist/
+node_modules/
+.DS_Store
+.phixify.json
+.phixify.local.json
