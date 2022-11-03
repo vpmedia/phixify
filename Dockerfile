@@ -15,6 +15,7 @@ apt-utils \
 apt-transport-https \
 software-properties-common \
 curl \
+wget \
 imagemagick \
 sox \
 libsox-fmt-mp3 \
