@@ -61,19 +61,11 @@ https://www.codeandweb.com/texturepacker/documentation/installation-and-licensin
 
 https://github.com/vpmedia/phixify-example
 
-## Comments
-
-At the moment only tested in MacOS platform.
-
 ## Conventions
 
 - Input audio files must be in WAV format
 - Input image files must be in PNG format
 - All audio sprite source files must be in the same exact format (incl. bitrate and channels)
-
-## TODO
-
-- Test in different platforms (Linux, Windows)
 
 ## Credits
 
