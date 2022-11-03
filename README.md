@@ -21,6 +21,12 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
     $ sudo apt-get update
     $ sudo apt-get install -y nodejs imagemagick sox libsox-fmt-mp3 ffmpeg
 
+#### Update ImageMagick to v7
+
+https://github.com/SoftCreatR/imei#one-step-automated-install
+
+    $ t=$(mktemp) && wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && bash "$t" && rm "$t"
+
 ### MacOS
 
     $ brew update

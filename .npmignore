@@ -6,6 +6,7 @@
 #
 
 src/
+asset/
 .github/
 .husky/
 .idea/
