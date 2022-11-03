@@ -60,7 +60,7 @@ export const baseConfig = {
   },
   cmd: {
     texturePacker: {
-      path: "texturepacker",
+      path: "TexturePacker",
       opts: {
         png: [
           "--format pixijs4",
