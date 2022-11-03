@@ -45,6 +45,7 @@ https://www.codeandweb.com/texturepacker/documentation/installation-and-licensin
 
     $ git clone git@github.com:vpmedia/phixify.git
     $ cd phixify
+    $ npm install
     $ ./phixify.sh
 
 ## Examples
