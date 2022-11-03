@@ -23,6 +23,10 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
     $ brew update
     $ brew install node imagemagick sox ffmpeg
 
+### Install TexturePacker for your platform
+
+https://www.codeandweb.com/texturepacker/documentation/installation-and-licensing
+
 ## Getting started
 
 ### Show the CLI help
@@ -43,7 +47,7 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
     $ cd phixify
     $ ./phixify.sh
 
-### Examples
+## Examples
 
 https://github.com/vpmedia/phixify-example
 
