@@ -17,6 +17,7 @@ software-properties-common \
 curl \
 imagemagick \
 sox \
+libsox-fmt-mp3 \
 ffmpeg
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
@@ -43,5 +44,5 @@ COPY package-lock.json .
 
 RUN npm install
 
-RUN mkdir -p assets
+RUN mkdir -p asset
 COPY . .

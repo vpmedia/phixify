@@ -8,6 +8,7 @@
 #
 
 set -e
+
 docker build -t phixify:latest .
 rm -rf ./asset
 mkdir -p ./asset
