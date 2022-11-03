@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y \
 apt-utils \
 apt-transport-https \
 software-properties-common \
-build-essential \
 curl \
 imagemagick \
 sox \
