@@ -2,4 +2,5 @@
 
 set -e
 docker build -t phixify:latest .
-docker run --mount type=bind,source="$(pwd)"/phixify_example,target=/assets phixify:latest ./phixify.sh all
+mkdir -p ./assets
+docker run --mount type=bind,source="$(pwd)"/assets,target=/assets phixify:latest ./phixify.sh help

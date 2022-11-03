@@ -8,6 +8,7 @@
 # folders
 /dist
 /lib
+/assets
 /node_modules
 
 # files
