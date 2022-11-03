@@ -5,6 +5,7 @@
 # see: https://docs.docker.com/engine/reference/builder/#dockerignore-file
 #
 
+.github/
 dist/
 node_modules/
 .DS_Store
