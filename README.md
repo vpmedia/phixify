@@ -1,5 +1,7 @@
 # Phixify
 
+[![npm version](https://badge.fury.io/js/@vpmedia%2Fphixify.svg)](https://badge.fury.io/js/@vpmedia%2Fphixify)
+
 Phaser and Pixi.js game engine asset and manifest command line generator.
 
 ## Pre-requisites
