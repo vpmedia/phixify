@@ -43,6 +43,10 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
     $ cd phixify
     $ ./phixify.sh
 
+### Examples
+
+https://github.com/vpmedia/phixify-example
+
 ## Comments
 
 At the moment only tested in MacOS platform.
