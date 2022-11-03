@@ -7,7 +7,7 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
 
 ## Pre-requisites
 
-- node.js v18.0
+- node.js
 - imagemagick
 - sox
 - texture-packer
