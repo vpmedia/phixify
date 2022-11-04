@@ -3,7 +3,7 @@ import { audioConvert } from "./audioConvert.js";
 /**
  * Converts an audio file from one format to many
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string[]} formats TBD
  * @param {string} outputPath TBD
  * @param {string} fileName TBD

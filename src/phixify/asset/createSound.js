@@ -4,7 +4,7 @@ import { audioConvert } from "../tool/audioConvert.js";
 /**
  * Creates many sound file assets
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} baseDir TBD
  * @returns {Promise} TBD
  */

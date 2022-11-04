@@ -6,7 +6,7 @@ import { exec } from "child_process";
 /**
  * Returns the duration of a sound file
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} inputDir TBD
  * @param {object} item TBD
  * @param {string} item.name TBD

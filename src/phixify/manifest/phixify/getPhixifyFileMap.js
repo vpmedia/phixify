@@ -1,11 +1,11 @@
-import { getFileList } from "../../../tool/fileUtil.js";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
+import { getFileList } from "../../tool/fileUtil.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
 
 /**
  * Returns the file list map for the manifest generator
  *
- * @param {object} config TBD
- * @param {string} targetPath TBD
+ * @param {object} config The configuration object reference
+ * @param {string} targetPath The path where the assets are stored
  * @returns {object} TBD
  */
 export const getPhixifyFileMap = (config, targetPath) => {

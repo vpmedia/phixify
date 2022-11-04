@@ -38,7 +38,7 @@ export const readJson = (path) => {
 /**
  * Writes out a JSON file
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {object} content TBD
  * @param {string} path TBD
  */

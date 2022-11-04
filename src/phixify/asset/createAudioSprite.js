@@ -7,7 +7,7 @@ import { audioSpriteJson } from "../tool/audioSpriteJson.js";
 /**
  * Creates many audio sprite file assets
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} sourcePath TBD
  * @param {string} outputPath TBD
  * @param {object} dir TBD
@@ -48,7 +48,7 @@ async function createAudioSpriteItem(config, sourcePath, outputPath, dir) {
 /**
  * Creates all audio sprites from a source directory
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} baseDir TBD
  * @returns {Promise} TBD
  */

@@ -1,19 +1,19 @@
 /**
  * Returns the manifest descriptor template object
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @returns {object} TBD
  */
-export const getPixiManifestTemplate = (config) => {
+export const getPhixifyManifestTemplate = (config) => {
   return {
-    bundles: [],
+    bundles: {},
     meta: {
       generated: config.phixify.timestamp,
       app: config.phixify.name,
       url: config.phixify.url,
       version: config.phixify.version,
       copyright: config.phixify.copyright,
-      pixiVersion: "7",
+      phixifyVersion: "1",
     },
   };
 };

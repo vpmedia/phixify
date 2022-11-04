@@ -1,11 +1,11 @@
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
-import { imageInfo } from "../../../tool/imageInfo.js";
-import { audioInfo } from "../../../tool/audioInfo.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
+import { imageInfo } from "../../tool/imageInfo.js";
+import { audioInfo } from "../../tool/audioInfo.js";
 
 /**
  * TBD
  *
- * @param {object} config TBD
+ * @param {object} config The configuration object reference
  * @param {string} sourcePath TBD
  * @param {object} item TBD
  * @param {string} type TBD

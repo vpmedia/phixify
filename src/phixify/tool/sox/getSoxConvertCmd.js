@@ -3,7 +3,7 @@ import { parse } from "path";
 /**
  * Creates a sox audio conversion command for execution
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} inputFile TBD
  * @param {string} outputFile TBD
  * @returns {string} TBD

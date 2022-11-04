@@ -6,7 +6,7 @@ import { imagePack } from "../tool/imagePack.js";
 /**
  * Creates many sprite sheet file assets
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} sourcePath TBD
  * @param {string} outputPath TBD
  * @param {object} dir TBD
@@ -53,7 +53,7 @@ async function createSpriteSheetItem(config, sourcePath, outputPath, dir) {
 /**
  * Creates all sprite sheets from a source directory
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} baseDir TBD
  * @returns {Promise} TBD
  */

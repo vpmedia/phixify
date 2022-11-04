@@ -5,7 +5,7 @@ import { exec } from "child_process";
 /**
  * Creates a sprite sheet file
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} inputDir TBD
  * @param {string} outputSheet TBD
  * @param {string} outputData TBD

@@ -2,17 +2,17 @@ import { getPhaserAudioSprite } from "./getPhaserAudioSprite.js";
 import { getPhaserImage } from "./getPhaserImage.js";
 import { getPhaserSound } from "./getPhaserSound.js";
 import { getPhaserSpriteSheet } from "./getPhaserSpriteSheet.js";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
 
 /**
  * Generates a Phaser game engine asset pack manifest
  *
- * @param {object} config Reference to the configuration object
- * @param {object} manifestData TBD
- * @param {string} bundleName TBD
- * @param {string} assetPath TBD
- * @param {string} targetPath TBD
- * @returns {object} TBD
+ * @param {object} config The configuration object reference
+ * @param {object} manifestData The output manifest object reference
+ * @param {string} bundleName The asset bundle name
+ * @param {string} assetPath The URL where the assets will be loaded from
+ * @param {string} targetPath The path where the assets are stored
+ * @returns {object} The output manifest object reference
  */
 export const createPhaserManifest = (config, manifestData, bundleName, assetPath, targetPath) => {
   const manifestGenerators = [

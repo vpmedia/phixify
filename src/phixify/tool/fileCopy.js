@@ -4,7 +4,7 @@ import { exec } from "child_process";
 /**
  * Copies a file
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} inputFile TBD
  * @param {string} outputFile TBD
  * @returns {Promise} TBD

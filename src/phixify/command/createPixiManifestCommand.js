@@ -1,8 +1,8 @@
 import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPixiManifest } from "../manifest/pixi/v7/createPixiManifest.js";
-import { getPixiManifestTemplate } from "../manifest/pixi/v7/getPixiManifestTemplate.js";
+import { createPixiManifest } from "../manifest/pixi/createPixiManifest.js";
+import { getPixiManifestTemplate } from "../manifest/pixi/getPixiManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
-import { createPhaserManifest } from "../manifest/phaser/v3/createPhaserManifest.js";
+import { createPhaserManifest } from "../manifest/phaser/createPhaserManifest.js";
 
 /**
  * Command creating all manifest descriptors

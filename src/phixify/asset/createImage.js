@@ -4,7 +4,7 @@ import { imageConvert } from "../tool/imageConvert.js";
 /**
  * Creates many image file assets
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} baseDir TBD
  * @returns {Promise} TBD
  */

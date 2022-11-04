@@ -1,7 +1,7 @@
 /**
  * Gets ffmpeg info command for execution
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} file TBD
  * @returns {string} TBD
  */

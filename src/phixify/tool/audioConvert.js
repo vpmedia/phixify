@@ -6,7 +6,7 @@ import { getFFConvertCmd } from "./ffmpeg/getFFConvertCmd.js";
 /**
  * Converts an audio file from one format to another
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} inputFile TBD
  * @param {string} outputFile TBD
  * @returns {Promise} TBD

@@ -1,6 +1,6 @@
 import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPhaserManifest } from "../manifest/phaser/v3/createPhaserManifest.js";
-import { getPhaserManifestTemplate } from "../manifest/phaser/v3/getPhaserManifestTemplate.js";
+import { createPhaserManifest } from "../manifest/phaser/createPhaserManifest.js";
+import { getPhaserManifestTemplate } from "../manifest/phaser/getPhaserManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
 
 /**

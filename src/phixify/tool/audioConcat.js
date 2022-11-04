@@ -5,7 +5,7 @@ import { getSoxConcatCmd } from "./sox/getSoxConcatCmd.js";
 /**
  * Creates an audio sheet file
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {object[]} durationResults TBD
  * @param {string} durationResults[].name TBD
  * @param {number} durationResults[].duration TBD

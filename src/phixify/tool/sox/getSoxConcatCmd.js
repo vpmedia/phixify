@@ -1,7 +1,7 @@
 /**
  * Creates a sox audio sprite creation command for execution
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {object[]} durationResults TBD
  * @param {string} inputDir TBD
  * @param {string} outputFile TBD

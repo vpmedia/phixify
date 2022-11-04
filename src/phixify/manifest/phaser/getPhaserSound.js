@@ -1,13 +1,13 @@
 /**
  * Creates the sound entries for the manifest object
  *
- * @param {object} config Reference to the configuration object
- * @param {string} assetPath TBD
- * @param {string} targetPath TBD
+ * @param {object} config The configuration object reference
+ * @param {string} assetPath The URL where the assets will be loaded from
+ * @param {string} targetPath The path where the assets are stored
  * @returns {object} TBD
  */
-import { SOUND } from "../../core/const.js";
-import { getFileList } from "../../../tool/fileUtil.js";
+import { SOUND } from "../core/const.js";
+import { getFileList } from "../../tool/fileUtil.js";
 
 export const getPhaserSound = (config, assetPath, targetPath) => {
   const dir = config.dir[SOUND];

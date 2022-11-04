@@ -1,6 +1,6 @@
 import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPhixifyManifest } from "../manifest/phixify/v1/createPhixifyManifest.js";
-import { getPhixifyManifestTemplate } from "../manifest/phixify/v1/getPhixifyManifestTemplate.js";
+import { createPhixifyManifest } from "../manifest/phixify/createPhixifyManifest.js";
+import { getPhixifyManifestTemplate } from "../manifest/phixify/getPhixifyManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
 
 /**

@@ -5,7 +5,7 @@ import { exec } from "child_process";
 /**
  * Gets image information
  *
- * @param {object} config Reference to the configuration object
+ * @param {object} config The configuration object reference
  * @param {string} file TBD
  * @returns {Promise} TBD
  */
