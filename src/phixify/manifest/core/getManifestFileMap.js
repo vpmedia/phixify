@@ -9,7 +9,7 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "./const.js";
  * @param {string} targetPath TBD
  * @returns {object} TBD
  */
-export const getManifestFileList = (config, assetPath, targetPath) => {
+export const getManifestFileMap = (config, assetPath, targetPath) => {
   const audioSpriteList = getFileList(`${targetPath}${config.dir.audioSprite}`);
   const imageList = getFileList(`${targetPath}${config.dir.image}`);
   const soundList = getFileList(`${targetPath}${config.dir.sound}`);
