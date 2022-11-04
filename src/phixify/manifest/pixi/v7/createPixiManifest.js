@@ -15,20 +15,19 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
  * @returns {object} TBD
  */
 export const createPixiManifest = (config, manifestData, bundleName, assetPath, listMap) => {
-  const audioSpriteData = getPixiAudioSprite(
-    config,
-    `${assetPath}${config.dir.audioSprite}/`,
-    listMap[AUDIO_SPRITE]
-  );
-  const imageData = getPixiImage(config, `${assetPath}${config.dir.image}/`, listMap[IMAGE]);
-  const soundData = getPixiSound(config, `${assetPath}${config.dir.sound}/`, listMap[SOUND]);
-  const spriteSheetData = getPixiSpriteSheet(
-    config,
-    `${assetPath}${config.dir.spriteSheet}/`,
-    listMap[SPRITE_SHEET]
-  );
-  const bundle = { name: bundleName };
-  bundle.assets = [...audioSpriteData, ...imageData, ...soundData, ...spriteSheetData];
+  const manifestGenerators = [
+    { type: AUDIO_SPRITE, generator: getPixiAudioSprite },
+    { type: IMAGE, generator: getPixiImage },
+    { type: SOUND, generator: getPixiSound },
+    { type: SPRITE_SHEET, generator: getPixiSpriteSheet },
+  ];
+  let assets = [];
+  manifestGenerators.forEach((item) => {
+    const path = `${assetPath}${config.dir[item.type]}/`;
+    const data = item.generator(config, path, listMap[item.type]);
+    assets = [...assets, ...data];
+  });
+  const bundle = { name: bundleName, assets };
   manifestData.bundles.push(bundle);
   return manifestData;
 };

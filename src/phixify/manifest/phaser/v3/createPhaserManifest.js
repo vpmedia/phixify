@@ -15,20 +15,18 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
  * @returns {object} TBD
  */
 export const createPhaserManifest = (config, manifestData, bundleName, assetPath, listMap) => {
-  const audioSpriteData = getPhaserAudioSprite(
-    config,
-    `${assetPath}${config.dir.audioSprite}/`,
-    listMap[AUDIO_SPRITE]
-  );
-  const imageData = getPhaserImage(config, `${assetPath}${config.dir.image}/`, listMap[IMAGE]);
-  const soundData = getPhaserSound(config, `${assetPath}${config.dir.sound}/`, listMap[SOUND]);
-  const spriteSheetData = getPhaserSpriteSheet(
-    config,
-    `${assetPath}${config.dir.spriteSheet}/`,
-    listMap[SPRITE_SHEET]
-  );
-  const bundle = {};
-  bundle.files = [...audioSpriteData, ...imageData, ...soundData, ...spriteSheetData];
-  manifestData[bundleName] = bundle;
+  const manifestGenerators = [
+    { type: AUDIO_SPRITE, generator: getPhaserAudioSprite },
+    { type: IMAGE, generator: getPhaserImage },
+    { type: SOUND, generator: getPhaserSound },
+    { type: SPRITE_SHEET, generator: getPhaserSpriteSheet },
+  ];
+  let files = [];
+  manifestGenerators.forEach((item) => {
+    const path = `${assetPath}${config.dir[item.type]}/`;
+    const data = item.generator(config, path, listMap[item.type]);
+    files = [...files, ...data];
+  });
+  manifestData[bundleName] = { files };
   return manifestData;
 };
