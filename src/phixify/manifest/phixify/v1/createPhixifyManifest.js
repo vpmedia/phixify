@@ -1,7 +1,7 @@
 import { statSync } from "fs";
-import { imageInfo } from "../../../tool/imageInfo.js";
-import { audioInfo } from "../../../tool/audioInfo.js";
 import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
+import { getPhixifyFileMap } from "./getPhixifyFileMap.js";
+import { getPhixifyFileInfo } from "./getPhixifyFileInfo.js";
 /**
  * Creates a phixify asset manifest bundle
  *
@@ -9,10 +9,9 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
  * @param {string} bundleName TBD
  * @param {string} assetPath TBD
  * @param {string} targetPath TBD
- * @param {object} listMap TBD
  * @returns {Promise} TBD
  */
-export const createPhixifyManifest = (config, bundleName, assetPath, targetPath, listMap) => {
+export const createPhixifyManifest = (config, bundleName, assetPath, targetPath) => {
   const manifestData = {};
   const promises = [];
   const listToMap = (list, type) => {
@@ -28,11 +27,12 @@ export const createPhixifyManifest = (config, bundleName, assetPath, targetPath,
         modified: fileStat.mtimeMs,
       };
       if (item.ext !== "json") {
-        const promise = fileInfo(config, sourcePath, item, type, manifestData);
+        const promise = getPhixifyFileInfo(config, sourcePath, item, type, manifestData);
         promises.push(promise);
       }
     });
   };
+  const listMap = getPhixifyFileMap(config, targetPath);
   listToMap(listMap[AUDIO_SPRITE], AUDIO_SPRITE);
   listToMap(listMap[IMAGE], IMAGE);
   listToMap(listMap[SOUND], SOUND);
@@ -42,30 +42,4 @@ export const createPhixifyManifest = (config, bundleName, assetPath, targetPath,
       resolve({ bundleName, manifestData });
     });
   });
-};
-
-/**
- * TBD
- *
- * @param {object} config TBD
- * @param {string} sourcePath TBD
- * @param {object} item TBD
- * @param {string} type TBD
- * @param {object} manifestData TBD
- * @returns {Promise} TBD
- */
-const fileInfo = (config, sourcePath, item, type, manifestData) => {
-  const filePath = `${sourcePath}/${item.name}.${item.ext}`;
-  const manifestEntry = manifestData[type][item.name][item.ext];
-  if (type === IMAGE || type === SPRITE_SHEET) {
-    return imageInfo(config, filePath).then((result) => {
-      manifestEntry.info = result;
-      return manifestEntry;
-    });
-  } else if (type === AUDIO_SPRITE || type === SOUND) {
-    return audioInfo(config, filePath).then((result) => {
-      manifestEntry.info = result;
-      return manifestEntry;
-    });
-  }
 };

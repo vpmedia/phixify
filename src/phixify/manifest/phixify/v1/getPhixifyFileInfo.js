@@ -1,0 +1,30 @@
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
+import { imageInfo } from "../../../tool/imageInfo.js";
+import { audioInfo } from "../../../tool/audioInfo.js";
+
+/**
+ * TBD
+ *
+ * @param {object} config TBD
+ * @param {string} sourcePath TBD
+ * @param {object} item TBD
+ * @param {string} type TBD
+ * @param {object} manifestData TBD
+ * @returns {Promise} TBD
+ */
+export const getPhixifyFileInfo = (config, sourcePath, item, type, manifestData) => {
+  const filePath = `${sourcePath}/${item.name}.${item.ext}`;
+  const manifestEntry = manifestData[type][item.name][item.ext];
+  if (type === IMAGE || type === SPRITE_SHEET) {
+    return imageInfo(config, filePath).then((result) => {
+      manifestEntry.info = result;
+      return manifestEntry;
+    });
+  } else if (type === AUDIO_SPRITE || type === SOUND) {
+    return audioInfo(config, filePath).then((result) => {
+      manifestEntry.info = result;
+      return manifestEntry;
+    });
+  }
+  return null;
+};

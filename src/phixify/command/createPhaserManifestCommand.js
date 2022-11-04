@@ -2,7 +2,6 @@ import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js"
 import { createPhaserManifest } from "../manifest/phaser/v3/createPhaserManifest.js";
 import { getPhaserManifestTemplate } from "../manifest/phaser/v3/getPhaserManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
-import { getManifestFileMap } from "../manifest/core/getManifestFileMap.js";
 
 /**
  * Command creating all manifest descriptors
@@ -22,12 +21,10 @@ export const createPhaserManifestCommand = (options) => {
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;
       const bundleTargetPath = `${targetPath}${bundle.name}/`;
-      const listMap = getManifestFileMap(config, bundleAssetPath, bundleTargetPath);
-      createPhaserManifest(config, manifestData, bundle.name, bundleAssetPath, listMap);
+      createPhaserManifest(config, manifestData, bundle.name, bundleAssetPath, bundleTargetPath);
     });
   } else {
-    const listMap = getManifestFileMap(config, assetPath, targetPath);
-    createPhaserManifest(config, manifestData, "main", assetPath, listMap);
+    createPhaserManifest(config, manifestData, "main", assetPath, targetPath);
   }
   writeJson(config, manifestData, `${targetPath}${config.output.phaser}`);
 };

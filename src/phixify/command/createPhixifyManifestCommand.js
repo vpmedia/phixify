@@ -2,7 +2,6 @@ import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js"
 import { createPhixifyManifest } from "../manifest/phixify/v1/createPhixifyManifest.js";
 import { getPhixifyManifestTemplate } from "../manifest/phixify/v1/getPhixifyManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
-import { getManifestFileMap } from "../manifest/core/getManifestFileMap.js";
 
 /**
  * Command creating all manifest descriptors
@@ -23,19 +22,11 @@ export const createPhixifyManifestCommand = (options) => {
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;
       const bundleTargetPath = `${targetPath}${bundle.name}/`;
-      const listMap = getManifestFileMap(config, bundleAssetPath, bundleTargetPath);
-      const promise = createPhixifyManifest(
-        config,
-        bundle.name,
-        bundleAssetPath,
-        bundleTargetPath,
-        listMap
-      );
+      const promise = createPhixifyManifest(config, bundle.name, bundleAssetPath, bundleTargetPath);
       promises.push(promise);
     });
   } else {
-    const listMap = getManifestFileMap(config, assetPath, targetPath);
-    const promise = createPhixifyManifest(config, "main", assetPath, targetPath, listMap);
+    const promise = createPhixifyManifest(config, "main", assetPath, targetPath);
     promises.push(promise);
   }
   Promise.all(promises).then((results) => {

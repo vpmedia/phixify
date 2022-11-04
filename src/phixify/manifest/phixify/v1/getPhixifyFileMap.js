@@ -1,15 +1,14 @@
-import { getFileList } from "../../tool/fileUtil.js";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "./const.js";
+import { getFileList } from "../../../tool/fileUtil.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
 
 /**
  * Returns the file list map for the manifest generator
  *
  * @param {object} config TBD
- * @param {string} assetPath TBD
  * @param {string} targetPath TBD
  * @returns {object} TBD
  */
-export const getManifestFileMap = (config, assetPath, targetPath) => {
+export const getPhixifyFileMap = (config, targetPath) => {
   const audioSpriteList = getFileList(`${targetPath}${config.dir.audioSprite}`);
   const imageList = getFileList(`${targetPath}${config.dir.image}`);
   const soundList = getFileList(`${targetPath}${config.dir.sound}`);

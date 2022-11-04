@@ -3,12 +3,16 @@
  *
  * @param {object} config Reference to the configuration object
  * @param {string} assetPath TBD
- * @param {object[]} list TBD
- * @param {string} list[].name - TBD
- * @param {string} list[].ext - TBD
+ * @param {string} targetPath TBD
  * @returns {object} TBD
  */
-export const getPixiSound = (config, assetPath, list) => {
+import { SOUND } from "../../core/const.js";
+import { getFileList } from "../../../tool/fileUtil.js";
+
+export const getPixiSound = (config, assetPath, targetPath) => {
+  const dir = config.dir[SOUND];
+  const path = `${assetPath}${dir}/`;
+  const list = getFileList(`${targetPath}${dir}`);
   const formats = config.manifest.sound;
   const sortFunc = (a, b) => {
     return formats.indexOf(a) - formats.indexOf(b);
@@ -20,7 +24,7 @@ export const getPixiSound = (config, assetPath, list) => {
     map[value.name].push(value.ext);
   });
   Object.entries(map).forEach(([key, value]) => {
-    const srcs = `${assetPath}${key}.{${value.sort(sortFunc).toString()}}`;
+    const srcs = `${path}${key}.{${value.sort(sortFunc).toString()}}`;
     result.push({ name: key, srcs });
   });
   return result;

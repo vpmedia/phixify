@@ -11,10 +11,10 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
  * @param {object} manifestData TBD
  * @param {string} bundleName TBD
  * @param {string} assetPath TBD
- * @param {object} listMap TBD
+ * @param {string} targetPath TBD
  * @returns {object} TBD
  */
-export const createPixiManifest = (config, manifestData, bundleName, assetPath, listMap) => {
+export const createPixiManifest = (config, manifestData, bundleName, assetPath, targetPath) => {
   const manifestGenerators = [
     { type: AUDIO_SPRITE, generator: getPixiAudioSprite },
     { type: IMAGE, generator: getPixiImage },
@@ -23,8 +23,7 @@ export const createPixiManifest = (config, manifestData, bundleName, assetPath, 
   ];
   let assets = [];
   manifestGenerators.forEach((item) => {
-    const path = `${assetPath}${config.dir[item.type]}/`;
-    const data = item.generator(config, path, listMap[item.type]);
+    const data = item.generator(config, assetPath, targetPath);
     assets = [...assets, ...data];
   });
   const bundle = { name: bundleName, assets };
