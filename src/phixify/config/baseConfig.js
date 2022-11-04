@@ -1,8 +1,9 @@
 /**
- * @typedef {object} Config
+ * @typedef {object} baseConfig
  * @property {string} basePath TBD
  * @property {string} assetPath TBD
  * @property {boolean} cache TBD
+ * @property {boolean} multiProject TBD
  * @property {boolean} multiBundle TBD
  * @property {object} engine TBD
  * @property {object} output TBD
@@ -25,7 +26,7 @@
 export const baseConfig = {
   basePath: "./asset/",
   assetPath: "/asset/",
-  cache: false,
+  multiProject: false,
   multiBundle: false,
   engine: {
     pixi_v7: true,

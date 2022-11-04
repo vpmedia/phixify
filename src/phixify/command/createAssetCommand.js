@@ -37,6 +37,10 @@ export const createAssetBundle = (config, bundleName, targetPath) => {
 export const createAssetCommand = (options) => {
   console.time("Assets created");
   const config = getConfig(options);
+  if (options.projectDir === "" && config.multiProject) {
+    console.error("Missing project-dir option");
+    return null;
+  }
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   if (!isFile(targetPath)) {
     console.error("Target path does not exist", targetPath);
