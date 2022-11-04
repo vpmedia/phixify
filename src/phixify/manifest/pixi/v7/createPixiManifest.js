@@ -2,6 +2,7 @@ import { getPixiAudioSprite } from "./getPixiAudioSprite.js";
 import { getPixiImage } from "./getPixiImage.js";
 import { getPixiSound } from "./getPixiSound.js";
 import { getPixiSpriteSheet } from "./getPixiSpriteSheet.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
 
 /**
  * Creates a pixi.js game engine asset manifest bundle
@@ -10,41 +11,21 @@ import { getPixiSpriteSheet } from "./getPixiSpriteSheet.js";
  * @param {object} manifestData TBD
  * @param {string} bundleName TBD
  * @param {string} assetPath TBD
- * @param {object[]} audioSpriteList TBD
- * @param {string} audioSpriteList[].name - TBD
- * @param {string} audioSpriteList[].ext - TBD
- * @param {object[]} imageList TBD
- * @param {string} imageList[].name - TBD
- * @param {string} imageList[].ext - TBD
- * @param {object[]} soundList TBD
- * @param {string} soundList[].name - TBD
- * @param {string} soundList[].ext - TBD
- * @param {object[]} spriteSheetList TBD
- * @param {string} spriteSheetList[].name - TBD
- * @param {string} spriteSheetList[].ext - TBD
+ * @param {object} listMap TBD
  * @returns {object} TBD
  */
-export const createPixiManifest = (
-  config,
-  manifestData,
-  bundleName,
-  assetPath,
-  audioSpriteList,
-  imageList,
-  soundList,
-  spriteSheetList
-) => {
+export const createPixiManifest = (config, manifestData, bundleName, assetPath, listMap) => {
   const audioSpriteData = getPixiAudioSprite(
     config,
     `${assetPath}${config.dir.audioSprite}/`,
-    audioSpriteList
+    listMap[AUDIO_SPRITE]
   );
-  const imageData = getPixiImage(config, `${assetPath}${config.dir.image}/`, imageList);
-  const soundData = getPixiSound(config, `${assetPath}${config.dir.sound}/`, soundList);
+  const imageData = getPixiImage(config, `${assetPath}${config.dir.image}/`, listMap[IMAGE]);
+  const soundData = getPixiSound(config, `${assetPath}${config.dir.sound}/`, listMap[SOUND]);
   const spriteSheetData = getPixiSpriteSheet(
     config,
     `${assetPath}${config.dir.spriteSheet}/`,
-    spriteSheetList
+    listMap[SPRITE_SHEET]
   );
   const bundle = { name: bundleName };
   bundle.assets = [...audioSpriteData, ...imageData, ...soundData, ...spriteSheetData];

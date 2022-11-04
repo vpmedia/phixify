@@ -1,39 +1,8 @@
-import { getDirectoryList, getFileList, normalizePath, writeJson } from "../tool/fileUtil.js";
+import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
 import { createPhixifyManifest } from "../manifest/phixify/v1/createPhixifyManifest.js";
 import { getPhixifyManifestTemplate } from "../manifest/phixify/v1/getPhixifyManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
-
-/**
- * Runs the asset manifest generation command
- *
- * @param {object} config TBD
- * @param {string} bundleName TBD
- * @param {string} assetPath TBD
- * @param {string} targetPath TBD
- * @returns {Promise} TBD
- */
-const createManifestBundle = (config, bundleName, assetPath, targetPath) => {
-  const audioSpriteList = getFileList(`${targetPath}${config.dir.audioSprite}`);
-  const imageList = getFileList(`${targetPath}${config.dir.image}`);
-  const soundList = getFileList(`${targetPath}${config.dir.sound}`);
-  const spriteSheetList = getFileList(`${targetPath}${config.dir.spriteSheet}`).filter((item) => {
-    return (
-      // tricky: filter out sprite-sheet data variants for different formats used by pixi.js
-      // sprite_data.png.json, sprite_data.webp.json, ...
-      !item.name.endsWith(".avif") && !item.name.endsWith(".png") && !item.name.endsWith(".webp")
-    );
-  });
-  return createPhixifyManifest(
-    config,
-    bundleName,
-    assetPath,
-    targetPath,
-    audioSpriteList,
-    imageList,
-    soundList,
-    spriteSheetList
-  );
-};
+import { getManifestFileList } from "../manifest/core/getManifestFileList.js";
 
 /**
  * Command creating all manifest descriptors
@@ -54,11 +23,19 @@ export const createPhixifyManifestCommand = (options) => {
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;
       const bundleTargetPath = `${targetPath}${bundle.name}/`;
-      const promise = createManifestBundle(config, bundle.name, bundleAssetPath, bundleTargetPath);
+      const listMap = getManifestFileList(config, bundleAssetPath, bundleTargetPath);
+      const promise = createPhixifyManifest(
+        config,
+        bundle.name,
+        bundleAssetPath,
+        bundleTargetPath,
+        listMap
+      );
       promises.push(promise);
     });
   } else {
-    const promise = createManifestBundle(config, "main", assetPath, targetPath);
+    const listMap = getManifestFileList(config, assetPath, targetPath);
+    const promise = createPhixifyManifest(config, "main", assetPath, targetPath, listMap);
     promises.push(promise);
   }
   Promise.all(promises).then((results) => {

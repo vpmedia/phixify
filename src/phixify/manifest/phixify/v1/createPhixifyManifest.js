@@ -1,6 +1,7 @@
 import { statSync } from "fs";
 import { imageInfo } from "../../../tool/imageInfo.js";
 import { audioInfo } from "../../../tool/audioInfo.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../../core/const.js";
 /**
  * Creates a phixify asset manifest bundle
  *
@@ -8,30 +9,10 @@ import { audioInfo } from "../../../tool/audioInfo.js";
  * @param {string} bundleName TBD
  * @param {string} assetPath TBD
  * @param {string} targetPath TBD
- * @param {object[]} audioSpriteList TBD
- * @param {string} audioSpriteList[].name - TBD
- * @param {string} audioSpriteList[].ext - TBD
- * @param {object[]} imageList TBD
- * @param {string} imageList[].name - TBD
- * @param {string} imageList[].ext - TBD
- * @param {object[]} soundList TBD
- * @param {string} soundList[].name - TBD
- * @param {string} soundList[].ext - TBD
- * @param {object[]} spriteSheetList TBD
- * @param {string} spriteSheetList[].name - TBD
- * @param {string} spriteSheetList[].ext - TBD
+ * @param {object} listMap TBD
  * @returns {Promise} TBD
  */
-export const createPhixifyManifest = (
-  config,
-  bundleName,
-  assetPath,
-  targetPath,
-  audioSpriteList,
-  imageList,
-  soundList,
-  spriteSheetList
-) => {
+export const createPhixifyManifest = (config, bundleName, assetPath, targetPath, listMap) => {
   const manifestData = {};
   const promises = [];
   const listToMap = (list, type) => {
@@ -52,10 +33,10 @@ export const createPhixifyManifest = (
       }
     });
   };
-  listToMap(audioSpriteList, "audioSprite");
-  listToMap(imageList, "image");
-  listToMap(soundList, "sound");
-  listToMap(spriteSheetList, "spriteSheet");
+  listToMap(listMap[AUDIO_SPRITE], AUDIO_SPRITE);
+  listToMap(listMap[IMAGE], IMAGE);
+  listToMap(listMap[SOUND], SOUND);
+  listToMap(listMap[SPRITE_SHEET], SPRITE_SHEET);
   return new Promise((resolve) => {
     Promise.all(promises).then(() => {
       resolve({ bundleName, manifestData });
@@ -76,12 +57,12 @@ export const createPhixifyManifest = (
 const fileInfo = (config, sourcePath, item, type, manifestData) => {
   const filePath = `${sourcePath}/${item.name}.${item.ext}`;
   const manifestEntry = manifestData[type][item.name][item.ext];
-  if (type === "image" || type === "spriteSheet") {
+  if (type === IMAGE || type === SPRITE_SHEET) {
     return imageInfo(config, filePath).then((result) => {
       manifestEntry.info = result;
       return manifestEntry;
     });
-  } else {
+  } else if (type === AUDIO_SPRITE || type === SOUND) {
     return audioInfo(config, filePath).then((result) => {
       manifestEntry.info = result;
       return manifestEntry;
