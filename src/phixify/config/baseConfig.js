@@ -39,6 +39,7 @@ export const baseConfig = {
     phixify: "phixify_resource.json",
   },
   dir: {
+    data: "data",
     audioSprite: "audiosprite",
     audioSpriteSource: "audiosprite-source",
     image: "image",
