@@ -6,6 +6,9 @@
 #
 
 .github/
+.husky/
+.idea/
+asset/
 dist/
 node_modules/
 .DS_Store

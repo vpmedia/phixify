@@ -5,20 +5,9 @@
 # see: https://git-scm.com/docs/gitignore
 #
 
-# folders
-/dist
+.idea/
 /asset
+/dist
 /node_modules
-
-# files
 .phixify.json
 .DS_Store
-*.log
-*.tgz
-
-# IntelliJ IDEA
-.idea/
-*.iml
-*.ipr
-*.iws
-

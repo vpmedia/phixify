@@ -5,5 +5,9 @@
 # see: https://eslint.org/docs/latest/user-guide/configuring/ignoring-code
 #
 
+.github/
+.husky/
+.idea/
+asset/
 dist/
 node_modules/

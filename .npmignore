@@ -5,11 +5,11 @@
 # see: https://docs.npmjs.com/cli/v8/using-npm/developers#keeping-files-out-of-your-package
 #
 
-src/
-asset/
 .github/
 .husky/
 .idea/
+asset/
+src/
 .dockerignore
 .DS_Store
 .editorconfig

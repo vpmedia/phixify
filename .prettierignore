@@ -5,6 +5,10 @@
 # see: https://prettier.io/docs/en/ignore.html
 #
 
+.github/
+.husky/
+.idea/
+asset/
 dist/
 node_modules/
 package-lock.json
