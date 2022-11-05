@@ -1,4 +1,4 @@
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 import { imageInfo } from "../../tool/imageInfo.js";
 import { audioInfo } from "../../tool/audioInfo.js";
 

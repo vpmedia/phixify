@@ -1,5 +1,5 @@
 import { getFileList } from "../../tool/fileUtil.js";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 
 /**
  * Returns the file list map for the manifest generator

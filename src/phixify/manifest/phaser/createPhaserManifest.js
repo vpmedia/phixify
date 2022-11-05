@@ -3,7 +3,7 @@ import { getPhaserData } from "./getPhaserData.js";
 import { getPhaserImage } from "./getPhaserImage.js";
 import { getPhaserSound } from "./getPhaserSound.js";
 import { getPhaserSpriteSheet } from "./getPhaserSpriteSheet.js";
-import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
+import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 
 /**
  * Generates a Phaser game engine asset pack manifest

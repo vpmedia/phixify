@@ -1,14 +1,14 @@
+import { DATA } from "../const.js";
+import { getFileList } from "../../tool/fileUtil.js";
+
 /**
  * Creates the data entries for the manifest object
  *
- * @param {object} config The configuration object reference
+ * @param {object} config The configuration reference
  * @param {string} assetPath The URL where the assets will be loaded from
  * @param {string} targetPath The path where the assets are stored
- * @returns {object} TBD
+ * @returns {object[]} The assembled manifest list
  */
-import { DATA } from "../core/const.js";
-import { getFileList } from "../../tool/fileUtil.js";
-
 export const getPixiData = (config, assetPath, targetPath) => {
   const dir = config.dir[DATA];
   const path = `${assetPath}${dir}/`;

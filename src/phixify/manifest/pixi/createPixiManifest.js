@@ -3,7 +3,7 @@ import { getPixiData } from "./getPixiData.js";
 import { getPixiImage } from "./getPixiImage.js";
 import { getPixiSound } from "./getPixiSound.js";
 import { getPixiSpriteSheet } from "./getPixiSpriteSheet.js";
-import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET } from "../core/const.js";
+import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 
 /**
  * Creates a pixi.js game engine asset manifest bundle
