@@ -14,8 +14,12 @@
   },
   "keywords": [
     "phaser",
+    "pixi",
+    "pixi.js",
     "pixijs",
     "asset",
+    "assets",
+    "bundle",
     "manifest",
     "cli",
     "generator"
