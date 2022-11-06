@@ -2,7 +2,6 @@ import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js"
 import { createPixiManifest } from "../manifest/pixi/createPixiManifest.js";
 import { getPixiManifestTemplate } from "../manifest/pixi/getPixiManifestTemplate.js";
 import { getConfig } from "../config/getConfig.js";
-import { createPhaserManifest } from "../manifest/phaser/createPhaserManifest.js";
 
 /**
  * Command creating all manifest descriptors
@@ -22,7 +21,7 @@ export const createPixiManifestCommand = (options) => {
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;
       const bundleTargetPath = `${targetPath}${bundle.name}/`;
-      createPhaserManifest(config, manifestData, bundle.name, bundleAssetPath, bundleTargetPath);
+      createPixiManifest(config, manifestData, bundle.name, bundleAssetPath, bundleTargetPath);
     });
   } else {
     createPixiManifest(config, manifestData, "main", assetPath, targetPath);
