@@ -3,7 +3,6 @@
 #
 # Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
 # author: Andras Csizmadia <andras@vpmedia.hu>
-# version: 1.0.0
 #
 
 set -e
