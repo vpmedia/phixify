@@ -57,7 +57,7 @@ export const baseConfig = {
     sound: ["mp3", "ogg", "wav"],
   },
   tool: {
-    image: "imageMagick",
+    image: "sharp",
     sound: "sox",
     spriteSheet: "texturePacker",
   },
@@ -79,6 +79,12 @@ export const baseConfig = {
       opts: {
         avif: ["-quality 90"],
         webp: ["-quality 90"],
+      },
+    },
+    sharp: {
+      opts: {
+        avif: { quality: 90 },
+        webp: { quality: 90 },
       },
     },
     sox: {

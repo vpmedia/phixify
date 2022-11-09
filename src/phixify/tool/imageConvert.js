@@ -1,4 +1,5 @@
 import { getMagickConvertCmd } from "./imagemagick/getMagickConvertCmd.js";
+import { getSharpConvertCmd } from "./sharp/getSharpConvertCmd.js";
 import { promisify } from "util";
 import { exec } from "child_process";
 
@@ -11,6 +12,9 @@ import { exec } from "child_process";
  * @returns {Promise} TBD
  */
 export async function imageConvert(config, inputFile, outputFile) {
+  if (config.tool.image === "sharp") {
+    return getSharpConvertCmd(config, inputFile, outputFile);
+  }
   const execPromise = promisify(exec);
   const cmd = getMagickConvertCmd(config, inputFile, outputFile);
   const cmdResult = execPromise(cmd, { stdio: "pipe" });

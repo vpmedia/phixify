@@ -8,9 +8,9 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
 ## Pre-requisites
 
 - node.js
-- imagemagick
 - sox
 - texture-packer
+- imagemagick (optional)
 - ffmpeg (optional)
 
 ## Installation guide
@@ -19,9 +19,15 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
 
     $ curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
     $ sudo apt-get update
-    $ sudo apt-get install -y nodejs imagemagick sox libsox-fmt-mp3 ffmpeg
+    $ sudo apt-get install -y nodejs sox libsox-fmt-mp3
 
-#### Update ImageMagick to v7
+#### Optional tools
+
+    $ sudo apt-get install -y imagemagick ffmpeg
+
+##### Update ImageMagick to v7
+
+This is an optional step because Phixify uses the Sharp image library by default.
 
 https://github.com/SoftCreatR/imei#one-step-automated-install
 
@@ -30,7 +36,11 @@ https://github.com/SoftCreatR/imei#one-step-automated-install
 ### MacOS
 
     $ brew update
-    $ brew install node imagemagick sox ffmpeg
+    $ brew install node sox
+
+#### Optional tools
+
+    $ brew install imagemagick ffmpeg
 
 ### Install TexturePacker for your platform
 

@@ -14,13 +14,12 @@ apt-utils \
 apt-transport-https \
 software-properties-common \
 curl \
-wget \
-imagemagick \
 sox \
-libsox-fmt-mp3 \
-ffmpeg
+libsox-fmt-mp3
 
-RUN t=$(mktemp) && wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && bash "$t" && rm "$t"
+# Optional steps
+# RUN apt-get install -y wget imagemagick ffmpeg
+# RUN t=$(mktemp) && wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && bash "$t" && rm "$t"
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get update && apt-get install -y nodejs

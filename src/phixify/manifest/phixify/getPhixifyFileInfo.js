@@ -17,6 +17,12 @@ export const getPhixifyFileInfo = (config, sourcePath, item, type, manifestData)
   const manifestEntry = manifestData[type][item.name][item.ext];
   if (type === IMAGE || type === SPRITE_SHEET) {
     return imageInfo(config, filePath).then((result) => {
+      if (config.tool.image === "sharp") {
+        delete result.exif;
+        delete result.icc;
+        delete result.xmp;
+        delete result.iptc;
+      }
       manifestEntry.info = result;
       return manifestEntry;
     });

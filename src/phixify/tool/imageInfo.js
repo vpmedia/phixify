@@ -1,6 +1,7 @@
 import { getMagickInfoCmd } from "./imagemagick/getMagickInfoCmd.js";
 import { promisify } from "util";
 import { exec } from "child_process";
+import { getSharpInfoCmd } from "./sharp/getSharpInfoCmd.js";
 
 /**
  * Gets image information
@@ -10,6 +11,9 @@ import { exec } from "child_process";
  * @returns {Promise} TBD
  */
 export async function imageInfo(config, file) {
+  if (config.tool.image === "sharp") {
+    return getSharpInfoCmd(config, file);
+  }
   const execPromise = promisify(exec);
   const cmd = getMagickInfoCmd(config, file);
   const cmdResult = execPromise(cmd, { stdio: "pipe" });
