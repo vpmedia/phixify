@@ -16,7 +16,7 @@ export const createPixiManifestCommand = (options) => {
   const assetPath = normalizePath(`${config.assetPath}${options.projectDir}`);
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   const manifestData = getPixiManifestTemplate(config);
-  if (config.multiBundle) {
+  if (config.flag.multiBundle) {
     const bundleList = getDirectoryList(targetPath);
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;

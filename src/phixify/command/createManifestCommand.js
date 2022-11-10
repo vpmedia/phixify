@@ -15,7 +15,7 @@ import { isFile, normalizePath } from "../tool/fileUtil.js";
 export const createManifestCommand = (options) => {
   console.time("Manifests created");
   const config = getConfig(options);
-  if (options.projectDir === "" && config.multiProject) {
+  if (options.projectDir === "" && config.flag.multiProject) {
     console.error("Missing project-dir option");
     return null;
   }

@@ -50,7 +50,7 @@ export const createAssetCommand = (options) => {
     console.log("Creating assets at:", targetPath);
   }
   const promises = [];
-  if (config.multiBundle) {
+  if (config.flag.multiBundle) {
     const bundleList = getDirectoryList(targetPath);
     bundleList.forEach((bundle) => {
       const createAssetResult = createAssetBundle(

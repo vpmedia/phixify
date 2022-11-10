@@ -26,8 +26,11 @@
 export const baseConfig = {
   basePath: "./asset/",
   assetPath: "/asset/",
-  multiProject: false,
-  multiBundle: false,
+  flag: {
+    multiProject: false,
+    multiBundle: false,
+    multiResolution: false,
+  },
   engine: {
     pixi_v7: true,
     phaser_v3: true,
@@ -108,7 +111,7 @@ export const baseConfig = {
   phixify: {
     name: "@vpmedia/phixify",
     url: "https://github.com/vpmedia/phixify",
-    version: "1.0.5",
+    version: "1.0.6",
     copyright: "Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
     timestamp: new Date().getTime().toString(),
   },

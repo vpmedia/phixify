@@ -17,7 +17,7 @@ export const createPhixifyManifestCommand = (options) => {
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   const manifestData = getPhixifyManifestTemplate(config);
   const promises = [];
-  if (config.multiBundle) {
+  if (config.flag.multiBundle) {
     const bundleList = getDirectoryList(targetPath);
     bundleList.forEach((bundle) => {
       const bundleAssetPath = `${assetPath}${bundle.name}/`;
