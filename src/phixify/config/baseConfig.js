@@ -29,7 +29,6 @@ export const baseConfig = {
   flag: {
     multiProject: false,
     multiBundle: false,
-    multiResolution: false,
   },
   engine: {
     pixi_v7: true,
@@ -54,6 +53,7 @@ export const baseConfig = {
   asset: {
     image: ["avif", "webp"],
     sound: ["mp3", "ogg"],
+    resolution: [0.5, 1, 2],
   },
   manifest: {
     image: ["avif", "webp", "png"],

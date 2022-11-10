@@ -20,11 +20,24 @@ export const getPixiImage = (config, assetPath, targetPath) => {
   const result = [];
   const map = {};
   list.forEach((value) => {
-    map[value.name] = map[value.name] || [];
-    map[value.name].push(value.ext);
+    const regExp = new RegExp("[@].*[x]");
+    const resolution = regExp.test(value.name) ? value.name.match(regExp)[0] : null;
+    const key = value.name.replace(regExp, "");
+    map[key] = map[key] || { name: [], ext: [], res: [] };
+    if (!map[key].name.includes(value.name)) {
+      map[key].name.push(value.name);
+    }
+    if (!map[key].ext.includes(value.ext)) {
+      map[key].ext.push(value.ext);
+    }
+    if (resolution && !map[key].res.includes(resolution)) {
+      map[key].res.push(resolution);
+    }
   });
   Object.entries(map).forEach(([key, value]) => {
-    const srcs = `${path}${key}.{${value.sort(sortFunc).toString()}}`;
+    const res = value.res.length ? `{${value.res.toString()}}` : "";
+    const ext = value.ext.sort(sortFunc).toString();
+    const srcs = `${path}${key}${res}.{${ext}}`;
     result.push({ name: key, srcs });
   });
   return result;

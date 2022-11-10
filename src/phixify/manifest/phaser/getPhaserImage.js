@@ -14,11 +14,28 @@ export const getPhaserImage = (config, assetPath, targetPath) => {
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);
   const result = [];
+  const map = {};
   list
     .filter((value) => value.ext === "webp")
     .forEach((value) => {
-      const url = `${path}${value.name}.${value.ext}`;
-      result.push({ type: "image", key: value.name, url });
+      const regExp = new RegExp("[@].*[x]");
+      const resolution = regExp.test(value.name) ? value.name.match(regExp)[0] : null;
+      const key = value.name.replace(regExp, "");
+      map[key] = map[key] || { name: [], ext: [], res: [] };
+      if (!map[key].name.includes(value.name)) {
+        map[key].name.push(value.name);
+      }
+      if (!map[key].ext.includes(value.ext)) {
+        map[key].ext.push(value.ext);
+      }
+      if (resolution && !map[key].res.includes(resolution)) {
+        map[key].res.push(resolution);
+      }
     });
+  Object.entries(map).forEach(([key, value]) => {
+    const res = value.res.length ? "@1x" : "";
+    const url = `${path}${key}${res}.${value.ext.toString()}`;
+    result.push({ type: "image", key, url });
+  });
   return result;
 };
