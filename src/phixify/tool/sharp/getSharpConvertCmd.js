@@ -14,7 +14,7 @@ export const getSharpConvertCmd = (config, inputFile, outputFile) => {
   const ext = parsedOutputFile.ext.substring(1);
   const opts = config.cmd.sharp.opts[ext];
   if (config.options.verbose) {
-    console.log("Running command:", `sharp ${inputFile} ${outputFile}`, opts);
+    console.log("Running command:", `sharp convert ${inputFile} ${outputFile}`, opts);
   }
   return sharp(inputFile, opts).toFile(outputFile);
 };

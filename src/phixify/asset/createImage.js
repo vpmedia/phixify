@@ -16,6 +16,8 @@ export async function createImage(config, baseDir) {
   const formats = config.asset.image;
   const targetPath = `${baseDir}${config.dir.image}/`;
   const fileList = getFileList(targetPath);
+  // const sourceResolution = config.asset.resolution.slice(-1);
+  // fileList.filter((item) => item.ext === "png" && item.name.includes(`@${sourceResolution}x`));    
   fileList
     .filter((item) => item.ext === "png")
     .forEach((item) => {
