@@ -12,11 +12,7 @@ import { audioConvert } from "./audioConvert.js";
 export async function audioConvertFormats(config, formats, outputPath, fileName) {
   const convertPromises = [];
   formats.forEach((ext) => {
-    const convertResult = audioConvert(
-      config,
-      `${outputPath}${fileName}.wav`,
-      `${outputPath}${fileName}.${ext}`
-    );
+    const convertResult = audioConvert(config, `${outputPath}${fileName}.wav`, `${outputPath}${fileName}.${ext}`);
     convertPromises.push(convertResult);
   });
   return Promise.all(convertPromises);

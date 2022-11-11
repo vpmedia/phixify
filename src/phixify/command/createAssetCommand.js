@@ -53,11 +53,7 @@ export const createAssetCommand = (options) => {
   if (config.flag.multiBundle) {
     const bundleList = getDirectoryList(targetPath);
     bundleList.forEach((bundle) => {
-      const createAssetResult = createAssetBundle(
-        config,
-        bundle.name,
-        `${targetPath}${bundle.name}/`
-      );
+      const createAssetResult = createAssetBundle(config, bundle.name, `${targetPath}${bundle.name}/`);
       promises.push(createAssetResult);
     });
   } else {

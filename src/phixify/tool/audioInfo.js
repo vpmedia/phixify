@@ -12,8 +12,7 @@ import { getFFInfoCmd } from "./ffmpeg/getFFInfoCmd.js";
  */
 export async function audioInfo(config, file) {
   const execPromise = promisify(exec);
-  const cmd =
-    config.tool.sound === "sox" ? getSoxInfoCmd(config, file) : getFFInfoCmd(config, file);
+  const cmd = config.tool.sound === "sox" ? getSoxInfoCmd(config, file) : getFFInfoCmd(config, file);
   const cmdResult = execPromise(cmd, { stdio: "pipe" });
   if (config.options.verbose) {
     console.log("Running command:", cmd);
