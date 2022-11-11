@@ -82,12 +82,14 @@ export const baseConfig = {
       opts: {
         avif: ["-quality 90"],
         webp: ["-quality 90"],
+        png: [],
       },
     },
     sharp: {
       opts: {
-        avif: { quality: 90 },
         webp: { quality: 90 },
+        avif: { quality: 90 },
+        png: {},
       },
     },
     sox: {

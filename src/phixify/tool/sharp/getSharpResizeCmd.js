@@ -8,12 +8,16 @@
  * @returns {string} TBD
  */
 import sharp from "sharp";
+import { parse } from "path";
 
 export const getSharpResizeCmd = (config, inputFile, outputFile, scale) => {
+  const parsedOutputFile = parse(outputFile);
+  const ext = parsedOutputFile.ext.substring(1);
+  const opts = config.cmd.sharp.opts[ext];
   if (config.options.verbose) {
-    console.log("Running command:", `sharp resize ${inputFile} ${outputFile}`);
+    console.log("Running command:", `sharp resize ${inputFile} ${outputFile} ${scale}`, opts);
   }
-  return sharp(inputFile)
+  return sharp(inputFile, opts)
     .metadata()
     .then(({ width, height }) =>
       sharp(inputFile)
