@@ -5,6 +5,16 @@
 
 Phaser and Pixi.js game engine asset and manifest command line generator.
 
+## Features
+
+- Converts WAV audio files to MP3 and OGG formats
+- Converts PNG image files to AVIF and WEBP formats
+- Resizes images to multiple resolutions
+- Generates audio sprite files
+- Generates sprite sheet files
+- Creates pixi.js asset bundle JSON manifest
+- Creates phaser resource pack JSON manifest
+
 ## Pre-requisites
 
 - node.js
