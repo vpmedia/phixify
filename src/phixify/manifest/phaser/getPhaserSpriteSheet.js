@@ -22,11 +22,12 @@ export const getPhaserSpriteSheet = (config, assetPath, targetPath) => {
   const result = [];
   list
     .filter((value) => value.ext === "webp")
-    .filter((value) => !value.name.includes("@"))
+    .filter((value) => !value.name.includes("@") || value.name.includes("@1x"))
     .forEach((value) => {
       const atlasURL = `${path}${value.name}.webp.json`;
       const textureURL = `${path}${value.name}.webp`;
-      result.push({ type: "atlas", key: value.name, textureURL, atlasURL });
+      const key = value.name.replace("@1x", "");
+      result.push({ type: "atlas", key, textureURL, atlasURL });
     });
   return result;
 };
