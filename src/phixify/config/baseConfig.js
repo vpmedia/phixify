@@ -113,7 +113,7 @@ export const baseConfig = {
   phixify: {
     name: "@vpmedia/phixify",
     url: "https://github.com/vpmedia/phixify",
-    version: "1.0.9",
+    version: "1.1.0",
     copyright: "Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
     timestamp: new Date().getTime().toString(),
   },

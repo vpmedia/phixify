@@ -27,18 +27,26 @@ export const getPixiSpriteSheet = (config, assetPath, targetPath) => {
   const map = {};
   list
     .filter((value) => value.ext !== "json")
-    .filter((value) => !value.name.includes("@"))
     .forEach((value) => {
-      map[value.name] = map[value.name] || [];
-      map[value.name].push(value.ext);
+      const regExp = new RegExp("[@].*[x]");
+      const resolution = regExp.test(value.name) ? value.name.match(regExp)[0] : null;
+      const key = value.name.replace(regExp, "");
+      map[key] = map[key] || { name: [], ext: [], res: [] };
+      if (!map[key].name.includes(value.name)) {
+        map[key].name.push(value.name);
+      }
+      if (!map[key].ext.includes(value.ext)) {
+        map[key].ext.push(value.ext);
+      }
+      if (resolution && !map[key].res.includes(resolution)) {
+        map[key].res.push(resolution);
+      }
     });
-  list
-    .filter((value) => value.ext === "json")
-    .filter((value) => !value.name.includes("@"))
-    .forEach((value) => {
-      const extensions = map[value.name].sort(sortFunc).toString();
-      const srcs = `${path}${value.name}.{${extensions}}.${value.ext}`;
-      result.push({ name: value.name, srcs });
-    });
+  Object.entries(map).forEach(([key, value]) => {
+    const res = value.res.length ? `{${value.res.toString()}}` : "";
+    const ext = value.ext.sort(sortFunc).toString();
+    const srcs = `${path}${key}${res}.{${ext}}.json`;
+    result.push({ name: key, srcs });
+  });
   return result;
 };
