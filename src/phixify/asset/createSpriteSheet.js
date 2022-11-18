@@ -26,22 +26,31 @@ async function createSpriteSheetItem(config, sourcePath, outputPath, dir) {
     const packResult = imagePack(config, inputDir, outputSheet, outputData);
     packResult.then(() => {
       const promises = [];
-      formats.forEach((ext) => {
-        // convert image
-        const convertResult = imageConvert(config, outputSheet, `${outputPath}${dir.name}.${ext}`);
-        promises.push(convertResult);
-        // copy format json
-        const copyResult = fileCopy(config, outputData, `${outputPath}${dir.name}.${ext}.json`);
+      const sourceResolutionValue = config.asset.resolution.slice(-1)[0];
+      const sourceResolutionName = `@${sourceResolutionValue}x`;
+      const resolutionNames = config.asset.resolution.map((resolutionValue) => `@${resolutionValue}x`);
+      const resolutions = dir.name.includes(sourceResolutionName) ? resolutionNames : [""];
+      const fileName = dir.name.replace(sourceResolutionName, "");
+      resolutions.forEach((res) => {
+        formats.forEach((ext) => {
+          // convert image
+          const convertResult = imageConvert(config, `${outputPath}${fileName}${res}.png`, `${outputPath}${fileName}${res}.${ext}`);
+          promises.push(convertResult);
+          // copy format json
+          const copyResult = fileCopy(config, `${outputPath}${fileName}${res}.json`, `${outputPath}${fileName}${res}.${ext}.json`);
+          promises.push(copyResult);
+        });
+        // copy png json to alias (spriteSheet.json to spriteSheet.png.json)
+        const copyResult = fileCopy(config, `${outputPath}${fileName}${res}.json`, `${outputPath}${fileName}${res}.png.json`);
         promises.push(copyResult);
       });
-      // copy png json to alias (spriteSheet.json to spriteSheet.png.json)
-      const copyResult = fileCopy(config, outputData, `${outputPath}${dir.name}.png.json`);
-      promises.push(copyResult);
       Promise.all(promises).then((result) => {
-        formats.forEach((ext) => {
-          const formatData = readJson(`${outputPath}${dir.name}.${ext}.json`);
-          formatData.meta.image = `${dir.name}.${ext}`;
-          writeJson(config, formatData, `${outputPath}${dir.name}.${ext}.json`);
+        resolutions.forEach((res) => {
+          formats.forEach((ext) => {
+            const formatData = readJson(`${outputPath}${fileName}${res}.${ext}.json`);
+            formatData.meta.image = `${fileName}${res}.${ext}`;
+            writeJson(config, formatData, `${outputPath}${fileName}${res}.${ext}.json`);
+          });
         });
         // finally
         resolve(result);
