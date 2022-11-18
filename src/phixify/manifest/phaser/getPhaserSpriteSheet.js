@@ -22,6 +22,7 @@ export const getPhaserSpriteSheet = (config, assetPath, targetPath) => {
   const result = [];
   list
     .filter((value) => value.ext === "webp")
+    .filter((value) => !value.name.includes("@"))
     .forEach((value) => {
       const atlasURL = `${path}${value.name}.webp.json`;
       const textureURL = `${path}${value.name}.webp`;

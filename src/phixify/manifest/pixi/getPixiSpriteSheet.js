@@ -27,12 +27,14 @@ export const getPixiSpriteSheet = (config, assetPath, targetPath) => {
   const map = {};
   list
     .filter((value) => value.ext !== "json")
+    .filter((value) => !value.name.includes("@"))
     .forEach((value) => {
       map[value.name] = map[value.name] || [];
       map[value.name].push(value.ext);
     });
   list
     .filter((value) => value.ext === "json")
+    .filter((value) => !value.name.includes("@"))
     .forEach((value) => {
       const extensions = map[value.name].sort(sortFunc).toString();
       const srcs = `${path}${value.name}.{${extensions}}.${value.ext}`;
