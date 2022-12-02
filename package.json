@@ -25,15 +25,15 @@
     "generator"
   ],
   "type": "module",
-  "main": "./dist/phixify.mjs",
-  "module": "./dist/phixify.mjs",
+  "main": "./dist/phixify.js",
+  "module": "./dist/phixify.js",
   "bin": {
-    "phixify": "./dist/phixify.mjs"
+    "phixify": "./dist/phixify.js"
   },
   "scripts": {
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rollup -c",
-    "postbuild": "chmod +x ./dist/phixify.cjs && chmod +x ./dist/phixify.mjs",
+    "postbuild": "chmod +x ./dist/phixify.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
     "lint": "eslint \"**/*.{js,ts}\"",

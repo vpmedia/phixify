@@ -28,14 +28,7 @@ export default {
     {
       banner,
       name: pkg.name,
-      file: `dist/${projectName}.cjs`,
-      format: "cjs",
-      exports: "named",
-    },
-    {
-      banner,
-      name: pkg.name,
-      file: `dist/${projectName}.mjs`,
+      file: `dist/${projectName}.js`,
       format: "es",
       exports: "named",
     },
