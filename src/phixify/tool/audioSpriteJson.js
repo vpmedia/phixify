@@ -29,6 +29,7 @@ export const audioSpriteJson = (config, outputPath, name, durationResults) => {
     spriteData.spritemap[item.name] = {
       start,
       end: start + item.duration,
+      duration: item.duration,
       loop: false,
     };
     start += item.roundedDuration;

@@ -24,14 +24,13 @@ export const createManifestCommand = (options) => {
     console.error("Target path does not exist", targetPath);
     return;
   }
-  if (config.engine.pixi_v7) {
-    createPixiManifestCommand(options);
-  }
-  if (config.engine.phaser_v3) {
-    createPhaserManifestCommand(options);
-  }
-  if (config.engine.phixify) {
-    createPhixifyManifestCommand(options);
-  }
-  console.timeEnd("Manifests created");
+  createPhixifyManifestCommand(options).then(() => {
+    if (config.engine.pixi) {
+      createPixiManifestCommand(options);
+    }
+    if (config.engine.phaser) {
+      createPhaserManifestCommand(options);
+    }
+    console.timeEnd("Manifests created");
+  });
 };

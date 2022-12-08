@@ -31,9 +31,8 @@ export const baseConfig = {
     multiBundle: false,
   },
   engine: {
-    pixi_v7: true,
-    phaser_v3: true,
-    phixify: true,
+    pixi: true,
+    phaser: true,
   },
   output: {
     pixi: "pixi_resource.json",
