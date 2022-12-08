@@ -1,6 +1,6 @@
 {
   "name": "@vpmedia/phixify",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Phaser and Pixi.js game engine asset and manifest command line generator",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
