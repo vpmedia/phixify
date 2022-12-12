@@ -5,17 +5,20 @@
  * @returns {object} TBD
  */
 export const getPhaserManifestTemplate = (config) => {
-  return {
+  const result = {
     init: {
       files: [],
     },
-    meta: {
+  };
+  if (!config.flag.skipManifestMeta) {
+    result.meta = {
       generated: config.phixify.timestamp,
       app: config.phixify.name,
       url: config.phixify.url,
       version: config.phixify.version,
       copyright: config.phixify.copyright,
       phaserVersion: "3",
-    },
-  };
+    };
+  }
+  return result;
 };

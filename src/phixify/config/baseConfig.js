@@ -29,6 +29,7 @@ export const baseConfig = {
   flag: {
     multiProject: false,
     multiBundle: false,
+    skipManifestMeta: false,
   },
   engine: {
     pixi: true,
