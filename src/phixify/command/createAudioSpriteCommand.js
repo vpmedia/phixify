@@ -36,7 +36,7 @@ export const createAudioSpriteCommand = (options) => {
     durationPromises.push(durationResult);
   });
   Promise.all(durationPromises).then((durationResults) => {
-    console.log(name, durationResults);
+    // console.log(name, durationResults);
     const outputFile = `${outputPath}${name}.wav`;
     const concatCmdResult = audioConcat(config, durationResults, sourcePath, outputFile);
     concatCmdResult.then(() => {

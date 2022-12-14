@@ -26,7 +26,9 @@ export async function audioDuration(config, inputDir, item) {
       // calculate durations
       const duration = parseFloat(durationValue.stdout.toString());
       const roundedDuration = Math.ceil(duration + 1);
-      const padDuration = roundedDuration - duration;
+      const padDurationFloat = roundedDuration - duration;
+      // fix duration calculation precision (1.2213150000000002 to 1.221315)
+      const padDuration = parseFloat(padDurationFloat.toFixed(12));
       resolve({ name: item.name, duration, roundedDuration, padDuration });
     });
   });
