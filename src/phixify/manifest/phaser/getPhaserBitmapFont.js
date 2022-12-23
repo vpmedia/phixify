@@ -17,8 +17,10 @@ export const getPhaserBitmapFont = (config, assetPath, targetPath) => {
   list
     .filter((value) => value.ext === "xml")
     .forEach((value) => {
-      const url = `${path}${value.name}.${value.ext}`;
-      result.push({ type: "bitmapFont", key: value.name, url });
+      const key = value.name;
+      const fontDataURL = `${path}${value.name}.${value.ext}`;
+      const textureURL = `${path}${value.name}.png`;
+      result.push({ type: "bitmapFont", key, fontDataURL, textureURL });
     });
   return result;
 };
