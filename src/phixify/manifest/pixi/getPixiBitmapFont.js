@@ -15,7 +15,7 @@ export const getPixiBitmapFont = (config, assetPath, targetPath) => {
   const list = getFileList(`${targetPath}${dir}`);
   const result = [];
   list
-    .filter((value) => value.ext === "xml")
+    .filter((value) => value.ext === "xml" || value.ext === "fnt")
     .forEach((value) => {
       const srcs = `${path}${value.name}.${value.ext}`;
       result.push({ name: value.name, srcs });

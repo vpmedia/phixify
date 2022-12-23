@@ -15,7 +15,7 @@ export const getPhaserBitmapFont = (config, assetPath, targetPath) => {
   const list = getFileList(`${targetPath}${dir}`);
   const result = [];
   list
-    .filter((value) => value.ext === "xml")
+    .filter((value) => value.ext === "xml" || value.ext === "fnt")
     .forEach((value) => {
       const key = value.name;
       const fontDataURL = `${path}${value.name}.${value.ext}`;
