@@ -25,7 +25,7 @@ export const createAudioSpriteCommand = (options) => {
   }
   const outputPath = normalizePath(config.options.outputPath);
   if (!isFile(outputPath)) {
-    console.error("Output path does not exists", sourcePath);
+    console.error("Output path does not exists", outputPath);
     return;
   }
   const name = config.options.name;
