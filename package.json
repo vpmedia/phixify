@@ -43,7 +43,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "commander": "^9.4.1",
+    "commander": "^9.5.0",
     "sharp": "^0.31.3"
   },
   "devDependencies": {
