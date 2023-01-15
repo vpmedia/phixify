@@ -22,7 +22,7 @@ export const createManifestCommand = (options) => {
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   if (!isFile(targetPath)) {
     console.error("Target path does not exist", targetPath);
-    return;
+    return null;
   }
   createPhixifyManifestCommand(options).then(() => {
     if (config.engine.pixi) {

@@ -5,6 +5,7 @@ import { createAllCommand } from "./command/createAllCommand.js";
 import { createAudioSpriteCommand } from "./command/createAudioSpriteCommand.js";
 import { initConfigCommand } from "./command/initConfigCommand.js";
 import { showConfigCommand } from "./command/showConfigCommand.js";
+import { cleanCommand } from "./command/cleanCommand.js";
 
 /**
  * Runs the CLI Commander program
@@ -48,6 +49,14 @@ export const commanderProgram = () => {
     .option("-v, --verbose", "Print detailed information to console", false)
     .description("Create manifests")
     .action(createManifestCommand);
+
+  program
+    .command("clean")
+    .option("-p, --project-dir <project-dir>", "Set project identifier", "")
+    .option("-c, --config-file <config-file>", "Configuration file")
+    .option("-v, --verbose", "Print detailed information to console", false)
+    .description("Cleanup generated files")
+    .action(cleanCommand);
 
   program
     .command("audioSprite")
