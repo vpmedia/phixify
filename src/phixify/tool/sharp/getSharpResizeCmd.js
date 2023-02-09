@@ -19,9 +19,9 @@ export const getSharpResizeCmd = (config, inputFile, outputFile, scale) => {
   }
   return sharp(inputFile, opts)
     .metadata()
-    .then(({ width, height }) =>
+    .then(({ width }) =>
       sharp(inputFile)
-        .resize(width * scale, height * scale)
+        .resize(Math.ceil(width * scale))
         .toFile(outputFile)
     );
 };
