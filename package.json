@@ -35,6 +35,7 @@
     "build": "rollup -c",
     "postbuild": "chmod +x ./dist/phixify.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "typecheck": "tsc",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint-fix": "eslint \"**/*.{js,ts}\" --fix",
