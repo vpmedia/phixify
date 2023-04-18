@@ -15,5 +15,16 @@
     "plugin:prettier/recommended",
     "plugin:jsdoc/recommended",
     "plugin:jest/recommended"
-  ]
+  ],
+  "rules": {
+    "jsdoc/check-indentation": 1,
+    "jsdoc/check-line-alignment": 1,
+    "jsdoc/check-syntax": 1,
+    "jsdoc/require-asterisk-prefix": 1,
+    "jsdoc/require-description": 1,
+    "jsdoc/require-description-complete-sentence": 1,
+    "jsdoc/require-hyphen-before-param-description": 1,
+    "jsdoc/require-throws": 1,
+    "jsdoc/sort-tags": 1
+  }
 }
