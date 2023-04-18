@@ -4,11 +4,10 @@ import { exec } from "child_process";
 import { getSharpInfoCmd } from "./sharp/getSharpInfoCmd.js";
 
 /**
- * Gets image information
- *
- * @param {object} config The configuration object reference
- * @param {string} file TBD
- * @returns {Promise} TBD
+ * Gets image information.
+ * @param {object} config - The configuration object reference.
+ * @param {string} file - TBD.
+ * @returns {Promise} TBD.
  */
 export async function imageInfo(config, file) {
   if (config.tool.image === "sharp") {

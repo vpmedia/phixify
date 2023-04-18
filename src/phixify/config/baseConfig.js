@@ -1,19 +1,19 @@
 /**
  * @typedef {object} baseConfig
- * @property {string} basePath TBD
- * @property {string} assetPath TBD
- * @property {boolean} cache TBD
- * @property {boolean} multiProject TBD
- * @property {boolean} multiBundle TBD
- * @property {object} engine TBD
- * @property {object} output TBD
- * @property {object} dir TBD
- * @property {object} asset TBD
- * @property {object} manifest TBD
- * @property {object} tool TBD
- * @property {object} cmd TBD
- * @property {object} phixify TBD
- * @property {object} options TBD
+ * @property {string} basePath TBD.
+ * @property {string} assetPath TBD.
+ * @property {boolean} cache TBD.
+ * @property {boolean} multiProject TBD.
+ * @property {boolean} multiBundle TBD.
+ * @property {object} engine TBD.
+ * @property {object} output TBD.
+ * @property {object} dir TBD.
+ * @property {object} asset TBD.
+ * @property {object} manifest TBD.
+ * @property {object} tool TBD.
+ * @property {object} cmd TBD.
+ * @property {object} phixify TBD.
+ * @property {object} options TBD.
  * @see https://imagemagick.org/script/command-line-options.php
  * @see https://sox.sourceforge.net/soxformat.html
  * @see https://ffmpeg.org/ffmpeg.html#Audio-Options

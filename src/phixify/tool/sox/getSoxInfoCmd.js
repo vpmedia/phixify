@@ -1,9 +1,8 @@
 /**
- * Creates a sox info command for execution
- *
- * @param {object} config The configuration object reference
- * @param {string} file TBD
- * @returns {string} TBD
+ * Creates a sox info command for execution.
+ * @param {object} config - The configuration object reference.
+ * @param {string} file - TBD.
+ * @returns {string} TBD.
  */
 export const getSoxInfoCmd = (config, file) => {
   const path = config.cmd.sox.path;

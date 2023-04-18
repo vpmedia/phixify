@@ -2,20 +2,18 @@ import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from 
 import { parse } from "path";
 
 /**
- * Check for a path if exists in the filesystem
- *
- * @param {string} path TBD
- * @returns {boolean} TBD
+ * Check for a path if exists in the filesystem.
+ * @param {string} path - TBD.
+ * @returns {boolean} TBD.
  */
 export const isFile = (path) => {
   return existsSync(path);
 };
 
 /**
- * Normalizes a path
- *
- * @param {string} path TBD
- * @returns {string} TBD
+ * Normalizes a path.
+ * @param {string} path - TBD.
+ * @returns {string} TBD.
  */
 export const normalizePath = (path) => {
   const normalizedPath = path.trim().replace("//", "/");
@@ -23,10 +21,9 @@ export const normalizePath = (path) => {
 };
 
 /**
- * Reads and parses a JSON file
- *
- * @param {string} path The path to the JSON file
- * @returns {object} The parsed JSON data
+ * Reads and parses a JSON file.
+ * @param {string} path - The path to the JSON file.
+ * @returns {object} The parsed JSON data.
  */
 export const readJson = (path) => {
   if (!existsSync(path)) {
@@ -36,11 +33,10 @@ export const readJson = (path) => {
 };
 
 /**
- * Writes out a JSON file
- *
- * @param {object} config The configuration object reference
- * @param {object} content TBD
- * @param {string} path TBD
+ * Writes out a JSON file.
+ * @param {object} config - The configuration object reference.
+ * @param {object} content - TBD.
+ * @param {string} path - TBD.
  */
 export const writeJson = (config, content, path) => {
   const parsedPath = parse(path);
@@ -54,10 +50,9 @@ export const writeJson = (config, content, path) => {
 };
 
 /**
- * Lists the files of a directory
- *
- * @param {string} path TBD
- * @returns {{name: string, ext: string}[]} TBD
+ * Lists the files of a directory.
+ * @param {string} path - TBD.
+ * @returns {{name: string, ext: string}[]} TBD.
  */
 export const getFileList = (path) => {
   const result = [];
@@ -76,10 +71,9 @@ export const getFileList = (path) => {
 };
 
 /**
- * Lists the directories and files of a directory
- *
- * @param {string} path TBD
- * @returns {object[]} TBD
+ * Lists the directories and files of a directory.
+ * @param {string} path - TBD.
+ * @returns {object[]} TBD.
  */
 export const getDirectoryList = (path) => {
   const result = [];

@@ -8,9 +8,8 @@ import { showConfigCommand } from "./command/showConfigCommand.js";
 import { cleanCommand } from "./command/cleanCommand.js";
 
 /**
- * Runs the CLI Commander program
- *
- * @returns {object} TBD
+ * Runs the CLI Commander program.
+ * @returns {object} TBD.
  */
 export const commanderProgram = () => {
   program

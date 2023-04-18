@@ -1,16 +1,15 @@
 import { writeJson } from "./fileUtil.js";
 
 /**
- * Creates the data file of an audio sprite
- *
- * @param {object} config TBD
- * @param {string} outputPath TBD
- * @param {string} name TBD
- * @param {object[]} durationResults TBD
- * @param {string} durationResults[].name TBD
- * @param {number} durationResults[].duration TBD
- * @param {number} durationResults[].roundedDuration TBD
- * @param {number} durationResults[].padDuration TBD
+ * Creates the data file of an audio sprite.
+ * @param {object} config - TBD.
+ * @param {string} outputPath - TBD.
+ * @param {string} name - TBD.
+ * @param {object[]} durationResults - TBD.
+ * @param {string} durationResults[].name - TBD.
+ * @param {number} durationResults[].duration - TBD.
+ * @param {number} durationResults[].roundedDuration - TBD.
+ * @param {number} durationResults[].padDuration - TBD.
  */
 export const audioSpriteJson = (config, outputPath, name, durationResults) => {
   // collect audio formats

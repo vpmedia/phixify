@@ -3,17 +3,16 @@ import { exec } from "child_process";
 import { getSoxConcatCmd } from "./sox/getSoxConcatCmd.js";
 
 /**
- * Creates an audio sheet file
- *
- * @param {object} config The configuration object reference
- * @param {object[]} durationResults TBD
- * @param {string} durationResults[].name TBD
- * @param {number} durationResults[].duration TBD
- * @param {number} durationResults[].roundedDuration TBD
- * @param {number} durationResults[].padDuration TBD
- * @param {string} inputDir TBD
- * @param {string} outputFile TBD
- * @returns {Promise} TBD
+ * Creates an audio sheet file.
+ * @param {object} config - The configuration object reference.
+ * @param {object[]} durationResults - TBD.
+ * @param {string} durationResults[].name - TBD.
+ * @param {number} durationResults[].duration - TBD.
+ * @param {number} durationResults[].roundedDuration - TBD.
+ * @param {number} durationResults[].padDuration - TBD.
+ * @param {string} inputDir - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {Promise} TBD.
  */
 export async function audioConcat(config, durationResults, inputDir, outputFile) {
   const execPromise = promisify(exec);

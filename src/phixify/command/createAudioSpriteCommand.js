@@ -5,9 +5,8 @@ import { audioConcat } from "../tool/audioConcat.js";
 import { audioSpriteJson } from "../tool/audioSpriteJson.js";
 
 /**
- * Creates a single audio sprite file
- *
- * @param {object} options TBD
+ * Creates a single audio sprite file.
+ * @param {object} options - TBD.
  */
 export const createAudioSpriteCommand = (options) => {
   console.time("Audio Sprite created");

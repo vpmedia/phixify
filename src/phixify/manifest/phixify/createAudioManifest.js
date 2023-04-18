@@ -2,14 +2,13 @@ import { getConfig } from "../../config/getConfig.js";
 import { normalizePath, readJson, writeJson } from "../../tool/fileUtil.js";
 
 /**
- * Create audio manifest containing sound durations
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
- * @param {string} bundleName TBD
- * @param {object} manifestData TBD
+ * Create audio manifest containing sound durations.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
+ * @param {string} bundleName - TBD.
+ * @param {object} manifestData - TBD.
  */
 export const createAudioManifest = (options, bundleName, manifestData) => {
   // working dir

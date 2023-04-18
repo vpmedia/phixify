@@ -4,11 +4,10 @@ import { getSoxInfoCmd } from "./sox/getSoxInfoCmd.js";
 import { getFFInfoCmd } from "./ffmpeg/getFFInfoCmd.js";
 
 /**
- * Gets image information
- *
- * @param {object} config The configuration object reference
- * @param {string} file TBD
- * @returns {Promise} TBD
+ * Gets image information.
+ * @param {object} config - The configuration object reference.
+ * @param {string} file - TBD.
+ * @returns {Promise} TBD.
  */
 export async function audioInfo(config, file) {
   const execPromise = promisify(exec);

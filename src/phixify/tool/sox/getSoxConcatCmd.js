@@ -1,11 +1,10 @@
 /**
- * Creates a sox audio sprite creation command for execution
- *
- * @param {object} config The configuration object reference
- * @param {object[]} durationResults TBD
- * @param {string} inputDir TBD
- * @param {string} outputFile TBD
- * @returns {string} TBD
+ * Creates a sox audio sprite creation command for execution.
+ * @param {object} config - The configuration object reference.
+ * @param {object[]} durationResults - TBD.
+ * @param {string} inputDir - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {string} TBD.
  */
 export const getSoxConcatCmd = (config, durationResults, inputDir, outputFile) => {
   const path = config.cmd.sox.path;

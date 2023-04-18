@@ -4,12 +4,11 @@ import { getPhaserManifestTemplate } from "../manifest/phaser/getPhaserManifestT
 import { getConfig } from "../config/getConfig.js";
 
 /**
- * Command creating all manifest descriptors
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
+ * Command creating all manifest descriptors.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
  */
 export const createPhaserManifestCommand = (options) => {
   const config = getConfig(options);

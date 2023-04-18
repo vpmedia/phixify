@@ -5,13 +5,12 @@ import { getConfig } from "../config/getConfig.js";
 import { createAudioManifest } from "../manifest/phixify/createAudioManifest.js";
 
 /**
- * Command creating all manifest descriptors
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
- * @returns {Promise} TBD
+ * Command creating all manifest descriptors.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
+ * @returns {Promise} TBD.
  */
 export const createPhixifyManifestCommand = (options) => {
   const config = getConfig(options);

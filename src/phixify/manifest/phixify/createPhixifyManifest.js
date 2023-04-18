@@ -3,13 +3,12 @@ import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 import { getPhixifyFileMap } from "./getPhixifyFileMap.js";
 import { getPhixifyFileInfo } from "./getPhixifyFileInfo.js";
 /**
- * Creates a phixify asset manifest bundle
- *
- * @param {object} config The configuration object reference
- * @param {string} bundleName The asset bundle name
- * @param {string} assetPath The URL where the assets will be loaded from
- * @param {string} targetPath The path where the assets are stored
- * @returns {Promise} TBD
+ * Creates a phixify asset manifest bundle.
+ * @param {object} config - The configuration object reference.
+ * @param {string} bundleName - The asset bundle name.
+ * @param {string} assetPath - The URL where the assets will be loaded from.
+ * @param {string} targetPath - The path where the assets are stored.
+ * @returns {Promise} TBD.
  */
 export const createPhixifyManifest = (config, bundleName, assetPath, targetPath) => {
   const manifestData = {};

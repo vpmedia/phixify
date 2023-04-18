@@ -1,11 +1,10 @@
 /**
- * Creates a texture packer command for execution
- *
- * @param {object} config The configuration object reference
- * @param {string} inputDir TBD
- * @param {string} outputSheet TBD
- * @param {string} outputData TBD
- * @returns {string} TBD
+ * Creates a texture packer command for execution.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputDir - TBD.
+ * @param {string} outputSheet - TBD.
+ * @param {string} outputData - TBD.
+ * @returns {string} TBD.
  */
 export const getTexturePackerPackCmd = (config, inputDir, outputSheet, outputData) => {
   const path = config.cmd.texturePacker.path;

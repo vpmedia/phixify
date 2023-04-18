@@ -2,12 +2,11 @@ import { promisify } from "util";
 import { exec } from "child_process";
 
 /**
- * Copies a file
- *
- * @param {object} config The configuration object reference
- * @param {string} inputFile TBD
- * @param {string} outputFile TBD
- * @returns {Promise} TBD
+ * Copies a file.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputFile - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {Promise} TBD.
  */
 export async function fileCopy(config, inputFile, outputFile) {
   const execPromise = promisify(exec);

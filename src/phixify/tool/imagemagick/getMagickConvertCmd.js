@@ -1,10 +1,9 @@
 /**
- * Creates a image magick conversion command for execution
- *
- * @param {object} config The configuration object reference
- * @param {string} inputFile TBD
- * @param {string} outputFile TBD
- * @returns {string} TBD
+ * Creates a image magick conversion command for execution.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputFile - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {string} TBD.
  */
 import { parse } from "path";
 

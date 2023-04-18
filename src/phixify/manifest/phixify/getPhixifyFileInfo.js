@@ -3,14 +3,13 @@ import { imageInfo } from "../../tool/imageInfo.js";
 import { audioInfo } from "../../tool/audioInfo.js";
 
 /**
- * TBD
- *
- * @param {object} config The configuration object reference
- * @param {string} sourcePath TBD
- * @param {object} item TBD
- * @param {string} type TBD
- * @param {object} manifestData TBD
- * @returns {Promise} TBD
+ * TBD.
+ * @param {object} config - The configuration object reference.
+ * @param {string} sourcePath - TBD.
+ * @param {object} item - TBD.
+ * @param {string} type - TBD.
+ * @param {object} manifestData - TBD.
+ * @returns {Promise} TBD.
  */
 export const getPhixifyFileInfo = (config, sourcePath, item, type, manifestData) => {
   const filePath = `${sourcePath}/${item.name}.${item.ext}`;

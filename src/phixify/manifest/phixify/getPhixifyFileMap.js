@@ -2,11 +2,10 @@ import { getFileList } from "../../tool/fileUtil.js";
 import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
 
 /**
- * Returns the file list map for the manifest generator
- *
- * @param {object} config The configuration object reference
- * @param {string} targetPath The path where the assets are stored
- * @returns {object} TBD
+ * Returns the file list map for the manifest generator.
+ * @param {object} config - The configuration object reference.
+ * @param {string} targetPath - The path where the assets are stored.
+ * @returns {object} TBD.
  */
 export const getPhixifyFileMap = (config, targetPath) => {
   const audioSpriteList = getFileList(`${targetPath}${config.dir.audioSprite}`);

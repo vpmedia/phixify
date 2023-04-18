@@ -1,9 +1,8 @@
 /**
- * Creates a image magick identify command for execution
- *
- * @param {object} config The configuration object reference
- * @param {string} file TBD
- * @returns {string} TBD
+ * Creates a image magick identify command for execution.
+ * @param {object} config - The configuration object reference.
+ * @param {string} file - TBD.
+ * @returns {string} TBD.
  */
 import sharp from "sharp";
 

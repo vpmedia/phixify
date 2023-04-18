@@ -4,13 +4,12 @@ import { promisify } from "util";
 import { exec } from "child_process";
 
 /**
- * Resizes an image file to an another file
- *
- * @param {object} config The configuration object reference
- * @param {string} inputFile TBD
- * @param {string} outputFile TBD
- * @param {number} scale TBD
- * @returns {Promise} TBD
+ * Resizes an image file to an another file.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputFile - TBD.
+ * @param {string} outputFile - TBD.
+ * @param {number} scale - TBD.
+ * @returns {Promise} TBD.
  */
 export async function imageResize(config, inputFile, outputFile, scale) {
   if (config.tool.image === "sharp") {

@@ -4,12 +4,11 @@ import { getPixiManifestTemplate } from "../manifest/pixi/getPixiManifestTemplat
 import { getConfig } from "../config/getConfig.js";
 
 /**
- * Command creating all manifest descriptors
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
+ * Command creating all manifest descriptors.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
  */
 export const createPixiManifestCommand = (options) => {
   const config = getConfig(options);

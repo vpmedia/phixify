@@ -3,13 +3,12 @@ import { promisify } from "util";
 import { exec } from "child_process";
 
 /**
- * Creates a sprite sheet file
- *
- * @param {object} config The configuration object reference
- * @param {string} inputDir TBD
- * @param {string} outputSheet TBD
- * @param {string} outputData TBD
- * @returns {Promise} TBD
+ * Creates a sprite sheet file.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputDir - TBD.
+ * @param {string} outputSheet - TBD.
+ * @param {string} outputData - TBD.
+ * @returns {Promise} TBD.
  */
 export async function imagePack(config, inputDir, outputSheet, outputData) {
   const execPromise = promisify(exec);

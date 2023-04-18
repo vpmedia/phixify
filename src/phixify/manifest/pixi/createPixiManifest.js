@@ -7,14 +7,13 @@ import { getPixiBitmapFont } from "./getPixiBitmapFont.js";
 import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET, BITMAP_FONT } from "../const.js";
 
 /**
- * Creates a pixi.js game engine asset manifest bundle
- *
- * @param {object} config The configuration object reference
- * @param {object} manifestData The output manifest object reference
- * @param {string} bundleName The asset bundle name
- * @param {string} assetPath The URL where the assets will be loaded from
- * @param {string} targetPath The path where the assets are stored
- * @returns {object} The output manifest object reference
+ * Creates a pixi.js game engine asset manifest bundle.
+ * @param {object} config - The configuration object reference.
+ * @param {object} manifestData - The output manifest object reference.
+ * @param {string} bundleName - The asset bundle name.
+ * @param {string} assetPath - The URL where the assets will be loaded from.
+ * @param {string} targetPath - The path where the assets are stored.
+ * @returns {object} The output manifest object reference.
  */
 export const createPixiManifest = (config, manifestData, bundleName, assetPath, targetPath) => {
   const manifestGenerators = [

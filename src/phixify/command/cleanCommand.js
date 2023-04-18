@@ -5,13 +5,12 @@ import { getConfig } from "../config/getConfig.js";
 import { getDirectoryList, isFile, normalizePath } from "../tool/fileUtil.js";
 
 /**
- * Cleanup generated files
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
- * @returns {Promise} TBD
+ * Cleanup generated files.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
+ * @returns {Promise} TBD.
  */
 export const cleanCommand = (options) => {
   const config = getConfig(options);

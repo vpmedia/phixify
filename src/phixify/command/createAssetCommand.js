@@ -6,12 +6,11 @@ import { createSound } from "../asset/createSound.js";
 import { createSpriteSheet } from "../asset/createSpriteSheet.js";
 
 /**
- * Command creating all media assets
- *
- * @param {object} config TBD
- * @param {string} bundleName TBD
- * @param {string} targetPath TBD
- * @returns {Promise} TBD
+ * Command creating all media assets.
+ * @param {object} config - TBD.
+ * @param {string} bundleName - TBD.
+ * @param {string} targetPath - TBD.
+ * @returns {Promise} TBD.
  */
 export const createAssetBundle = (config, bundleName, targetPath) => {
   if (config.options.verbose) {
@@ -26,13 +25,12 @@ export const createAssetBundle = (config, bundleName, targetPath) => {
 };
 
 /**
- * Runs the asset file generation command
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
- * @returns {Promise} TBD
+ * Runs the asset file generation command.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
+ * @returns {Promise} TBD.
  */
 export const createAssetCommand = (options) => {
   console.time("Assets created");

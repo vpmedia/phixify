@@ -1,8 +1,7 @@
 /**
- * Returns the manifest descriptor template object
- *
- * @param {object} config The configuration object reference
- * @returns {object} TBD
+ * Returns the manifest descriptor template object.
+ * @param {object} config - The configuration object reference.
+ * @returns {object} TBD.
  */
 export const getPhaserManifestTemplate = (config) => {
   const result = {

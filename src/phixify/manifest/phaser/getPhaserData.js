@@ -2,10 +2,9 @@ import { DATA } from "../const.js";
 import { getFileList } from "../../tool/fileUtil.js";
 
 /**
- * TBD
- *
- * @param {string} ext TBD
- * @returns {string} TBD
+ * TBD.
+ * @param {string} ext - TBD.
+ * @returns {string} TBD.
  */
 const getTypeByExt = (ext) => {
   if (ext === "txt") {
@@ -15,12 +14,11 @@ const getTypeByExt = (ext) => {
 };
 
 /**
- * Creates the data entries for the manifest object
- *
- * @param {object} config The configuration reference
- * @param {string} assetPath The URL where the assets will be loaded from
- * @param {string} targetPath The path where the assets are stored
- * @returns {object[]} The assembled manifest list
+ * Creates the data entries for the manifest object.
+ * @param {object} config - The configuration reference.
+ * @param {string} assetPath - The URL where the assets will be loaded from.
+ * @param {string} targetPath - The path where the assets are stored.
+ * @returns {object[]} The assembled manifest list.
  */
 export const getPhaserData = (config, assetPath, targetPath) => {
   const dir = config.dir[DATA];

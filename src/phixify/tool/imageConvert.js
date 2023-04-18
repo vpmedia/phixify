@@ -4,12 +4,11 @@ import { promisify } from "util";
 import { exec } from "child_process";
 
 /**
- * Converts an image file from one format to another
- *
- * @param {object} config The configuration object reference
- * @param {string} inputFile TBD
- * @param {string} outputFile TBD
- * @returns {Promise} TBD
+ * Converts an image file from one format to another.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputFile - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {Promise} TBD.
  */
 export async function imageConvert(config, inputFile, outputFile) {
   if (config.tool.image === "sharp") {

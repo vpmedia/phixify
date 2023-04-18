@@ -4,12 +4,11 @@ import { getSoxConvertCmd } from "./sox/getSoxConvertCmd.js";
 import { getFFConvertCmd } from "./ffmpeg/getFFConvertCmd.js";
 
 /**
- * Converts an audio file from one format to another
- *
- * @param {object} config The configuration object reference
- * @param {string} inputFile TBD
- * @param {string} outputFile TBD
- * @returns {Promise} TBD
+ * Converts an audio file from one format to another.
+ * @param {object} config - The configuration object reference.
+ * @param {string} inputFile - TBD.
+ * @param {string} outputFile - TBD.
+ * @returns {Promise} TBD.
  */
 export async function audioConvert(config, inputFile, outputFile) {
   const execPromise = promisify(exec);

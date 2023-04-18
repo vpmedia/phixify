@@ -1,10 +1,9 @@
 /**
- * Command creating all manifest descriptors
- *
- * @param {object} options TBD
- * @param {string=} options.configFile - TBD
- * @param {string} options.projectDir - TBD
- * @param {boolean} options.verbose - TBD
+ * Command creating all manifest descriptors.
+ * @param {object} options - TBD.
+ * @param {string} options.configFile - TBD.
+ * @param {string} options.projectDir - TBD.
+ * @param {boolean} options.verbose - TBD.
  */
 import { createPixiManifestCommand } from "./createPixiManifestCommand.js";
 import { createPhaserManifestCommand } from "./createPhaserManifestCommand.js";
