@@ -3,7 +3,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es2022": true
+    "es2022": true,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -16,7 +17,29 @@
     "plugin:jsdoc/recommended",
     "plugin:jest/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "jsdoc": {
+      "contexts": ["any"]
+    }
+  },
   "rules": {
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": true
+        }
+      }
+    ],
     "jsdoc/check-indentation": 1,
     "jsdoc/check-line-alignment": 1,
     "jsdoc/check-syntax": 1,
