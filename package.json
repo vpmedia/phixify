@@ -36,9 +36,9 @@
     "postbuild": "chmod +x ./dist/phixify.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "typecheck": "tsc",
-    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "lint": "eslint \"**/*.{js,ts}\"",
-    "lint-fix": "eslint \"**/*.{js,ts}\" --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "lint-fix": "eslint --fix \"**/*.{js,jsx}\"",
     "lint-staged": "lint-staged",
     "prepack": "npm run build",
     "prepare": "husky install"
