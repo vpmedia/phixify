@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "commander": "^10.0.1",
-    "sharp": "^0.32.0"
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
