@@ -22,9 +22,6 @@
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
-    },
-    "jsdoc": {
-      "mode": "typescript"
     }
   },
   "rules": {
