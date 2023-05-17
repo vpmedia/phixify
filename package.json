@@ -50,7 +50,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
-    "@types/node": "^20.1.5",
+    "@types/node": "^20.1.7",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
@@ -61,7 +61,7 @@
     "jest": "^29.5.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "rollup": "^3.21.8",
+    "rollup": "^3.22.0",
     "typescript": "^5.0.4"
   },
   "engines": {
