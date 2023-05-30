@@ -3,7 +3,7 @@
 # author: Andras Csizmadia <andras@vpmedia.hu>
 # see: https://docs.docker.com/engine/reference/builder
 #
-FROM ubuntu:22.04
+FROM ubuntu:23.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
