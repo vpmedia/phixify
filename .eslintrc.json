@@ -17,13 +17,6 @@
     "plugin:jsdoc/recommended",
     "plugin:jest/recommended"
   ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  },
   "rules": {
     "jsdoc/require-jsdoc": [
       "warn",
