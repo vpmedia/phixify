@@ -49,6 +49,7 @@ export const baseConfig = {
     sound: "sound",
     spriteSheet: "spritesheet",
     spriteSheetSource: "spritesheet-source",
+    svg: "svg",
   },
   asset: {
     image: ["avif", "webp"],
@@ -116,7 +117,7 @@ export const baseConfig = {
   phixify: {
     name: "@vpmedia/phixify",
     url: "https://github.com/vpmedia/phixify",
-    version: "1.4.0",
+    version: "1.5.0",
     copyright: "Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
     timestamp: new Date().getTime().toString(),
   },
