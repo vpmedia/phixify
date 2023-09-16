@@ -6,7 +6,14 @@
 
 .github/
 .husky/
+.vscode/
+.idea/
 asset/
+build/
+coverage/
+deploy/
 dist/
 node_modules/
+public/
+types/
 package-lock.json
