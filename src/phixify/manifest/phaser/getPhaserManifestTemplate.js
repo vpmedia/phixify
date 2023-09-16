@@ -16,7 +16,7 @@ export const getPhaserManifestTemplate = (config) => {
       url: config.phixify.url,
       version: config.phixify.version,
       copyright: config.phixify.copyright,
-      phaserVersion: "3",
+      phaserVersion: '3',
     };
   }
   return result;

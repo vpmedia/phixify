@@ -1,5 +1,5 @@
-import { getConfig } from "../config/getConfig.js";
-import { writeJson } from "../tool/fileUtil.js";
+import { getConfig } from '../config/getConfig.js';
+import { writeJson } from '../tool/fileUtil.js';
 
 /**
  * Creates the programs configuration.
@@ -10,5 +10,5 @@ export const initConfigCommand = (options) => {
   const config = getConfig(options);
   delete config.phixify;
   delete config.options;
-  writeJson(config, config, "./.phixify.json");
+  writeJson(config, config, './.phixify.json');
 };

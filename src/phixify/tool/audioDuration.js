@@ -1,7 +1,7 @@
-import { getSoxDurationCmd } from "./sox/getSoxDurationCmd.js";
-import { getFFDurationCmd } from "./ffmpeg/getFFDurationCmd.js";
-import { promisify } from "util";
-import { exec } from "child_process";
+import { getSoxDurationCmd } from './sox/getSoxDurationCmd.js';
+import { getFFDurationCmd } from './ffmpeg/getFFDurationCmd.js';
+import { promisify } from 'util';
+import { exec } from 'child_process';
 
 /**
  * Returns the duration of a sound file.
@@ -16,10 +16,10 @@ export async function audioDuration(config, inputDir, item) {
   const execPromise = promisify(exec);
   const promise = new Promise((resolve) => {
     const cmd =
-      config.tool.sound === "sox"
+      config.tool.sound === 'sox'
         ? getSoxDurationCmd(config, `${inputDir}${item.name}.${item.ext}`)
         : getFFDurationCmd(config, `${inputDir}${item.name}.${item.ext}`);
-    const cmdResult = execPromise(cmd, { stdio: "pipe" });
+    const cmdResult = execPromise(cmd, { stdio: 'pipe' });
     // wait for duration to be calculated
     cmdResult.then((durationValue) => {
       // calculate durations

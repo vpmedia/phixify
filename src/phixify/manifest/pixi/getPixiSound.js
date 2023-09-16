@@ -1,5 +1,5 @@
-import { SOUND } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { SOUND } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * Creates the sound entries for the manifest object.

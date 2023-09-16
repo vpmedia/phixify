@@ -1,5 +1,5 @@
-import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from "fs";
-import { parse } from "path";
+import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from 'fs';
+import { parse } from 'path';
 
 /**
  * Check for a path if exists in the filesystem.
@@ -16,8 +16,8 @@ export const isFile = (path) => {
  * @returns {string} TBD.
  */
 export const normalizePath = (path) => {
-  const normalizedPath = path.trim().replace("//", "/");
-  return normalizedPath.endsWith("/") ? normalizedPath : `${normalizedPath}/`;
+  const normalizedPath = path.trim().replace('//', '/');
+  return normalizedPath.endsWith('/') ? normalizedPath : `${normalizedPath}/`;
 };
 
 /**
@@ -44,7 +44,7 @@ export const writeJson = (config, content, path) => {
     mkdirSync(parsedPath.dir);
   }
   if (config.options.verbose) {
-    console.log("Writing JSON:", path);
+    console.log('Writing JSON:', path);
   }
   writeFileSync(path, JSON.stringify(content, null, 2));
 };

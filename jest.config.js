@@ -1,6 +1,6 @@
 /** @type {import('jest').Config} */
 const config = {
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   collectCoverage: true,
   verbose: false,
 };

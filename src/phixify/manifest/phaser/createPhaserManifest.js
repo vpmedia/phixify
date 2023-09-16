@@ -1,11 +1,11 @@
-import { getPhaserAudioSprite } from "./getPhaserAudioSprite.js";
-import { getPhaserData } from "./getPhaserData.js";
-import { getPhaserImage } from "./getPhaserImage.js";
-import { getPhaserSound } from "./getPhaserSound.js";
-import { getPhaserSpriteSheet } from "./getPhaserSpriteSheet.js";
-import { getPhaserSvg } from "./getPhaserSvg.js";
-import { getPhaserBitmapFont } from "./getPhaserBitmapFont.js";
-import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET, BITMAP_FONT, SVG } from "../const.js";
+import { getPhaserAudioSprite } from './getPhaserAudioSprite.js';
+import { getPhaserData } from './getPhaserData.js';
+import { getPhaserImage } from './getPhaserImage.js';
+import { getPhaserSound } from './getPhaserSound.js';
+import { getPhaserSpriteSheet } from './getPhaserSpriteSheet.js';
+import { getPhaserSvg } from './getPhaserSvg.js';
+import { getPhaserBitmapFont } from './getPhaserBitmapFont.js';
+import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET, BITMAP_FONT, SVG } from '../const.js';
 
 /**
  * Generates a Phaser game engine asset pack manifest.

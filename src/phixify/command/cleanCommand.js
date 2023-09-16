@@ -1,8 +1,8 @@
-import { rm } from "fs/promises";
-import { readdirSync, existsSync } from "fs";
-import { parse } from "path";
-import { getConfig } from "../config/getConfig.js";
-import { getDirectoryList, isFile, normalizePath } from "../tool/fileUtil.js";
+import { rm } from 'fs/promises';
+import { readdirSync, existsSync } from 'fs';
+import { parse } from 'path';
+import { getConfig } from '../config/getConfig.js';
+import { getDirectoryList, isFile, normalizePath } from '../tool/fileUtil.js';
 
 /**
  * Cleanup generated files.
@@ -14,13 +14,13 @@ import { getDirectoryList, isFile, normalizePath } from "../tool/fileUtil.js";
  */
 export const cleanCommand = (options) => {
   const config = getConfig(options);
-  if (options.projectDir === "" && config.flag.multiProject) {
-    console.error("Missing project-dir option");
+  if (options.projectDir === '' && config.flag.multiProject) {
+    console.error('Missing project-dir option');
     return null;
   }
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   if (!isFile(targetPath)) {
-    console.error("Target path does not exist", targetPath);
+    console.error('Target path does not exist', targetPath);
     return null;
   }
   const promises = [];
@@ -41,15 +41,15 @@ const cleanTarget = (options, targetPath) => {
   const promises = [];
   const spriteSheetPath = normalizePath(`${targetPath}${config.dir.spriteSheet}`);
   if (existsSync(spriteSheetPath)) {
-    console.error("Deleting:", spriteSheetPath);
+    console.error('Deleting:', spriteSheetPath);
     promises.push(rm(spriteSheetPath, { recursive: true }));
   }
   const audioSpritePath = normalizePath(`${targetPath}${config.dir.audioSprite}`);
   if (existsSync(audioSpritePath)) {
-    console.error("Deleting:", audioSpritePath);
+    console.error('Deleting:', audioSpritePath);
     promises.push(rm(audioSpritePath, { recursive: true }));
   }
-  const deleteExts = [".avif", ".webp", ".mp3", ".ogg"];
+  const deleteExts = ['.avif', '.webp', '.mp3', '.ogg'];
   readdirSync(targetPath, { withFileTypes: true }).forEach((item) => {
     if (item.isDirectory() && item.name !== config.dir.spriteSheet && item.name !== config.dir.audioSprite) {
       readdirSync(`${targetPath}${item.name}`, { withFileTypes: true }).forEach((subItem) => {

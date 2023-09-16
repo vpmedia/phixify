@@ -1,4 +1,4 @@
-import { writeJson } from "./fileUtil.js";
+import { writeJson } from './fileUtil.js';
 
 /**
  * Creates the data file of an audio sprite.

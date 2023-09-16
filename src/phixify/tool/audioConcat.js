@@ -1,6 +1,6 @@
-import { promisify } from "util";
-import { exec } from "child_process";
-import { getSoxConcatCmd } from "./sox/getSoxConcatCmd.js";
+import { promisify } from 'util';
+import { exec } from 'child_process';
+import { getSoxConcatCmd } from './sox/getSoxConcatCmd.js';
 
 /**
  * Creates an audio sheet file.
@@ -17,9 +17,9 @@ import { getSoxConcatCmd } from "./sox/getSoxConcatCmd.js";
 export async function audioConcat(config, durationResults, inputDir, outputFile) {
   const execPromise = promisify(exec);
   const cmd = getSoxConcatCmd(config, durationResults, inputDir, outputFile);
-  const cmdResult = execPromise(cmd, { stdio: "pipe" });
+  const cmdResult = execPromise(cmd, { stdio: 'pipe' });
   if (config.options.verbose) {
-    console.log("Running command:", cmd);
+    console.log('Running command:', cmd);
   }
   if (config.options.verbose) {
     cmdResult.then((result) => {

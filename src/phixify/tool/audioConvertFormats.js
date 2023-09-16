@@ -1,4 +1,4 @@
-import { audioConvert } from "./audioConvert.js";
+import { audioConvert } from './audioConvert.js';
 
 /**
  * Converts an audio file from one format to many.

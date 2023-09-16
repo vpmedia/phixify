@@ -1,7 +1,7 @@
-import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPhaserManifest } from "../manifest/phaser/createPhaserManifest.js";
-import { getPhaserManifestTemplate } from "../manifest/phaser/getPhaserManifestTemplate.js";
-import { getConfig } from "../config/getConfig.js";
+import { getDirectoryList, normalizePath, writeJson } from '../tool/fileUtil.js';
+import { createPhaserManifest } from '../manifest/phaser/createPhaserManifest.js';
+import { getPhaserManifestTemplate } from '../manifest/phaser/getPhaserManifestTemplate.js';
+import { getConfig } from '../config/getConfig.js';
 
 /**
  * Command creating all manifest descriptors.
@@ -23,7 +23,7 @@ export const createPhaserManifestCommand = (options) => {
       createPhaserManifest(config, manifestData, bundle.name, bundleAssetPath, bundleTargetPath);
     });
   } else {
-    createPhaserManifest(config, manifestData, "main", assetPath, targetPath);
+    createPhaserManifest(config, manifestData, 'main', assetPath, targetPath);
   }
   writeJson(config, manifestData, `${targetPath}${config.output.phaser}`);
 };

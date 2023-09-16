@@ -1,13 +1,13 @@
-import { nodeResolve } from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import { readFileSync } from "node:fs";
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import { readFileSync } from 'node:fs';
 
 // Use import.meta.url to make the path relative to the current source file instead of process.cwd()
-const packageFile = readFileSync(new URL("./package.json", import.meta.url));
+const packageFile = readFileSync(new URL('./package.json', import.meta.url));
 const pkg = JSON.parse(packageFile.toString());
 
-const projectName = "phixify";
-const compiled = new Date().toUTCString().replace(/GMT/g, "UTC");
+const projectName = 'phixify';
+const compiled = new Date().toUTCString().replace(/GMT/g, 'UTC');
 
 const banner = [
   `#!/usr/bin/env node`,
@@ -20,17 +20,17 @@ const banner = [
   ` * @see ${pkg.homepage}`,
   ` * @generated ${compiled}`,
   ` */`,
-].join("\n");
+].join('\n');
 
 export default {
-  input: "src/index.js",
+  input: 'src/index.js',
   output: [
     {
       banner,
       name: pkg.name,
       file: `dist/${projectName}.js`,
-      format: "es",
-      exports: "named",
+      format: 'es',
+      exports: 'named',
     },
   ],
   external: Object.keys(pkg.dependencies),

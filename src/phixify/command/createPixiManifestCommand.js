@@ -1,7 +1,7 @@
-import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPixiManifest } from "../manifest/pixi/createPixiManifest.js";
-import { getPixiManifestTemplate } from "../manifest/pixi/getPixiManifestTemplate.js";
-import { getConfig } from "../config/getConfig.js";
+import { getDirectoryList, normalizePath, writeJson } from '../tool/fileUtil.js';
+import { createPixiManifest } from '../manifest/pixi/createPixiManifest.js';
+import { getPixiManifestTemplate } from '../manifest/pixi/getPixiManifestTemplate.js';
+import { getConfig } from '../config/getConfig.js';
 
 /**
  * Command creating all manifest descriptors.
@@ -23,7 +23,7 @@ export const createPixiManifestCommand = (options) => {
       createPixiManifest(config, manifestData, bundle.name, bundleAssetPath, bundleTargetPath);
     });
   } else {
-    createPixiManifest(config, manifestData, "main", assetPath, targetPath);
+    createPixiManifest(config, manifestData, 'main', assetPath, targetPath);
   }
   writeJson(config, manifestData, `${targetPath}${config.output.pixi}`);
 };

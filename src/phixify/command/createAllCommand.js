@@ -1,5 +1,5 @@
-import { createAssetCommand } from "./createAssetCommand.js";
-import { createManifestCommand } from "./createManifestCommand.js";
+import { createAssetCommand } from './createAssetCommand.js';
+import { createManifestCommand } from './createManifestCommand.js';
 
 /**
  * Runs the asset and manifest generation commands.

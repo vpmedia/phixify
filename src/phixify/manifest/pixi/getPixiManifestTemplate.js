@@ -14,7 +14,7 @@ export const getPixiManifestTemplate = (config) => {
       url: config.phixify.url,
       version: config.phixify.version,
       copyright: config.phixify.copyright,
-      pixiVersion: "7",
+      pixiVersion: '7',
     };
   }
   return result;

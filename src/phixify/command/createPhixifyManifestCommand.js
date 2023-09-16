@@ -1,8 +1,8 @@
-import { getDirectoryList, normalizePath, writeJson } from "../tool/fileUtil.js";
-import { createPhixifyManifest } from "../manifest/phixify/createPhixifyManifest.js";
-import { getPhixifyManifestTemplate } from "../manifest/phixify/getPhixifyManifestTemplate.js";
-import { getConfig } from "../config/getConfig.js";
-import { createAudioManifest } from "../manifest/phixify/createAudioManifest.js";
+import { getDirectoryList, normalizePath, writeJson } from '../tool/fileUtil.js';
+import { createPhixifyManifest } from '../manifest/phixify/createPhixifyManifest.js';
+import { getPhixifyManifestTemplate } from '../manifest/phixify/getPhixifyManifestTemplate.js';
+import { getConfig } from '../config/getConfig.js';
+import { createAudioManifest } from '../manifest/phixify/createAudioManifest.js';
 
 /**
  * Command creating all manifest descriptors.
@@ -27,7 +27,7 @@ export const createPhixifyManifestCommand = (options) => {
       promises.push(promise);
     });
   } else {
-    const promise = createPhixifyManifest(config, "main", assetPath, targetPath);
+    const promise = createPhixifyManifest(config, 'main', assetPath, targetPath);
     promises.push(promise);
   }
   return Promise.all(promises).then((results) => {

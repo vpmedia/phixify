@@ -1,5 +1,5 @@
-import { SVG } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { SVG } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * Creates the svg entries for the manifest object.

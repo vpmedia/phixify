@@ -1,4 +1,4 @@
-import { getConfig } from "../config/getConfig.js";
+import { getConfig } from '../config/getConfig.js';
 
 /**
  * Displays the current program configuration.

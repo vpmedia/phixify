@@ -1,5 +1,5 @@
-import { SVG } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { SVG } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * TBD.
@@ -7,8 +7,8 @@ import { getFileList } from "../../tool/fileUtil.js";
  * @returns {string} TBD.
  */
 const getTypeByExt = (ext) => {
-  if (ext === "svg") {
-    return "svg";
+  if (ext === 'svg') {
+    return 'svg';
   }
   return ext;
 };

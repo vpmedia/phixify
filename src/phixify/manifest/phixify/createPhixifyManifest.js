@@ -1,7 +1,7 @@
-import { statSync } from "fs";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
-import { getPhixifyFileMap } from "./getPhixifyFileMap.js";
-import { getPhixifyFileInfo } from "./getPhixifyFileInfo.js";
+import { statSync } from 'fs';
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from '../const.js';
+import { getPhixifyFileMap } from './getPhixifyFileMap.js';
+import { getPhixifyFileInfo } from './getPhixifyFileInfo.js';
 /**
  * Creates a phixify asset manifest bundle.
  * @param {object} config - The configuration object reference.
@@ -25,7 +25,7 @@ export const createPhixifyManifest = (config, bundleName, assetPath, targetPath)
         size: fileStat.size,
         modified: fileStat.mtimeMs,
       };
-      if (item.ext !== "json") {
+      if (item.ext !== 'json') {
         const promise = getPhixifyFileInfo(config, sourcePath, item, type, manifestData);
         promises.push(promise);
       }

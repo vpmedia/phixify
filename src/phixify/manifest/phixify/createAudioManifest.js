@@ -1,5 +1,5 @@
-import { getConfig } from "../../config/getConfig.js";
-import { normalizePath, readJson, writeJson } from "../../tool/fileUtil.js";
+import { getConfig } from '../../config/getConfig.js';
+import { normalizePath, readJson, writeJson } from '../../tool/fileUtil.js';
 
 /**
  * Create audio manifest containing sound durations.
@@ -14,7 +14,7 @@ export const createAudioManifest = (options, bundleName, manifestData) => {
   // working dir
   const config = getConfig(options);
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
-  const bundleDir = config.flag.multiBundle ? `${bundleName}/` : "";
+  const bundleDir = config.flag.multiBundle ? `${bundleName}/` : '';
   // output template
   const soundData = {
     sound: {},

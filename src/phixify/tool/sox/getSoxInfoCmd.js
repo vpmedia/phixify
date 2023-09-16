@@ -6,6 +6,6 @@
  */
 export const getSoxInfoCmd = (config, file) => {
   const path = config.cmd.sox.path;
-  const opts = "-n stat";
+  const opts = '-n stat';
   return `${path} ${file} ${opts}`;
 };

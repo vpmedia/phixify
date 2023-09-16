@@ -1,5 +1,5 @@
-import { normalizePath } from "./fileUtil.js";
+import { normalizePath } from './fileUtil.js';
 
-test("tests normalizePath", () => {
-  expect(normalizePath(" ./test/dir ")).toBe("./test/dir/");
+test('tests normalizePath', () => {
+  expect(normalizePath(' ./test/dir ')).toBe('./test/dir/');
 });

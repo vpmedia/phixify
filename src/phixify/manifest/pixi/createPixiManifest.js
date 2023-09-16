@@ -1,11 +1,11 @@
-import { getPixiAudioSprite } from "./getPixiAudioSprite.js";
-import { getPixiBitmapFont } from "./getPixiBitmapFont.js";
-import { getPixiData } from "./getPixiData.js";
-import { getPixiImage } from "./getPixiImage.js";
-import { getPixiSound } from "./getPixiSound.js";
-import { getPixiSpriteSheet } from "./getPixiSpriteSheet.js";
-import { getPixiSvg } from "./getPixiSvg.js";
-import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET, BITMAP_FONT, SVG } from "../const.js";
+import { getPixiAudioSprite } from './getPixiAudioSprite.js';
+import { getPixiBitmapFont } from './getPixiBitmapFont.js';
+import { getPixiData } from './getPixiData.js';
+import { getPixiImage } from './getPixiImage.js';
+import { getPixiSound } from './getPixiSound.js';
+import { getPixiSpriteSheet } from './getPixiSpriteSheet.js';
+import { getPixiSvg } from './getPixiSvg.js';
+import { AUDIO_SPRITE, DATA, IMAGE, SOUND, SPRITE_SHEET, BITMAP_FONT, SVG } from '../const.js';
 
 /**
  * Creates a pixi.js game engine asset manifest bundle.

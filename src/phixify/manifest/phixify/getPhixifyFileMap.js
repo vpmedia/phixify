@@ -1,5 +1,5 @@
-import { getFileList } from "../../tool/fileUtil.js";
-import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from "../const.js";
+import { getFileList } from '../../tool/fileUtil.js';
+import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from '../const.js';
 
 /**
  * Returns the file list map for the manifest generator.
@@ -15,7 +15,7 @@ export const getPhixifyFileMap = (config, targetPath) => {
     return (
       // tricky: filter out sprite-sheet data variants for different formats used by pixi.js
       // sprite_data.png.json, sprite_data.webp.json, ...
-      !item.name.endsWith(".avif") && !item.name.endsWith(".png") && !item.name.endsWith(".webp")
+      !item.name.endsWith('.avif') && !item.name.endsWith('.png') && !item.name.endsWith('.webp')
     );
   });
   const listMap = {};

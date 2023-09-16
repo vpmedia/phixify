@@ -1,5 +1,5 @@
-import { AUDIO_SPRITE } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { AUDIO_SPRITE } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * Creates the audio sprite entries for the manifest object.
@@ -19,7 +19,7 @@ export const getPixiAudioSprite = (config, assetPath, targetPath) => {
   const result = [];
   // json
   list
-    .filter((value) => value.ext === "json")
+    .filter((value) => value.ext === 'json')
     .forEach((value) => {
       result.push({
         name: `${value.name}_data`,
@@ -29,7 +29,7 @@ export const getPixiAudioSprite = (config, assetPath, targetPath) => {
   // audio
   const map = {};
   list
-    .filter((value) => value.ext !== "json")
+    .filter((value) => value.ext !== 'json')
     .forEach((value) => {
       map[value.name] = map[value.name] || [];
       map[value.name].push(value.ext);

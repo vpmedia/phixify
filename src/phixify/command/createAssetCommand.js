@@ -1,9 +1,9 @@
-import { getDirectoryList, isFile, normalizePath } from "../tool/fileUtil.js";
-import { getConfig } from "../config/getConfig.js";
-import { createAudioSprite } from "../asset/createAudioSprite.js";
-import { createImage } from "../asset/createImage.js";
-import { createSound } from "../asset/createSound.js";
-import { createSpriteSheet } from "../asset/createSpriteSheet.js";
+import { getDirectoryList, isFile, normalizePath } from '../tool/fileUtil.js';
+import { getConfig } from '../config/getConfig.js';
+import { createAudioSprite } from '../asset/createAudioSprite.js';
+import { createImage } from '../asset/createImage.js';
+import { createSound } from '../asset/createSound.js';
+import { createSpriteSheet } from '../asset/createSpriteSheet.js';
 
 /**
  * Command creating all media assets.
@@ -14,7 +14,7 @@ import { createSpriteSheet } from "../asset/createSpriteSheet.js";
  */
 export const createAssetBundle = (config, bundleName, targetPath) => {
   if (config.options.verbose) {
-    console.log("Creating asset bundle:", bundleName, targetPath);
+    console.log('Creating asset bundle:', bundleName, targetPath);
   }
   const audioSpriteResult = createAudioSprite(config, targetPath);
   const imageResult = createImage(config, targetPath);
@@ -33,19 +33,19 @@ export const createAssetBundle = (config, bundleName, targetPath) => {
  * @returns {Promise} TBD.
  */
 export const createAssetCommand = (options) => {
-  console.time("Assets created");
+  console.time('Assets created');
   const config = getConfig(options);
-  if (options.projectDir === "" && config.multiProject) {
-    console.error("Missing project-dir option");
+  if (options.projectDir === '' && config.multiProject) {
+    console.error('Missing project-dir option');
     return null;
   }
   const targetPath = normalizePath(`${config.basePath}${options.projectDir}`);
   if (!isFile(targetPath)) {
-    console.error("Target path does not exist", targetPath);
+    console.error('Target path does not exist', targetPath);
     return null;
   }
   if (options.verbose) {
-    console.log("Creating assets at:", targetPath);
+    console.log('Creating assets at:', targetPath);
   }
   const promises = [];
   if (config.flag.multiBundle) {
@@ -55,12 +55,12 @@ export const createAssetCommand = (options) => {
       promises.push(createAssetResult);
     });
   } else {
-    const createAssetResult = createAssetBundle(config, "main", targetPath);
+    const createAssetResult = createAssetBundle(config, 'main', targetPath);
     promises.push(createAssetResult);
   }
   const createAllResult = Promise.all(promises);
   createAllResult.then(() => {
-    console.timeEnd("Assets created");
+    console.timeEnd('Assets created');
   });
   return createAllResult;
 };

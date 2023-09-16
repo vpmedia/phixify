@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { commanderProgram } from "./phixify/commanderProgram.js";
+import { commanderProgram } from './phixify/commanderProgram.js';
 
 commanderProgram();

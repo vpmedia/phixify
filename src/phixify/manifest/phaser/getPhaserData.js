@@ -1,5 +1,5 @@
-import { DATA } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { DATA } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * TBD.
@@ -7,8 +7,8 @@ import { getFileList } from "../../tool/fileUtil.js";
  * @returns {string} TBD.
  */
 const getTypeByExt = (ext) => {
-  if (ext === "txt") {
-    return "text";
+  if (ext === 'txt') {
+    return 'text';
   }
   return ext;
 };

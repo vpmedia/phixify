@@ -1,5 +1,5 @@
-import { DATA } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { DATA } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * Creates the data entries for the manifest object.

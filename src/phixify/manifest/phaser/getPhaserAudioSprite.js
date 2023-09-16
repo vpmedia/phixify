@@ -1,5 +1,5 @@
-import { AUDIO_SPRITE } from "../const.js";
-import { getFileList } from "../../tool/fileUtil.js";
+import { AUDIO_SPRITE } from '../const.js';
+import { getFileList } from '../../tool/fileUtil.js';
 
 /**
  * Creates the audio sprite entries for the manifest object.
@@ -24,11 +24,11 @@ export const getPhaserAudioSprite = (config, assetPath, targetPath) => {
   });
   Object.entries(map).forEach(([key, value]) => {
     const audioURL = value
-      .filter((ext) => ext !== "json")
+      .filter((ext) => ext !== 'json')
       .sort(sortFunc)
       .map((ext) => `${path}${key}.${ext}`);
     const jsonURL = `${path}${key}.json`;
-    result.push({ type: "audioSprite", key, audioURL, jsonURL });
+    result.push({ type: 'audioSprite', key, audioURL, jsonURL });
   });
   return result;
 };
