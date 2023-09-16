@@ -4,6 +4,7 @@
 # see: https://git-scm.com/docs/gitignore
 #
 
+coverage/
 /asset
 /dist
 /node_modules
