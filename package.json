@@ -37,8 +37,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "typecheck": "tsc",
     "format": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
-    "lint": "eslint \"**/*.{js,jsx}\"",
-    "lint-fix": "eslint --fix \"**/*.{js,jsx}\"",
+    "lint": "eslint --fix \"**/*.{js,jsx}\"",
     "lint-staged": "lint-staged",
     "prepack": "npm run build",
     "prepare": "husky install"
@@ -48,6 +47,7 @@
     "sharp": "^0.32.5"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@types/node": "^20.6.2",
