@@ -65,6 +65,11 @@
     "rollup": "^3.29.2",
     "typescript": "^5.2.2"
   },
+  "browserslist": [
+    "> 1%",
+    "not dead",
+    "not op_mini all"
+  ],
   "engines": {
     "npm": ">=9.0.0",
     "node": ">=19.0.0"
