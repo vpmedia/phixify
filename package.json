@@ -50,8 +50,8 @@
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^25.0.5",
     "@rollup/plugin-node-resolve": "^15.2.2",
-    "@types/node": "^20.8.2",
-    "eslint": "^8.50.0",
+    "@types/node": "^20.8.3",
+    "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jest": "^27.4.2",
@@ -62,7 +62,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
-    "rollup": "^4.0.0",
+    "rollup": "^4.0.2",
     "typescript": "^5.2.2"
   },
   "browserslist": [
