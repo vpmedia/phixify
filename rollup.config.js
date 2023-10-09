@@ -23,6 +23,9 @@ const banner = [
   ` */`,
 ].join('\n');
 
+const external = Object.keys(pkg.dependencies);
+external.push('node_modules');
+
 export default {
   input: 'src/index.js',
   output: [
@@ -34,6 +37,6 @@ export default {
       exports: 'named',
     },
   ],
-  external: ['/node_modules/'],
+  external,
   plugins: [nodeResolve(), commonjs(), json()],
 };
