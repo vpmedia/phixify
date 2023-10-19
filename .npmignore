@@ -15,12 +15,12 @@ src/
 .eslintrc.json
 .gitattributes
 .gitignore
-.lintstagedrc.json
+lint-staged.config.js
 .npmignore
 .npmrc
 .phixify.json
 .prettierignore
-.prettierrc.json
+prettier.config.js
 bitbucket-pipelines.yml
 docker-run.sh
 Dockerfile
