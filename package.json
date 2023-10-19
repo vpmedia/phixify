@@ -34,7 +34,7 @@
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rollup -c",
     "postbuild": "chmod +x ./dist/phixify.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
     "typecheck": "tsc",
     "format": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "lint": "eslint --fix \"**/*.{js,jsx}\"",
@@ -51,6 +51,7 @@
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/jest": "^29.5.6",
     "@types/node": "^20.8.7",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
@@ -61,7 +62,7 @@
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.1",
     "prettier": "^3.0.3",
     "rollup": "^4.1.4",
     "typescript": "^5.2.2"
@@ -72,7 +73,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "npm": ">=9.0.0",
-    "node": ">=19.0.0"
+    "npm": ">=8.0.0",
+    "node": ">=18.0.0"
   }
 }
