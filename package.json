@@ -38,7 +38,9 @@
     "typecheck": "tsc",
     "format": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
     "lint": "eslint --fix \"**/*.{js,jsx}\"",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "lefthook:install": "lefthook install",
+    "lefthook:uninstall": "lefthook uninstall"
   },
   "dependencies": {
     "@rollup/plugin-json": "^6.0.1",
