@@ -5,7 +5,17 @@
 pre-commit:
   parallel: false
   commands:
-    lint:
+    lint_yaml:
+      glob: "*.{yml,yaml}"
+      run: |
+        set -e
+        yq 'true' {staged_files} > /dev/null
+    lint_json:
+      glob: "*.{json}"
+      run: |
+        set -e
+        jq empty {staged_files}
+    lint_js:
       glob: "*.{js,ts,jsx,tsx}"
       run: |
         set -e
