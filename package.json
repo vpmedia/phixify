@@ -45,23 +45,23 @@
   "dependencies": {
     "@rollup/plugin-json": "^6.1.0",
     "commander": "^11.1.0",
-    "sharp": "^0.33.1"
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jest": "^29.5.11",
-    "@types/node": "^20.10.8",
+    "@types/node": "^20.11.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^27.6.2",
+    "eslint-plugin-jest": "^27.6.3",
     "eslint-plugin-jsdoc": "^48.0.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lefthook": "^1.5.5",
-    "prettier": "^3.1.1",
-    "rollup": "^4.9.4",
+    "lefthook": "^1.5.6",
+    "prettier": "^3.2.2",
+    "rollup": "^4.9.5",
     "typescript": "^5.3.3"
   },
   "browserslist": [
