@@ -19,5 +19,4 @@ pre-commit:
       glob: "*.{js,ts,jsx,tsx}"
       run: |
         set -e
-        ./node_modules/.bin/eslint --fix {staged_files}
-        git add {staged_files} &> /dev/null || true
+        ./node_modules/.bin/eslint {staged_files}
