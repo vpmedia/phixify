@@ -33,7 +33,7 @@ jobs:
       - name: Slack notification
         # https://github.com/slackapi/slack-github-action
         id: slack
-        uses: slackapi/slack-github-action@v1.24.0
+        uses: slackapi/slack-github-action@v1.25.0
         with:
           channel-id: "dev-github"
           slack-message: "${{ github.repository }} - ${{ github.workflow }} workflow is ${{ job.status }} for ${{ github.base_ref || github.ref_name }} branch\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
