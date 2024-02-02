@@ -1,6 +1,6 @@
 {
   "name": "@vpmedia/phixify",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Phaser and Pixi.js game engine asset and manifest command line generator",
   "author": "Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)",
   "license": "MIT",
@@ -51,8 +51,8 @@
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.15",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.16",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.6.3",
