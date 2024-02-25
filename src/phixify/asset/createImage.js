@@ -36,7 +36,7 @@ export async function createImage(config, baseDir) {
       });
     });
   fileList
-    .filter((item) => item.ext === "png" && (!resolutionRegExp.test(item.name) || item.name.includes(sourceResolutionName)))
+    .filter((item) => item.ext === "png" && (!resolutionRegExp.test(item.name) || item.name.includes(sourceResolutionName)))
     .forEach((item) => {
       const inputFile = `${targetPath}${item.name}.${item.ext}`;
       formats.forEach((ext) => {
