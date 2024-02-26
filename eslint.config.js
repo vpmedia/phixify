@@ -1,3 +1,4 @@
+/* eslint n/no-unpublished-import: 0 */
 import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
@@ -55,6 +56,7 @@ export default [
       ...js.configs.recommended.rules,
       ...jsdocPlugin.configs['flat/recommended'].rules,
       ...importPlugin.configs.recommended.rules,
+      ...nodePlugin.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'prefer-arrow-callback': 'warn',
       'prefer-template': 'warn',
