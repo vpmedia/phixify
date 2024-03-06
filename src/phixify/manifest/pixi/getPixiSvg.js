@@ -1,5 +1,5 @@
-import { SVG } from '../const.js';
 import { getFileList } from '../../tool/fileUtil.js';
+import { SVG } from '../const.js';
 
 /**
  * Creates the svg entries for the manifest object.
@@ -14,8 +14,8 @@ export const getPixiSvg = (config, assetPath, targetPath) => {
   const list = getFileList(`${targetPath}${dir}`);
   const result = [];
   list.forEach((value) => {
-    const srcs = `${path}${value.name}.${value.ext}`;
-    result.push({ name: `${value.name}.${value.ext}`, srcs });
+    const src = `${path}${value.name}.${value.ext}`;
+    result.push({ alias: `${value.name}.${value.ext}`, src });
   });
   return result;
 };

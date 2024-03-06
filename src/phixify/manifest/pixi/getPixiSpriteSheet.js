@@ -1,5 +1,5 @@
-import { SPRITE_SHEET } from '../const.js';
 import { getFileList } from '../../tool/fileUtil.js';
+import { SPRITE_SHEET } from '../const.js';
 
 /**
  * Creates the sprite sheet entries for the manifest object.
@@ -44,8 +44,8 @@ export const getPixiSpriteSheet = (config, assetPath, targetPath) => {
   Object.entries(map).forEach(([key, value]) => {
     const res = value.res.length ? `{${value.res.toString()}}` : '';
     const ext = value.ext.sort(sortFunc).toString();
-    const srcs = `${path}${key}${res}.{${ext}}.json`;
-    result.push({ name: key, srcs });
+    const src = `${path}${key}${res}.{${ext}}.json`;
+    result.push({ alias: key, src });
   });
   return result;
 };

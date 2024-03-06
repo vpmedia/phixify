@@ -1,5 +1,5 @@
-import { BITMAP_FONT } from '../const.js';
 import { getFileList } from '../../tool/fileUtil.js';
+import { BITMAP_FONT } from '../const.js';
 
 /**
  * Creates the bitmap font entries for the manifest object.
@@ -16,8 +16,8 @@ export const getPixiBitmapFont = (config, assetPath, targetPath) => {
   list
     .filter((value) => value.ext === 'xml' || value.ext === 'fnt')
     .forEach((value) => {
-      const srcs = `${path}${value.name}.${value.ext}`;
-      result.push({ name: value.name, srcs });
+      const src = `${path}${value.name}.${value.ext}`;
+      result.push({ alias: value.name, src });
     });
   return result;
 };

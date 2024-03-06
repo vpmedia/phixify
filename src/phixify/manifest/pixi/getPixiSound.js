@@ -1,5 +1,5 @@
-import { SOUND } from '../const.js';
 import { getFileList } from '../../tool/fileUtil.js';
+import { SOUND } from '../const.js';
 
 /**
  * Creates the sound entries for the manifest object.
@@ -23,8 +23,8 @@ export const getPixiSound = (config, assetPath, targetPath) => {
     map[value.name].push(value.ext);
   });
   Object.entries(map).forEach(([key, value]) => {
-    const srcs = `${path}${key}.{${value.sort(sortFunc).toString()}}`;
-    result.push({ name: key, srcs });
+    const src = `${path}${key}.{${value.sort(sortFunc).toString()}}`;
+    result.push({ alias: key, src });
   });
   return result;
 };
