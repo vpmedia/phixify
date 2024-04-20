@@ -64,7 +64,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lefthook": "^1.6.10",
     "prettier": "^3.2.5",
-    "rollup": "^4.14.3",
+    "rollup": "^4.15.0",
     "typescript": "^5.4.5"
   },
   "browserslist": [
