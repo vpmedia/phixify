@@ -68,7 +68,7 @@
     "typescript": "^5.4.5"
   },
   "browserslist": [
-    "> 1%",
+    "> 0.5%",
     "not dead",
     "not op_mini all"
   ],
