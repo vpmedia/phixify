@@ -54,7 +54,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.8",
     "eslint": "^9.5.0",
-    "eslint-plugin-jsdoc": "^48.2.13",
+    "eslint-plugin-jsdoc": "^48.3.0",
     "eslint-plugin-n": "^17.9.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.6.0",
