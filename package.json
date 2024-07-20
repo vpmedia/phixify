@@ -54,7 +54,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.11",
     "eslint": "^9.7.0",
-    "eslint-plugin-jsdoc": "^48.7.0",
+    "eslint-plugin-jsdoc": "^48.8.1",
     "eslint-plugin-n": "^17.9.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.8.0",
@@ -62,7 +62,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lefthook": "^1.7.4",
     "prettier": "^3.3.3",
-    "rollup": "^4.18.1",
+    "rollup": "^4.19.0",
     "typescript": "^5.5.3"
   },
   "browserslist": [
