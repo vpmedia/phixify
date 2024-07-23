@@ -63,7 +63,7 @@
     "lefthook": "^1.7.5",
     "prettier": "^3.3.3",
     "rollup": "^4.19.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "browserslist": [
     "> 0.5%",
