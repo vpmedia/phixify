@@ -52,7 +52,7 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.13",
+    "@types/node": "^22.0.0",
     "eslint": "^9.8.0",
     "eslint-plugin-jsdoc": "^48.9.2",
     "eslint-plugin-n": "^17.10.1",
