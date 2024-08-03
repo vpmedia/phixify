@@ -52,9 +52,9 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.0.2",
+    "@types/node": "^22.1.0",
     "eslint": "^9.8.0",
-    "eslint-plugin-jsdoc": "^48.10.2",
+    "eslint-plugin-jsdoc": "^48.11.0",
     "eslint-plugin-n": "^17.10.1",
     "eslint-plugin-unicorn": "^55.0.0",
     "globals": "^15.9.0",
@@ -62,7 +62,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lefthook": "^1.7.11",
     "prettier": "^3.3.3",
-    "rollup": "^4.19.2",
+    "rollup": "^4.20.0",
     "typescript": "^5.5.4"
   },
   "browserslist": [
