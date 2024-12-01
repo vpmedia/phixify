@@ -47,12 +47,12 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.16.0",
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.1",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-n": "^17.14.0",
     "eslint-plugin-unicorn": "^56.0.1",
@@ -61,7 +61,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lefthook": "^1.8.4",
     "prettier": "^3.4.1",
-    "rollup": "^4.27.4",
+    "rollup": "^4.28.0",
     "typescript": "^5.7.2"
   },
   "browserslist": [
