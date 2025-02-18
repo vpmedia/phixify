@@ -1,7 +1,3 @@
-# Copyright (c) Andras Csizmadia <andras@vpmedia.hu> (www.vpmedia.hu)
-# author: Andras Csizmadia <andras@vpmedia.hu>
-# see: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
-
 pre-commit:
   parallel: false
   commands:
