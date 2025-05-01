@@ -17,6 +17,10 @@ jobs:
         node-version: [22.x]
     steps:
       - uses: actions/checkout@v4
+      - name: Setup git user
+        run: |
+          git config --global user.name "vpmedia"
+          git config --global user.email "andras@vpmedia.hu"
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
