@@ -12,10 +12,6 @@ updates:
       github-actions:
         patterns:
           - "*"
-    assignees:
-      - "vpmedia"
-    reviewers:
-      - "vpmedia"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -24,7 +20,3 @@ updates:
       npm:
         patterns:
           - "*"
-    assignees:
-      - "vpmedia"
-    reviewers:
-      - "vpmedia"
