@@ -49,7 +49,7 @@
     "@jest/globals": "^30.0.4",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.12",
+    "@types/node": "^24.0.13",
     "eslint": "^9.30.1",
     "eslint-plugin-jsdoc": "^51.3.4",
     "eslint-plugin-n": "^17.21.0",
