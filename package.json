@@ -49,7 +49,7 @@
     "@jest/globals": "^30.0.4",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.13",
+    "@types/node": "^24.0.14",
     "eslint": "^9.31.0",
     "eslint-plugin-jsdoc": "^51.3.4",
     "eslint-plugin-n": "^17.21.0",
@@ -58,7 +58,7 @@
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "prettier": "^3.6.2",
-    "rollup": "^4.45.0",
+    "rollup": "^4.45.1",
     "typescript": "^5.8.3"
   },
   "browserslist": [
