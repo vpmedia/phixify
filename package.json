@@ -45,7 +45,7 @@
     "sharp": "^0.34.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.33.0",
     "@jest/globals": "^30.0.5",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/jest": "^30.0.0",
