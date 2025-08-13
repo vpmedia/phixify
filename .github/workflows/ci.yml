@@ -16,7 +16,7 @@ jobs:
       matrix:
         node-version: [24.x]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup git user
         run: |
           git config --global user.name "vpmedia"
