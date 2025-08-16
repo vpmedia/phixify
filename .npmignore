@@ -23,6 +23,6 @@ prettier.config.js
 bitbucket-pipelines.yml
 docker-run.sh
 Dockerfile
-jest.config.js
+vitest.config.js
 phixify.sh
 rollup.config.js

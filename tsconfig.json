@@ -4,10 +4,7 @@
     "jsx": "react-jsx",
     "module": "NodeNext",
     "moduleResolution": "nodenext",
-    "types": [
-      "jest",
-      "node"
-    ],
+    "types": ["vitest", "node"],
     "allowJs": true,
     "checkJs": true,
     "declaration": true,

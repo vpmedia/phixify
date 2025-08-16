@@ -33,7 +33,7 @@
   "scripts": {
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rollup -c",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests",
+    "test": "vitest --coverage --pass-with-no-tests",
     "typecheck": "tsc",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,css}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
@@ -46,20 +46,19 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@jest/globals": "^30.0.5",
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.3.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.33.0",
     "eslint-plugin-jsdoc": "^54.1.0",
     "eslint-plugin-n": "^17.21.3",
     "eslint-plugin-unicorn": "^60.0.0",
     "globals": "^16.3.0",
-    "jest": "^30.0.5",
-    "jest-environment-jsdom": "^30.0.5",
+    "jsdom": "^26.1.0",
     "prettier": "^3.6.2",
     "rollup": "^4.46.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "browserslist": [
     "> 0.5%",
