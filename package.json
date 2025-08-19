@@ -37,7 +37,7 @@
     "typecheck": "tsc",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,css}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "prepack": "npm run build"
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@rollup/plugin-json": "^6.1.0",
@@ -56,7 +56,7 @@
     "globals": "^16.3.0",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.2",
-    "rollup": "^4.46.2",
+    "rollup": "^4.46.3",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },

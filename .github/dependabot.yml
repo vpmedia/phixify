@@ -12,11 +12,11 @@ updates:
       github-actions:
         patterns:
           - "*"
-  - package-ecosystem: "npm"
+  - package-ecosystem: "pnpm"
     directory: "/"
     schedule:
       interval: "weekly"
     groups:
-      npm:
+      pnpm:
         patterns:
           - "*"

@@ -43,7 +43,7 @@ WORKDIR /phixify
 COPY package.json .
 COPY package-lock.json .
 
-RUN npm install
+RUN pnpm install
 
 RUN mkdir -p asset
 COPY . .

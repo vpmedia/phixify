@@ -62,19 +62,19 @@ https://www.codeandweb.com/texturepacker/documentation/installation-and-licensin
 
 > When using the npm package locally:
 
-    $ npm install --save-dev @vpmedia/phixify
+    $ pnpm add-dev @vpmedia/phixify
     $ ./node_modules/.bin/phixify
 
 > When using the npm package globally:
 
-    $ npm install --global @vpmedia/phixify
+    $ pnpm install --global @vpmedia/phixify
     $ phixify
 
 > When using the git repository:
 
     $ git clone git@github.com:vpmedia/phixify.git
     $ cd phixify
-    $ npm install
+    $ pnpm install
     $ ./phixify.sh
 
 ## Examples
