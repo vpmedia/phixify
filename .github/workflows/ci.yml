@@ -27,7 +27,7 @@ jobs:
           version: latest
           run_install: false
       - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
@@ -42,7 +42,7 @@ jobs:
       - name: Post to a Slack channel
         # https://github.com/slackapi/slack-github-action
         id: slack
-        uses: slackapi/slack-github-action@v2.0.0
+        uses: slackapi/slack-github-action@v2.1.1
         with:
           errors: true
           method: chat.postMessage
