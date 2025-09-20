@@ -28,8 +28,8 @@ importers:
         specifier: ^9.36.0
         version: 9.36.0
       eslint-plugin-jsdoc:
-        specifier: ^59.1.0
-        version: 59.1.0(eslint@9.36.0)
+        specifier: ^60.0.0
+        version: 60.0.0(eslint@9.36.0)
       eslint-plugin-n:
         specifier: ^17.23.1
         version: 17.23.1(eslint@9.36.0)(typescript@5.9.2)
@@ -983,8 +983,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-jsdoc@59.1.0:
-    resolution: {integrity: sha512-sg9mzjjzfnMynyY4W8FDiQv3i8eFcKVEHDt4Xh7MLskP3QkMt2z6p7FuzSw7jJSKFues6RaK2GWvmkB1FLPxXg==}
+  eslint-plugin-jsdoc@60.0.0:
+    resolution: {integrity: sha512-K8D5fJOkeunX+exeOkOUx+P7ZCixdRBsM3QQ+M2aazSO+64pnjH6z03wWYGQ3XTjUxpI2QXOTSQ9E75bDKi5AA==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1530,11 +1530,11 @@ packages:
     resolution: {integrity: sha512-azl+t0z7pw/z958Gy9svOTuzqIk6xq+NSheJzn5MMWtWTFywIacg2wUlzKFGtt3cthx0r2SxMK0yzJOR0IES7Q==}
     engines: {node: '>=14.0.0'}
 
-  tldts-core@7.0.14:
-    resolution: {integrity: sha512-viZGNK6+NdluOJWwTO9olaugx0bkKhscIdriQQ+lNNhwitIKvb+SvhbYgnCz6j9p7dX3cJntt4agQAKMXLjJ5g==}
+  tldts-core@7.0.15:
+    resolution: {integrity: sha512-YBkp2VfS9VTRMPNL2PA6PMESmxV1JEVoAr5iBlZnB5JG3KUrWzNCB3yNNkRa2FZkqClaBgfNYCp8PgpYmpjkZw==}
 
-  tldts@7.0.14:
-    resolution: {integrity: sha512-lMNHE4aSI3LlkMUMicTmAG3tkkitjOQGDTFboPJwAg2kJXKP1ryWEyqujktg5qhrFZOkk5YFzgkxg3jErE+i5w==}
+  tldts@7.0.15:
+    resolution: {integrity: sha512-heYRCiGLhtI+U/D0V8YM3QRwPfsLJiP+HX+YwiHZTnWzjIKC+ZCxQRYlzvOoTEc6KIP62B1VeAN63diGCng2hg==}
     hasBin: true
 
   tough-cookie@6.0.0:
@@ -2466,7 +2466,7 @@ snapshots:
       eslint: 9.36.0
       eslint-compat-utils: 0.5.1(eslint@9.36.0)
 
-  eslint-plugin-jsdoc@59.1.0(eslint@9.36.0):
+  eslint-plugin-jsdoc@60.0.0(eslint@9.36.0):
     dependencies:
       '@es-joy/jsdoccomment': 0.58.0
       are-docs-informative: 0.0.2
@@ -3087,15 +3087,15 @@ snapshots:
 
   tinyspy@4.0.4: {}
 
-  tldts-core@7.0.14: {}
+  tldts-core@7.0.15: {}
 
-  tldts@7.0.14:
+  tldts@7.0.15:
     dependencies:
-      tldts-core: 7.0.14
+      tldts-core: 7.0.15
 
   tough-cookie@6.0.0:
     dependencies:
-      tldts: 7.0.14
+      tldts: 7.0.15
 
   tr46@6.0.0:
     dependencies:
