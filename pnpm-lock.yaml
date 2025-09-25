@@ -28,8 +28,8 @@ importers:
         specifier: ^9.36.0
         version: 9.36.0
       eslint-plugin-jsdoc:
-        specifier: ^60.3.0
-        version: 60.3.0(eslint@9.36.0)
+        specifier: ^60.3.1
+        version: 60.3.1(eslint@9.36.0)
       eslint-plugin-n:
         specifier: ^17.23.1
         version: 17.23.1(eslint@9.36.0)(typescript@5.9.2)
@@ -134,8 +134,8 @@ packages:
   '@emnapi/wasi-threads@1.1.0':
     resolution: {integrity: sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ==}
 
-  '@es-joy/jsdoccomment@0.58.0':
-    resolution: {integrity: sha512-smMc5pDht/UVsCD3hhw/a/e/p8m0RdRYiluXToVfd+d4yaQQh7nn9bACjkk6nXJvat7EWPAxuFkMEFfrxeGa3Q==}
+  '@es-joy/jsdoccomment@0.60.0':
+    resolution: {integrity: sha512-nZIXk63VbpIooJVXRWEhLIbVScE8rtbcPWr+zQ0ZQsnflvomq31DvB5hR0T1IoikvrNaF4pNoDOi5se5tmIZIg==}
     engines: {node: '>=20.11.0'}
 
   '@esbuild/aix-ppc64@0.25.10':
@@ -845,8 +845,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001743:
-    resolution: {integrity: sha512-e6Ojr7RV14Un7dz6ASD0aZDmQPT/A+eZU+nuTNfjqmRrmkmQlnTNWH0SKmqagx9PeW87UVqapSurtAXifmtdmw==}
+  caniuse-lite@1.0.30001745:
+    resolution: {integrity: sha512-ywt6i8FzvdgrrrGbr1jZVObnVv6adj+0if2/omv9cmR2oiZs30zL4DIyaptKcbOrBdOIc74QTMoJvSE2QHh5UQ==}
 
   chai@5.3.3:
     resolution: {integrity: sha512-4zNhdJD/iOjSH0A05ea+Ke6MU5mmpQcbQsSOkgdaUMJ9zTlDTD/GYlwohmIE2u0gaxHYiVHEn1Fw9mZ/ktJWgw==}
@@ -983,8 +983,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-jsdoc@60.3.0:
-    resolution: {integrity: sha512-2Hu3S5kvzxvQ/tuxSbFI0yU3ZNhf9Vnd2Q4jeW+0DkCyDrt1SGCguqoa6I9/Tn8Aw6lJIodhEAuOoTGh9dmj9Q==}
+  eslint-plugin-jsdoc@60.3.1:
+    resolution: {integrity: sha512-AEJRW4EgERmAGnMraZXu85r5xgtI9XqKlgKfaWkkFmHbMVMii2oz1dmz1b3GISJOkhfHNi4JsVC0RA+IPTrkBg==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1132,6 +1132,9 @@ packages:
   html-encoding-sniffer@4.0.0:
     resolution: {integrity: sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==}
     engines: {node: '>=18'}
+
+  html-entities@2.6.0:
+    resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -1796,7 +1799,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@es-joy/jsdoccomment@0.58.0':
+  '@es-joy/jsdoccomment@0.60.0':
     dependencies:
       '@types/estree': 1.0.8
       '@typescript-eslint/types': 8.44.1
@@ -2315,7 +2318,7 @@ snapshots:
   browserslist@4.26.2:
     dependencies:
       baseline-browser-mapping: 2.8.6
-      caniuse-lite: 1.0.30001743
+      caniuse-lite: 1.0.30001745
       electron-to-chromium: 1.5.223
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
@@ -2326,7 +2329,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001743: {}
+  caniuse-lite@1.0.30001745: {}
 
   chai@5.3.3:
     dependencies:
@@ -2467,9 +2470,9 @@ snapshots:
       eslint: 9.36.0
       eslint-compat-utils: 0.5.1(eslint@9.36.0)
 
-  eslint-plugin-jsdoc@60.3.0(eslint@9.36.0):
+  eslint-plugin-jsdoc@60.3.1(eslint@9.36.0):
     dependencies:
-      '@es-joy/jsdoccomment': 0.58.0
+      '@es-joy/jsdoccomment': 0.60.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
       debug: 4.4.3
@@ -2477,6 +2480,7 @@ snapshots:
       eslint: 9.36.0
       espree: 10.4.0
       esquery: 1.6.0
+      html-entities: 2.6.0
       object-deep-merge: 1.0.5
       parse-imports-exports: 0.2.4
       semver: 7.7.2
@@ -2662,6 +2666,8 @@ snapshots:
   html-encoding-sniffer@4.0.0:
     dependencies:
       whatwg-encoding: 3.1.1
+
+  html-entities@2.6.0: {}
 
   html-escaper@2.0.2: {}
 
