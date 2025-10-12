@@ -21,10 +21,10 @@ libsox-fmt-mp3
 # RUN apt-get install -y wget imagemagick ffmpeg
 # RUN t=$(mktemp) && wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && bash "$t" && rm "$t"
 
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_24.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
-RUN curl https://www.codeandweb.com/download/texturepacker/6.0.2/TexturePacker-6.0.2.deb --silent --output /tmp/TexturePacker-6.0.2.deb
+RUN curl https://www.codeandweb.com/download/texturepacker/7.9.0/TexturePacker-7.9.0.deb --silent --output /tmp/TexturePacker-7.9.0.deb
 
 RUN apt-get install -y  \
 libegl1-mesa  \
@@ -32,7 +32,7 @@ libgl1-mesa-glx  \
 libfontconfig  \
 libx11-6  \
 libxkbcommon-x11-0  \
-/tmp/TexturePacker-6.0.2.deb
+/tmp/TexturePacker-7.9.0.deb
 
 RUN echo agree | TexturePacker --version
 
@@ -41,7 +41,8 @@ ENV NODE_ENV development
 WORKDIR /phixify
 
 COPY package.json .
-COPY package-lock.json .
+COPY pnpm-lock.yaml .
+COPY pnpm-workspace.yaml .
 
 RUN pnpm install
 
