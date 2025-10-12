@@ -13,7 +13,7 @@ permissions:
 jobs:
   publish:
     name: Publish package
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [24.X]
