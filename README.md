@@ -27,7 +27,7 @@ Phaser and Pixi.js game engine asset and manifest command line generator.
 
 ### Ubuntu Linux
 
-    $ curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+    $ curl -sL https://deb.nodesource.com/setup_24.x | sudo -E bash -
     $ sudo apt-get update
     $ sudo apt-get install -y nodejs sox libsox-fmt-mp3
 
@@ -62,13 +62,12 @@ https://www.codeandweb.com/texturepacker/documentation/installation-and-licensin
 
 > When using the npm package locally:
 
-    $ pnpm add-dev @vpmedia/phixify
-    $ ./node_modules/.bin/phixify
+    $ pnpm add --save-dev @vpmedia/phixify
+    $ pnpm exec phixify
 
 > When using the npm package globally:
 
-    $ pnpm install --global @vpmedia/phixify
-    $ phixify
+    $ pnpx @vpmedia/phixify
 
 > When using the git repository:
 
