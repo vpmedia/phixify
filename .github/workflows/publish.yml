@@ -1,0 +1,51 @@
+# Copyright (c) 2023-present VPMedia
+# author: Andras Csizmadia <andras@vpmedia.hu>
+
+name: Publish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish package
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [24.X]
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup git user
+        run: |
+          git config --global user.name "vpmedia"
+          git config --global user.email "andras@vpmedia.hu"
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: false
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+      - name: Init
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm run lint
+      - name: Test
+        run: pnpm run test
+      - name: Build
+        run: pnpm run build
+      - name: Release
+        run: |
+          pnpm version minor -m "Release v%s"
+          git push --follow-tags
+      - name: Publish
+        run: pnpm publish --provenance --access public
+        env:
+            NPM_CONFIG_PROVENANCE: true
