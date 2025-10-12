@@ -16,6 +16,9 @@ jobs:
       matrix:
         node-version: [24.X]
     steps:
+      - name: Set start timestamp
+        id: start_timestamp
+        run: echo "timestamp=$EPOCHSECONDS" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v5
       - name: Setup git user
         run: |
