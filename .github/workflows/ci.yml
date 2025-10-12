@@ -42,6 +42,12 @@ jobs:
         run: pnpm run test
       - name: Build
         run: pnpm run build
+      - name: Calculate workflow duration
+        id: workflow_duration
+        env:
+          START_TIMESTAMP: ${{ steps.start_timestamp.outputs.timestamp }}
+        run: echo "timedelta=$((EPOCHSECONDS - START_TIMESTAMP))" >> "$GITHUB_OUTPUT"
+        if: always()
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v2.1.1

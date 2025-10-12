@@ -18,6 +18,9 @@ jobs:
       matrix:
         node-version: [24.X]
     steps:
+      - name: Set start timestamp
+        id: start_timestamp
+        run: echo "timestamp=$EPOCHSECONDS" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v5
       - name: Setup git user
         run: |
@@ -49,6 +52,12 @@ jobs:
         run: pnpm publish --provenance --access public
         env:
             NPM_CONFIG_PROVENANCE: true
+      - name: Calculate workflow duration
+        id: workflow_duration
+        env:
+          START_TIMESTAMP: ${{ steps.start_timestamp.outputs.timestamp }}
+        run: echo "timedelta=$((EPOCHSECONDS - START_TIMESTAMP))" >> "$GITHUB_OUTPUT"
+        if: always()
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v2.1.1
