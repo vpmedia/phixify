@@ -31,13 +31,14 @@
     "phixify": "./dist/phixify.js"
   },
   "scripts": {
+    "prepack": "pnpm run build",
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rolldown --config",
-    "test": "vitest --coverage --pass-with-no-tests",
-    "typecheck": "tsc",
+    "check": "pnpm lint && pnpm test && pnpm typecheck",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,css}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "prepack": "pnpm run build"
+    "test": "vitest --coverage --pass-with-no-tests",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "commander": "^14.0.1",
