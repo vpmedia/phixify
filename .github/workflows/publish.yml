@@ -13,7 +13,7 @@ permissions:
 jobs:
   publish:
     name: Publish package
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         node-version: [24.X]
@@ -22,10 +22,6 @@ jobs:
         id: start_timestamp
         run: echo "timestamp=$EPOCHSECONDS" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v5
-      - name: Setup git user
-        run: |
-          git config --global user.name "vpmedia"
-          git config --global user.email "andras@vpmedia.hu"
       - uses: pnpm/action-setup@v4
         with:
           version: latest
@@ -42,8 +38,10 @@ jobs:
         run: pnpm run test
       - name: Build
         run: pnpm run build
-      - name: Release
+      - name: Publish
         run: |
+          git config --global user.name "vpmedia"
+          git config --global user.email "andras@vpmedia.hu"
           pnpm version minor -m "Release v%s"
           git push --follow-tags
       - name: Publish
