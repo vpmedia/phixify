@@ -1,0 +1,26 @@
+{
+  "env": { "node": true },
+  "plugins": [
+    "eslint",
+    "import",
+    "jsdoc",
+    "jsx-a11y",
+    "oxc",
+    "react-perf",
+    "react",
+    "typescript",
+    "unicorn"
+  ],
+  "categories": {
+    "correctness": "warn",
+    "nursery": "warn",
+    "pedantic": "warn",
+    "perf": "warn",
+    "restriction": "warn",
+    "style": "warn",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "no-unused-vars": "off"
+  }
+}
