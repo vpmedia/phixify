@@ -4,7 +4,6 @@ import { imageResize } from "../tool/imageResize.js";
 
 /**
  * Creates many image file assets
- *
  * @param {object} config The configuration object reference
  * @param {string} baseDir TBD
  * @returns {Promise} TBD

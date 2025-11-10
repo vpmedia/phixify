@@ -1,6 +1,6 @@
 import { getMagickInfoCmd } from './imagemagick/getMagickInfoCmd.js';
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { promisify } from 'node:util';
+import { exec } from 'node:child_process';
 import { getSharpInfoCmd } from './sharp/getSharpInfoCmd.js';
 
 /**

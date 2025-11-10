@@ -7,7 +7,7 @@
  * @returns {string} TBD.
  */
 import sharp from 'sharp';
-import { parse } from 'path';
+import { parse } from 'node:path';
 
 export const getSharpResizeCmd = (config, inputFile, outputFile, scale) => {
   const parsedOutputFile = parse(outputFile);

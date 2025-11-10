@@ -5,7 +5,7 @@
  * @param {string} outputFile - TBD.
  * @returns {string} TBD.
  */
-import { parse } from 'path';
+import { parse } from 'node:path';
 
 export const getMagickConvertCmd = (config, inputFile, outputFile) => {
   const path = config.cmd.imageMagick.path;

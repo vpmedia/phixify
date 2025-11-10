@@ -1,7 +1,7 @@
 import { getSoxDurationCmd } from './sox/getSoxDurationCmd.js';
 import { getFFDurationCmd } from './ffmpeg/getFFDurationCmd.js';
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { promisify } from 'node:util';
+import { exec } from 'node:child_process';
 
 /**
  * Returns the duration of a sound file.

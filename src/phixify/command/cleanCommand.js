@@ -1,6 +1,6 @@
-import { rm } from 'fs/promises';
-import { readdirSync, existsSync } from 'fs';
-import { parse } from 'path';
+import { rm } from 'node:fs/promises';
+import { readdirSync, existsSync } from 'node:fs';
+import { parse } from 'node:path';
 import { getConfig } from '../config/getConfig.js';
 import { getDirectoryList, isFile, normalizePath } from '../tool/fileUtil.js';
 

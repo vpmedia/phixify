@@ -1,7 +1,7 @@
 import { getMagickConvertCmd } from './imagemagick/getMagickConvertCmd.js';
 import { getSharpConvertCmd } from './sharp/getSharpConvertCmd.js';
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { promisify } from 'node:util';
+import { exec } from 'node:child_process';
 
 /**
  * Converts an image file from one format to another.

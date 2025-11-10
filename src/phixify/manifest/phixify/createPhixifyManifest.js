@@ -1,4 +1,4 @@
-import { statSync } from 'fs';
+import { statSync } from 'node:fs';
 import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from '../const.js';
 import { getPhixifyFileMap } from './getPhixifyFileMap.js';
 import { getPhixifyFileInfo } from './getPhixifyFileInfo.js';

@@ -1,4 +1,4 @@
-import { parse } from 'path';
+import { parse } from 'node:path';
 
 /**
  * Creates a sox audio conversion command for execution.

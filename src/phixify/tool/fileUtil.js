@@ -1,5 +1,5 @@
-import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from 'fs';
-import { parse } from 'path';
+import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { parse } from 'node:path';
 
 /**
  * Check for a path if exists in the filesystem.

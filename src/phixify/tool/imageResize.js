@@ -1,7 +1,7 @@
 import { getMagickResizeCmd } from './imagemagick/getMagickResizeCmd.js';
 import { getSharpResizeCmd } from './sharp/getSharpResizeCmd.js';
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { promisify } from 'node:util';
+import { exec } from 'node:child_process';
 
 /**
  * Resizes an image file to an another file.

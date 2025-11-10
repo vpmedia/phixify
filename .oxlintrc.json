@@ -5,6 +5,7 @@
     "import",
     "jsdoc",
     "jsx-a11y",
+    "node",
     "oxc",
     "react-perf",
     "react",

@@ -1,5 +1,5 @@
-import { promisify } from 'util';
-import { exec } from 'child_process';
+import { promisify } from 'node:util';
+import { exec } from 'node:child_process';
 import { getSoxConvertCmd } from './sox/getSoxConvertCmd.js';
 import { getFFConvertCmd } from './ffmpeg/getFFConvertCmd.js';
 

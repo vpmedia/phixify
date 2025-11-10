@@ -6,7 +6,7 @@
  * @returns {string} TBD.
  */
 import sharp from 'sharp';
-import { parse } from 'path';
+import { parse } from 'node:path';
 
 export const getSharpConvertCmd = (config, inputFile, outputFile) => {
   const parsedOutputFile = parse(outputFile);
