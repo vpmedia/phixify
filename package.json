@@ -49,7 +49,7 @@
     "@types/node": "^24.10.1",
     "@vitest/coverage-v8": "^4.0.8",
     "eslint": "^9.39.1",
-    "eslint-plugin-jsdoc": "^61.2.0",
+    "eslint-plugin-jsdoc": "^61.2.1",
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-oxlint": "^1.28.0",
     "eslint-plugin-unicorn": "^62.0.0",
