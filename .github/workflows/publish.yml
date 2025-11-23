@@ -38,11 +38,21 @@ jobs:
         run: pnpm run test
       - name: Build
         run: pnpm run build
-      - name: Publish
+      - name: Version
         run: |
-          git config --global user.name "vpmedia"
-          git config --global user.email "andras@vpmedia.hu"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           pnpm version minor -m "Release v%s"
+      - name: Changelog
+        uses: orhun/git-cliff-action@v4
+        with:
+          args: --latest --prepend "CHANGELOG.md"
+        env:
+          OUTPUT: /dev/null
+      - name: Commit
+        run: |
+          git add -A
+          git commit --message "ci: release"
           git push --follow-tags
       - name: Publish
         run: pnpm publish --provenance --access public
