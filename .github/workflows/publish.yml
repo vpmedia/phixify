@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          pnpm version minor -m "Release v%s"
+          pnpm version minor -m "chore(release): v%s"
       - name: Changelog
         uses: orhun/git-cliff-action@v4
         with:
