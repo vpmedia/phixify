@@ -35,7 +35,7 @@
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rolldown --config",
     "check": "pnpm lint && pnpm test && pnpm typecheck",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,md,css}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "test": "vitest --coverage --pass-with-no-tests",
     "typecheck": "tsc"
