@@ -22,6 +22,8 @@ jobs:
         id: start_timestamp
         run: echo "timestamp=$EPOCHSECONDS" >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: latest
@@ -45,10 +47,8 @@ jobs:
           pnpm version minor -m "chore(release): v%s"
       - name: Changelog
         uses: orhun/git-cliff-action@v4
-        with:
-          args: --latest --prepend "CHANGELOG.md"
         env:
-          OUTPUT: /dev/null
+          OUTPUT: CHANGELOG.md
       - name: Commit
         run: |
           git add -A
