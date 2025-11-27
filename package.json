@@ -58,8 +58,8 @@
     "globals": "^16.5.0",
     "jsdom": "^27.2.0",
     "oxlint": "^1.30.0",
-    "prettier": "^3.6.2",
-    "rolldown": "1.0.0-beta.51",
+    "prettier": "^3.7.0",
+    "rolldown": "1.0.0-beta.52",
     "typescript": "^5.9.3",
     "vitest": "^4.0.14"
   },
