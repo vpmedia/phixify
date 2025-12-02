@@ -1,3 +1,5 @@
 onlyBuiltDependencies:
   - esbuild
   - sharp
+trustPolicy: no-downgrade
+minimumReleaseAge: 2880
