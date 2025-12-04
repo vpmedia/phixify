@@ -49,7 +49,7 @@
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
-    "@vitest/coverage-v8": "^4.0.14",
+    "@vitest/coverage-v8": "^4.0.15",
     "eslint": "^9.39.1",
     "eslint-plugin-jsdoc": "^61.4.1",
     "eslint-plugin-n": "^17.23.1",
@@ -58,10 +58,10 @@
     "globals": "^16.5.0",
     "jsdom": "^27.2.0",
     "oxlint": "^1.31.0",
-    "prettier": "^3.7.3",
-    "rolldown": "1.0.0-beta.52",
+    "prettier": "^3.7.4",
+    "rolldown": "1.0.0-beta.53",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.14"
+    "vitest": "^4.0.15"
   },
   "browserslist": [
     "> 0.5%",
