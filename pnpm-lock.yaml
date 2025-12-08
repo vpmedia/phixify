@@ -34,8 +34,8 @@ importers:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
       eslint-plugin-jsdoc:
-        specifier: ^61.4.1
-        version: 61.4.1(eslint@9.39.1(jiti@2.6.1))
+        specifier: ^61.4.2
+        version: 61.4.2(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-n:
         specifier: ^17.23.1
         version: 17.23.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
@@ -69,14 +69,14 @@ importers:
 
 packages:
 
-  '@acemir/cssom@0.9.26':
-    resolution: {integrity: sha512-UMFbL3EnWH/eTvl21dz9s7Td4wYDMtxz/56zD8sL9IZGYyi48RxmdgPMiyT7R6Vn3rjMTwYZ42bqKa7ex74GEQ==}
+  '@acemir/cssom@0.9.27':
+    resolution: {integrity: sha512-Ja8SQ/4mec5WZABC1F9XB1juJlkdHVZ4F1dftBmXagtZnbmspW+tuzd4bo35eRrc48iAEtk1yTUzBveOsa/MZA==}
 
   '@asamuzakjp/css-color@4.1.0':
     resolution: {integrity: sha512-9xiBAtLn4aNsa4mDnpovJvBn72tNEIACyvlqaNJ+ADemR+yeMJWnBudOi2qGDviJa7SwcDOU/TRh5dnET7qk0w==}
 
-  '@asamuzakjp/dom-selector@6.7.5':
-    resolution: {integrity: sha512-Eks6dY8zau4m4wNRQjRVaKQRTalNcPcBvU1ZQ35w5kKRk1gUeNCkVLsRiATurjASTp3TKM4H10wsI50nx3NZdw==}
+  '@asamuzakjp/dom-selector@6.7.6':
+    resolution: {integrity: sha512-hBaJER6A9MpdG3WgdlOolHmbOYvSk46y7IQN/1+iqiCuUu6iWdQrs9DGKF8ocqsEqWujWf/V7b7vaDgiUmIvUg==}
 
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
@@ -974,8 +974,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.9.2:
-    resolution: {integrity: sha512-PxSsosKQjI38iXkmb3d0Y32efqyA0uW4s41u4IVBsLlWLhCiYNpH/AfNOVWRqCQBlD8TFJTz6OUWNd4DFJCnmw==}
+  baseline-browser-mapping@2.9.4:
+    resolution: {integrity: sha512-ZCQ9GEWl73BVm8bu5Fts8nt7MHdbt5vY9bP6WGnUh+r3l8M7CgfyTlwsgCbMC66BNxPr6Xoce3j66Ms5YUQTNA==}
     hasBin: true
 
   bidi-js@1.0.3:
@@ -1177,8 +1177,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-jsdoc@61.4.1:
-    resolution: {integrity: sha512-3c1QW/bV25sJ1MsIvsvW+EtLtN6yZMduw7LVQNVt72y2/5BbV5Pg5b//TE5T48LRUxoEQGaZJejCmcj3wCxBzw==}
+  eslint-plugin-jsdoc@61.4.2:
+    resolution: {integrity: sha512-WzZNvefoUaG/JWikVFhNLYqE2BEd6LQD2ZyfJOe1Ld3Cir05csDMMf0AihGwrSbB/e7fHRSfQOZ4F/hik9fQww==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -2013,7 +2013,7 @@ packages:
 
 snapshots:
 
-  '@acemir/cssom@0.9.26': {}
+  '@acemir/cssom@0.9.27': {}
 
   '@asamuzakjp/css-color@4.1.0':
     dependencies:
@@ -2023,7 +2023,7 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
       lru-cache: 11.2.4
 
-  '@asamuzakjp/dom-selector@6.7.5':
+  '@asamuzakjp/dom-selector@6.7.6':
     dependencies:
       '@asamuzakjp/nwsapi': 2.3.9
       bidi-js: 1.0.3
@@ -2729,7 +2729,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.9.2: {}
+  baseline-browser-mapping@2.9.4: {}
 
   bidi-js@1.0.3:
     dependencies:
@@ -2742,7 +2742,7 @@ snapshots:
 
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.9.2
+      baseline-browser-mapping: 2.9.4
       caniuse-lite: 1.0.30001759
       electron-to-chromium: 1.5.266
       node-releases: 2.0.27
@@ -2933,7 +2933,7 @@ snapshots:
       eslint: 9.39.1(jiti@2.6.1)
       eslint-compat-utils: 0.5.1(eslint@9.39.1(jiti@2.6.1))
 
-  eslint-plugin-jsdoc@61.4.1(eslint@9.39.1(jiti@2.6.1)):
+  eslint-plugin-jsdoc@61.4.2(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
       '@es-joy/jsdoccomment': 0.76.0
       '@es-joy/resolve.exports': 1.2.0
@@ -3239,8 +3239,8 @@ snapshots:
 
   jsdom@27.2.0:
     dependencies:
-      '@acemir/cssom': 0.9.26
-      '@asamuzakjp/dom-selector': 6.7.5
+      '@acemir/cssom': 0.9.27
+      '@asamuzakjp/dom-selector': 6.7.6
       cssstyle: 5.3.3
       data-urls: 6.0.0
       decimal.js: 10.6.0
