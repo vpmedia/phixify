@@ -3,5 +3,5 @@ onlyBuiltDependencies:
   - sharp
 trustPolicy: no-downgrade
 trustPolicyExclude:
-  - ts-api-utils@2.3.0
+  - ts-api-utils
 minimumReleaseAge: 2880
