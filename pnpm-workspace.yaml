@@ -4,4 +4,4 @@ onlyBuiltDependencies:
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - ts-api-utils
-minimumReleaseAge: 2880
+minimumReleaseAge: 1440
