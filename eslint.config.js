@@ -52,7 +52,7 @@ export default defineConfig([
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...jsdocPlugin.configs['flat/recommended'].rules,
+      ...jsdocPlugin.configs['flat/recommended-typescript-flavor'].rules,
       ...nodePlugin.configs['flat/all'].rules,
       ...unicornPlugin.configs.recommended.rules,
       'n/no-sync': 'off',
