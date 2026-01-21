@@ -51,7 +51,7 @@
     "@types/node": "^25.0.9",
     "@vitest/coverage-v8": "^4.0.17",
     "eslint": "^9.39.2",
-    "eslint-plugin-jsdoc": "^62.2.0",
+    "eslint-plugin-jsdoc": "^62.3.0",
     "eslint-plugin-n": "^17.23.2",
     "eslint-plugin-oxlint": "^1.41.0",
     "eslint-plugin-unicorn": "^62.0.0",
@@ -64,11 +64,5 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.53.1",
     "vitest": "^4.0.17"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "not dead",
-    "not op_mini all",
-    "iOS >= 14"
-  ]
+  }
 }
