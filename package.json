@@ -53,16 +53,14 @@
     "eslint": "^10.0.0",
     "eslint-plugin-jsdoc": "^62.5.4",
     "eslint-plugin-n": "^17.23.2",
-    "eslint-plugin-oxlint": "^1.46.0",
     "eslint-plugin-unicorn": "^63.0.0",
     "globals": "^17.3.0",
     "jsdom": "^28.0.0",
     "oxlint": "^1.46.0",
-    "oxlint-tsgolint": "^0.11.5",
+    "oxlint-tsgolint": "^0.12.0",
     "prettier": "^3.8.1",
-    "rolldown": "1.0.0-rc.3",
+    "rolldown": "1.0.0-rc.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.55.0",
     "vitest": "^4.0.18"
   }
 }
