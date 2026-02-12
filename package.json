@@ -36,7 +36,7 @@
     "build": "rolldown --config",
     "check": "pnpm lint && pnpm test && pnpm typecheck",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
-    "lint": "oxlint \"**/*.{js,jsx}\"",
+    "lint": "oxlint src",
     "test": "vitest --coverage --pass-with-no-tests",
     "typecheck": "tsc"
   },
