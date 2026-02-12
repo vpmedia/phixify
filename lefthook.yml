@@ -19,7 +19,7 @@ pre-commit:
         git add {staged_files} &> /dev/null || true
     lint_js:
       glob: "*.{js,jsx}"
-      run: pnpm exec eslint {staged_files}
+      run: pnpm exec oxlint {staged_files}
 commit-msg:
   commands:
     commitlint:
