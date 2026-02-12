@@ -10,8 +10,6 @@ src/
 .dockerignore
 .DS_Store
 .editorconfig
-.eslintignore
-.eslintrc.json
 .gitattributes
 .gitignore
 lint-staged.config.js
