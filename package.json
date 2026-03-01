@@ -35,7 +35,7 @@
     "prebuild": "rm -rf ./dist && rm -rf ./lib",
     "build": "rolldown --config",
     "check": "pnpm lint && pnpm test && pnpm typecheck",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
+    "format": "oxfmt --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json,css}\"",
     "lint": "oxlint src",
     "test": "vitest --coverage --pass-with-no-tests",
     "typecheck": "tsc"
@@ -49,11 +49,10 @@
     "@commitlint/config-conventional": "^20.4.2",
     "@types/node": "^25.3.3",
     "@vitest/coverage-v8": "^4.0.18",
-    "globals": "^17.3.0",
     "jsdom": "^28.1.0",
+    "oxfmt": "^0.35.0",
     "oxlint": "^1.50.0",
     "oxlint-tsgolint": "^0.15.0",
-    "prettier": "^3.8.1",
     "rolldown": "1.0.0-rc.6",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"

@@ -16,7 +16,8 @@ lint-staged.config.js
 .npmignore
 .npmrc
 .phixify.json
-.prettierignore
+.oxlintrc.json
+.oxfmtrc.json
 prettier.config.js
 bitbucket-pipelines.yml
 docker-run.sh

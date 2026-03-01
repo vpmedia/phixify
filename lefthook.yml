@@ -15,7 +15,7 @@ pre-commit:
       glob: "*.{js,jsx}"
       run: |
         set -e
-        pnpm exec prettier --write -- {staged_files} || true
+        pnpm exec oxfmt --write -- {staged_files} || true
         git add {staged_files} &> /dev/null || true
     lint_js:
       glob: "*.{js,jsx}"
