@@ -47,7 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
-    "@types/node": "^25.3.2",
+    "@types/node": "^25.3.3",
     "@vitest/coverage-v8": "^4.0.18",
     "globals": "^17.3.0",
     "jsdom": "^28.1.0",
