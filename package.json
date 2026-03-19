@@ -54,7 +54,7 @@
     "oxlint": "^1.56.0",
     "oxlint-tsgolint": "^0.17.0",
     "rolldown": "1.0.0-rc.10",
-    "typescript": "6.0.0-dev.20260315",
+    "typescript": "6.0.0-dev.20260319",
     "vitest": "^4.1.0"
   }
 }
