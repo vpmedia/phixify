@@ -53,7 +53,7 @@
     "oxfmt": "^0.44.0",
     "oxlint": "^1.59.0",
     "oxlint-tsgolint": "^0.20.0",
-    "rolldown": "1.0.0-rc.13",
+    "rolldown": "1.0.0-rc.15",
     "typescript": "^6.0.2",
     "vitest": "^4.1.4"
   }
