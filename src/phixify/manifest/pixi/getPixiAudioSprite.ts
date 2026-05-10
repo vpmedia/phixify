@@ -1,0 +1,44 @@
+import type { PhixifyConfig, PixiAsset } from '../../types.js';
+import { getFileList } from '../../tool/fileUtil.js';
+import { AUDIO_SPRITE } from '../const.js';
+
+/**
+ * Creates the audio sprite entries for the manifest object.
+ */
+export const getPixiAudioSprite = (
+  config: PhixifyConfig,
+  assetPath: string,
+  targetPath: string,
+): PixiAsset[] => {
+  const dir = config.dir[AUDIO_SPRITE];
+  const path = `${assetPath}${dir}/`;
+  const list = getFileList(`${targetPath}${dir}`);
+  const formats = config.manifest.sound;
+  const sortFunc = (a: string, b: string): number => {
+    return formats.indexOf(a) - formats.indexOf(b);
+  };
+  const result: PixiAsset[] = [];
+  // json
+  list
+    .filter((value) => value.ext === 'json')
+    .forEach((value) => {
+      result.push({
+        alias: `${value.name}_data`,
+        src: `${path}${value.name}.${value.ext}`,
+      });
+    });
+  // audio
+  const map: Record<string, string[]> = {};
+  list
+    .filter((value) => value.ext !== 'json')
+    .forEach((value) => {
+      map[value.name] = map[value.name] || [];
+      map[value.name].push(value.ext);
+    });
+  Object.entries(map).forEach(([key, value]) => {
+    const extensions = value.sort(sortFunc).toString();
+    const src = `${path}${key}.{${extensions}}`;
+    result.push({ alias: key, src });
+  });
+  return result;
+};
