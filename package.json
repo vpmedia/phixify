@@ -49,7 +49,7 @@
     "@commitlint/config-conventional": "^21.0.0",
     "@types/node": "^25.6.2",
     "@vitest/coverage-v8": "^4.1.5",
-    "jsdom": "^29.1.1",
+    "happy-dom": "^20.9.0",
     "oxfmt": "^0.48.0",
     "oxlint": "^1.63.0",
     "oxlint-tsgolint": "^0.22.1",
