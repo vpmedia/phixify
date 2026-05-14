@@ -24,7 +24,6 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
 - Rolldown: https://rolldown.rs/llms.txt
 - Sharp: https://context7.com/lovell/sharp/llms.txt
-- TypeScript: https://www.typescriptlang.org/llms.txt
 - Vitest: https://vitest.dev/llms.txt
 
 ## Commands
