@@ -12,7 +12,7 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - **Runtime Dependencies:** `commander` (CLI), `sharp` (image processing)
 - **Build:** Rolldown
 - **Distribution:** Docker (Dockerfile), bin entry `phixify`
-- **Testing:** Vitest, @vitest/coverage-v8, jsdom
+- **Testing:** Vitest, @vitest/coverage-v8, happy-dom
 - **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
 - **Type Checking:** TypeScript
 - **Tooling:** lefthook (git hooks), commitlint (conventional commits)
@@ -24,6 +24,7 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
 - Rolldown: https://rolldown.rs/llms.txt
 - Sharp: https://context7.com/lovell/sharp/llms.txt
+- TypeScript: https://context7.com/websites/typescriptlang/llms.txt
 - Vitest: https://vitest.dev/llms.txt
 
 ## Commands
