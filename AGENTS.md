@@ -18,6 +18,16 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - **Type Checking:** TypeScript
 - **Tooling:** lefthook (git hooks), commitlint (conventional commits)
 
+## Documentation
+
+- Commander: https://context7.com/tj/commander.js/llms.txt
+- Lefthook: https://lefthook.dev/llms.txt
+- OXC (oxlint, oxfmt): https://oxc.rs/llms.txt
+- Rolldown: https://rolldown.rs/llms.txt
+- Sharp: https://context7.com/lovell/sharp/llms.txt
+- TypeScript: https://www.typescriptlang.org/llms.txt
+- Vitest: https://vitest.dev/llms.txt
+
 ## Commands
 
 - **Install:** `pnpm install`
