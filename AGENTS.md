@@ -9,7 +9,6 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - **Language:** TypeScript (ESM, `"type": "module"`)
 - **Runtime:** Node.js (CLI)
 - **Package Manager:** pnpm (workspaces)
-- **Domain:** CLI asset & manifest generator for Phaser and Pixi.js game engines
 - **Runtime Dependencies:** `commander` (CLI), `sharp` (image processing)
 - **Build:** Rolldown
 - **Distribution:** Docker (Dockerfile), bin entry `phixify`
@@ -48,9 +47,9 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 
 ## Conventions
 
-- **Commits:** Conventional Commits with custom rules (header ≤ 100, body line ≤ 100, no sentence/start/pascal/upper-case subjects)
+- **Commits:** Conventional Commits (`@commitlint/config-conventional`)
 - **Modules:** ESM only
-- **Style:** Enforced by oxlint + oxfmt
+- **Style:** Enforced by oxlint + oxfmt — do not hand-format
 
 ## Testing
 
