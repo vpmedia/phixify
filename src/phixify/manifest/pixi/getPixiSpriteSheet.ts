@@ -34,7 +34,7 @@ export const getPixiSpriteSheet = (
   list
     .filter((value) => value.ext !== 'json')
     .forEach((value) => {
-      const regExp = new RegExp('[@].*[x]');
+      const regExp = /[@].*[x]/;
       const match = value.name.match(regExp);
       const resolution = match ? match[0] : null;
       const key = value.name.replace(regExp, '');

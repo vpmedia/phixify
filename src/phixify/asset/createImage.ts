@@ -18,7 +18,7 @@ export async function createImage(config: PhixifyConfig, baseDir: string): Promi
   const fileList = getFileList(targetPath);
   const sourceResolutionValue = config.asset.resolution.slice(-1)[0];
   const sourceResolutionName = `@${sourceResolutionValue}x`;
-  const resolutionRegExp = new RegExp('[@].*[x]');
+  const resolutionRegExp = /[@].*[x]/;
   fileList
     .filter((item) => item.ext === 'png' && item.name.includes(sourceResolutionName))
     .forEach((item) => {

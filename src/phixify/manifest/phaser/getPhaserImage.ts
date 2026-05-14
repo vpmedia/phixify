@@ -24,7 +24,7 @@ export const getPhaserImage = (
   list
     .filter((value) => value.ext === 'webp')
     .forEach((value) => {
-      const regExp = new RegExp('[@].*[x]');
+      const regExp = /[@].*[x]/;
       const match = value.name.match(regExp);
       const resolution = match ? match[0] : null;
       const key = value.name.replace(regExp, '');
