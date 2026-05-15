@@ -50,10 +50,10 @@
     "@types/node": "^25.7.0",
     "@vitest/coverage-v8": "^4.1.6",
     "happy-dom": "^20.9.0",
-    "oxfmt": "^0.48.0",
+    "oxfmt": "^0.49.0",
     "oxlint": "^1.64.0",
     "oxlint-tsgolint": "^0.22.1",
-    "rolldown": "^1.0.0",
+    "rolldown": "^1.0.1",
     "typescript": "^6.0.3",
     "vitest": "^4.1.6"
   }
