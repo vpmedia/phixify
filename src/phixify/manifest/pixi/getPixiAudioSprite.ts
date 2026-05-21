@@ -5,11 +5,7 @@ import { AUDIO_SPRITE } from '../const.js';
 /**
  * Creates the audio sprite entries for the manifest object.
  */
-export const getPixiAudioSprite = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PixiAsset[] => {
+export const getPixiAudioSprite = (config: PhixifyConfig, assetPath: string, targetPath: string): PixiAsset[] => {
   const dir = config.dir[AUDIO_SPRITE];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);

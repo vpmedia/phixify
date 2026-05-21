@@ -8,10 +8,7 @@ import type { PhixifyConfig } from '../types.js';
 /**
  * Gets image information via sharp or imagemagick.
  */
-export async function imageInfo(
-  config: PhixifyConfig,
-  file: string,
-): Promise<Metadata | Record<string, unknown>> {
+export async function imageInfo(config: PhixifyConfig, file: string): Promise<Metadata | Record<string, unknown>> {
   if (config.tool.image === 'sharp') {
     return getSharpInfoCmd(config, file);
   }

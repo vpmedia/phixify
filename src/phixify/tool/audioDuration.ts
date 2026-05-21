@@ -10,7 +10,7 @@ import type { AudioDurationResult, FileEntry, PhixifyConfig } from '../types.js'
 export async function audioDuration(
   config: PhixifyConfig,
   inputDir: string,
-  item: FileEntry,
+  item: FileEntry
 ): Promise<AudioDurationResult> {
   const execPromise = promisify(exec);
   return new Promise<AudioDurationResult>((resolve) => {

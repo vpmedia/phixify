@@ -1,9 +1,4 @@
-import type {
-  FileEntry,
-  PhixifyConfig,
-  PhixifyFileInfoEntry,
-  PhixifyManifestBundleData,
-} from '../../types.js';
+import type { FileEntry, PhixifyConfig, PhixifyFileInfoEntry, PhixifyManifestBundleData } from '../../types.js';
 import { AUDIO_SPRITE, IMAGE, SOUND, SPRITE_SHEET } from '../const.js';
 import { imageInfo } from '../../tool/imageInfo.js';
 import { audioInfo } from '../../tool/audioInfo.js';
@@ -16,7 +11,7 @@ export const getPhixifyFileInfo = (
   sourcePath: string,
   item: FileEntry,
   type: string,
-  manifestData: PhixifyManifestBundleData,
+  manifestData: PhixifyManifestBundleData
 ): Promise<PhixifyFileInfoEntry> | null => {
   const filePath = `${sourcePath}/${item.name}.${item.ext}`;
   const manifestEntry = manifestData[type][item.name][item.ext];

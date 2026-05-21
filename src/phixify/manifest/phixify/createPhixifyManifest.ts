@@ -17,7 +17,7 @@ export const createPhixifyManifest = (
   config: PhixifyConfig,
   bundleName: string,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): Promise<PhixifyManifestResult> => {
   const manifestData: PhixifyManifestBundleData = {};
   const promises: Promise<PhixifyFileInfoEntry>[] = [];

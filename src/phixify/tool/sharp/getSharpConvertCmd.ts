@@ -9,7 +9,7 @@ import type { PhixifyConfig } from '../../types.js';
 export const getSharpConvertCmd = (
   config: PhixifyConfig,
   inputFile: string,
-  outputFile: string,
+  outputFile: string
 ): Promise<OutputInfo> => {
   const parsedOutputFile = parse(outputFile);
   const ext = parsedOutputFile.ext.substring(1);

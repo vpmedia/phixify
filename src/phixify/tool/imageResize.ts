@@ -13,7 +13,7 @@ export async function imageResize(
   config: PhixifyConfig,
   inputFile: string,
   outputFile: string,
-  scale: number,
+  scale: number
 ): Promise<OutputInfo | ExecResult> {
   if (config.tool.image === 'sharp') {
     return getSharpResizeCmd(config, inputFile, outputFile, scale);

@@ -15,7 +15,7 @@ export async function audioConcat(
   config: PhixifyConfig,
   durationResults: AudioDurationResult[],
   inputDir: string,
-  outputFile: string,
+  outputFile: string
 ): Promise<ExecResult> {
   const execPromise = promisify(exec);
   const cmd = getSoxConcatCmd(config, durationResults, inputDir, outputFile);

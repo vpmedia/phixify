@@ -11,11 +11,7 @@ interface ImageMapEntry {
 /**
  * Creates the image entries for the manifest object.
  */
-export const getPhaserImage = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PhaserFileGeneric[] => {
+export const getPhaserImage = (config: PhixifyConfig, assetPath: string, targetPath: string): PhaserFileGeneric[] => {
   const dir = config.dir[IMAGE];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);

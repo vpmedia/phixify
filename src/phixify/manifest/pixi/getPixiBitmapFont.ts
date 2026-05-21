@@ -5,11 +5,7 @@ import { BITMAP_FONT } from '../const.js';
 /**
  * Creates the bitmap font entries for the manifest object.
  */
-export const getPixiBitmapFont = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PixiAsset[] => {
+export const getPixiBitmapFont = (config: PhixifyConfig, assetPath: string, targetPath: string): PixiAsset[] => {
   const dir = config.dir[BITMAP_FONT];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);

@@ -18,7 +18,7 @@ export const createPhaserManifest = (
   manifestData: PhaserManifest,
   bundleName: string,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): PhaserManifest => {
   const manifestGenerators: { type: string; generator: PhaserGenerator }[] = [
     { type: AUDIO_SPRITE, generator: getPhaserAudioSprite },

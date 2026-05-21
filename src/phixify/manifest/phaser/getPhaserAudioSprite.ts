@@ -8,7 +8,7 @@ import { getFileList } from '../../tool/fileUtil.js';
 export const getPhaserAudioSprite = (
   config: PhixifyConfig,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): PhaserFileAudioSprite[] => {
   const dir = config.dir[AUDIO_SPRITE];
   const path = `${assetPath}${dir}/`;

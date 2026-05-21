@@ -7,7 +7,7 @@ export const getSoxConcatCmd = (
   config: PhixifyConfig,
   durationResults: AudioDurationResult[],
   inputDir: string,
-  outputFile: string,
+  outputFile: string
 ): string => {
   const path = config.cmd.sox.path;
   let concatCmdParams = '';

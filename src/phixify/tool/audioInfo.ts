@@ -34,11 +34,14 @@ export async function audioInfo(config: PhixifyConfig, file: string): Promise<Re
         kv[key] = value;
         return kv;
       });
-    const finalResult = parsedResult.reduce<Record<string, number>>((obj: Record<string, number>, item: Record<string, number>) => {
-      const key = Object.keys(item)[0];
-      obj[key] = item[key];
-      return obj;
-    }, {});
+    const finalResult = parsedResult.reduce<Record<string, number>>(
+      (obj: Record<string, number>, item: Record<string, number>) => {
+        const key = Object.keys(item)[0];
+        obj[key] = item[key];
+        return obj;
+      },
+      {}
+    );
     return finalResult;
   });
 }

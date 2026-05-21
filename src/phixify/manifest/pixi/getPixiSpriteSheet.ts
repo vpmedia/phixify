@@ -11,11 +11,7 @@ interface SpriteSheetMapEntry {
 /**
  * Creates the sprite sheet entries for the manifest object.
  */
-export const getPixiSpriteSheet = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PixiAsset[] => {
+export const getPixiSpriteSheet = (config: PhixifyConfig, assetPath: string, targetPath: string): PixiAsset[] => {
   const dir = config.dir[SPRITE_SHEET];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`).filter((item) => {

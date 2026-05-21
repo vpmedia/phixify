@@ -10,7 +10,7 @@ export const getSharpResizeCmd = (
   config: PhixifyConfig,
   inputFile: string,
   outputFile: string,
-  scale: number,
+  scale: number
 ): Promise<OutputInfo> => {
   const parsedOutputFile = parse(outputFile);
   const ext = parsedOutputFile.ext.substring(1);
@@ -23,6 +23,6 @@ export const getSharpResizeCmd = (
     .then(({ width }) =>
       sharp(inputFile)
         .resize(Math.ceil((width ?? 0) * scale))
-        .toFile(outputFile),
+        .toFile(outputFile)
     );
 };

@@ -11,7 +11,7 @@ export async function imagePack(
   config: PhixifyConfig,
   inputDir: string,
   outputSheet: string,
-  outputData: string,
+  outputData: string
 ): Promise<ExecResult> {
   const execPromise = promisify(exec);
   const cmd = getTexturePackerPackCmd(config, inputDir, outputSheet, outputData);

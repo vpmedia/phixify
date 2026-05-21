@@ -9,7 +9,7 @@ export async function audioConvertFormats(
   config: PhixifyConfig,
   formats: string[],
   outputPath: string,
-  fileName: string,
+  fileName: string
 ): Promise<ExecResult[]> {
   const convertPromises: Promise<ExecResult>[] = [];
   formats.forEach((ext) => {

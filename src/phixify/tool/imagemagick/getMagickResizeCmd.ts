@@ -7,7 +7,7 @@ export const getMagickResizeCmd = (
   config: PhixifyConfig,
   inputFile: string,
   outputFile: string,
-  scale: number,
+  scale: number
 ): string => {
   const path = config.cmd.imageMagick.path;
   const opts = `-resize ${scale * 100}%`;

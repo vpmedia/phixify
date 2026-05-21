@@ -8,7 +8,7 @@ import { getFileList } from '../../tool/fileUtil.js';
 export const getPhaserBitmapFont = (
   config: PhixifyConfig,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): PhaserFileBitmapFont[] => {
   const dir = config.dir[BITMAP_FONT];
   const path = `${assetPath}${dir}/`;

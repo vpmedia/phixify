@@ -7,7 +7,7 @@ export const getTexturePackerPackCmd = (
   config: PhixifyConfig,
   inputDir: string,
   outputSheet: string,
-  outputData: string,
+  outputData: string
 ): string => {
   const path = config.cmd.texturePacker.path;
   const opts = config.cmd.texturePacker.opts.png.join(' ').trim();

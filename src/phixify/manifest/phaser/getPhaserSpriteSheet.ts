@@ -8,7 +8,7 @@ import { getFileList } from '../../tool/fileUtil.js';
 export const getPhaserSpriteSheet = (
   config: PhixifyConfig,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): PhaserFileAtlas[] => {
   const dir = config.dir[SPRITE_SHEET];
   const path = `${assetPath}${dir}/`;

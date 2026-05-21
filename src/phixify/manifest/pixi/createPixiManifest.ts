@@ -18,7 +18,7 @@ export const createPixiManifest = (
   manifestData: PixiManifest,
   bundleName: string,
   assetPath: string,
-  targetPath: string,
+  targetPath: string
 ): PixiManifest => {
   const manifestGenerators: { type: string; generator: PixiGenerator }[] = [
     { type: AUDIO_SPRITE, generator: getPixiAudioSprite },

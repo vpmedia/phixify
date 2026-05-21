@@ -12,7 +12,7 @@ import { createSpriteSheet } from '../asset/createSpriteSheet.js';
 export const createAssetBundle = (
   config: PhixifyConfig,
   bundleName: string,
-  targetPath: string,
+  targetPath: string
 ): Promise<unknown[]> => {
   if (config.options.verbose) {
     console.log('Creating asset bundle:', bundleName, targetPath);

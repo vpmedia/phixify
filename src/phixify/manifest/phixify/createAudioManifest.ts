@@ -18,7 +18,7 @@ interface SoundManifest {
 export const createAudioManifest = (
   options: PhixifyCliOptions,
   bundleName: string,
-  manifestData: PhixifyManifestBundleData,
+  manifestData: PhixifyManifestBundleData
 ): void => {
   // working dir
   const config = getConfig(options);
@@ -43,7 +43,7 @@ export const createAudioManifest = (
   audioSpriteKeys.forEach((key) => {
     soundData.audioSprite[key] = {};
     const spriteData = readJson<AudioSpriteJsonContent>(
-      `${targetPath}${bundleDir}${config.dir.audioSprite}/${key}.json`,
+      `${targetPath}${bundleDir}${config.dir.audioSprite}/${key}.json`
     );
     const spriteKeys = Object.keys(spriteData.spritemap);
     spriteKeys.forEach((spriteKey) => {

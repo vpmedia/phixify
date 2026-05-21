@@ -12,11 +12,7 @@ const getTypeByExt = (ext: string): string => {
 /**
  * Creates the data entries for the manifest object.
  */
-export const getPhaserData = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PhaserFileGeneric[] => {
+export const getPhaserData = (config: PhixifyConfig, assetPath: string, targetPath: string): PhaserFileGeneric[] => {
   const dir = config.dir[DATA];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);

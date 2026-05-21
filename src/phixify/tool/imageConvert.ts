@@ -12,7 +12,7 @@ import type { ExecResult } from './audioConcat.js';
 export async function imageConvert(
   config: PhixifyConfig,
   inputFile: string,
-  outputFile: string,
+  outputFile: string
 ): Promise<OutputInfo | ExecResult> {
   if (config.tool.image === 'sharp') {
     return getSharpConvertCmd(config, inputFile, outputFile);

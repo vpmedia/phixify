@@ -5,11 +5,7 @@ import { getFileList } from '../../tool/fileUtil.js';
 /**
  * Creates the sound entries for the manifest object.
  */
-export const getPhaserSound = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PhaserFileSound[] => {
+export const getPhaserSound = (config: PhixifyConfig, assetPath: string, targetPath: string): PhaserFileSound[] => {
   const dir = config.dir[SOUND];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);

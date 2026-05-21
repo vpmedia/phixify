@@ -8,11 +8,7 @@ import { getFFConvertCmd } from './ffmpeg/getFFConvertCmd.js';
 /**
  * Converts an audio file from one format to another.
  */
-export async function audioConvert(
-  config: PhixifyConfig,
-  inputFile: string,
-  outputFile: string,
-): Promise<ExecResult> {
+export async function audioConvert(config: PhixifyConfig, inputFile: string, outputFile: string): Promise<ExecResult> {
   const execPromise = promisify(exec);
   const cmd =
     config.tool.sound === 'sox'

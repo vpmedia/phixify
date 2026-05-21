@@ -8,7 +8,7 @@ export const audioSpriteJson = (
   config: PhixifyConfig,
   outputPath: string,
   name: string,
-  durationResults: AudioDurationResult[],
+  durationResults: AudioDurationResult[]
 ): void => {
   // collect audio formats
   const resources = config.asset.sound.map((ext) => {

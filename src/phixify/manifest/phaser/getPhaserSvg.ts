@@ -12,11 +12,7 @@ const getTypeByExt = (ext: string): string => {
 /**
  * Creates the svg entries for the manifest object.
  */
-export const getPhaserSvg = (
-  config: PhixifyConfig,
-  assetPath: string,
-  targetPath: string,
-): PhaserFileGeneric[] => {
+export const getPhaserSvg = (config: PhixifyConfig, assetPath: string, targetPath: string): PhaserFileGeneric[] => {
   const dir = config.dir[SVG];
   const path = `${assetPath}${dir}/`;
   const list = getFileList(`${targetPath}${dir}`);
