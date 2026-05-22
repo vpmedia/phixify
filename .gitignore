@@ -10,3 +10,4 @@ coverage/
 /node_modules
 .phixify.json
 .DS_Store
+.claude/settings.local.json
