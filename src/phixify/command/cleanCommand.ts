@@ -1,6 +1,6 @@
 import { rm } from 'node:fs/promises';
 import { readdirSync, existsSync } from 'node:fs';
-import { parse } from 'node:path';
+import path from 'node:path';
 import type { PhixifyCliOptions } from '../types.js';
 import { getConfig } from '../config/getConfig.js';
 import { getDirectoryList, isFile, normalizePath } from '../tool/fileUtil.js';
@@ -23,7 +23,7 @@ const cleanTarget = (options: PhixifyCliOptions, targetPath: string): Promise<vo
     if (item.isDirectory() && item.name !== config.dir.spriteSheet && item.name !== config.dir.audioSprite) {
       readdirSync(`${targetPath}${item.name}`, { withFileTypes: true }).forEach((subItem) => {
         if (!subItem.isDirectory()) {
-          const parsedPath = parse(subItem.name);
+          const parsedPath = path.parse(subItem.name);
           if (deleteExts.includes(parsedPath.ext)) {
             const deletePath = `${targetPath}${item.name}/${subItem.name}`;
             promises.push(rm(deletePath));

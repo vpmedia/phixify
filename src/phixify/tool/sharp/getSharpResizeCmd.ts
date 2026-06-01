@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 import type { OutputInfo, SharpOptions } from 'sharp';
-import { parse } from 'node:path';
+import path from 'node:path';
 import type { PhixifyConfig } from '../../types.js';
 
 /**
@@ -12,7 +12,7 @@ export const getSharpResizeCmd = (
   outputFile: string,
   scale: number
 ): Promise<OutputInfo> => {
-  const parsedOutputFile = parse(outputFile);
+  const parsedOutputFile = path.parse(outputFile);
   const ext = parsedOutputFile.ext.substring(1);
   const opts = config.cmd.sharp.opts[ext] as SharpOptions;
   if (config.options.verbose) {
