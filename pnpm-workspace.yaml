@@ -1,8 +1,9 @@
 onlyBuiltDependencies:
   - esbuild
   - sharp
-trustPolicy: no-downgrade
-trustPolicyExclude:
-  - ts-api-utils
+
 minimumReleaseAge: 1440
+
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 1440
 blockExoticSubdeps: true
