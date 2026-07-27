@@ -6,16 +6,7 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 
 ## Tech Stack
 
-- **Language:** TypeScript (ESM, `"type": "module"`)
-- **Runtime:** Node.js (CLI)
-- **Package Manager:** pnpm (workspaces)
-- **Runtime Dependencies:** `commander` (CLI), `sharp` (image processing)
-- **Build:** Rolldown
-- **Distribution:** Docker (Dockerfile), bin entry `phixify`
-- **Testing:** Vitest, @vitest/coverage-v8, happy-dom
-- **Lint/Format:** oxlint (+ `oxlint-tsgolint`), oxfmt
-- **Type Checking:** TypeScript
-- **Tooling:** lefthook (git hooks), commitlint (conventional commits)
+Read [package.json](package.json) for the language, runtime, dependencies and tooling.
 
 ## Documentation
 
@@ -36,14 +27,6 @@ Command-line asset and manifest generator for the Phaser and Pixi.js game engine
 - **All checks:** `pnpm check`
 - **Run CLI locally:** `./phixify.sh` (or `node dist/phixify.js` after build)
 - **Docker:** `./docker-run.sh`
-
-## Project Structure
-
-- `src/index.ts` — CLI entry point
-- `src/phixify/` — implementation modules (incl. `tool/`)
-- `asset/` — sample/test assets
-- `dist/` — build output (CLI bin output, gitignored)
-- `Dockerfile`, `docker-run.sh`, `phixify.sh` — packaging/run scripts
 
 ## Conventions
 
