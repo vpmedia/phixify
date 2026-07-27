@@ -38,3 +38,9 @@ Read [package.json](package.json) for the language, runtime, dependencies and to
 
 - Tests are co-located with source as `*.test.ts` under `src/phixify/`
 - Run a single file: `pnpm test src/phixify/tool/fileUtil.test.ts`
+
+## Reference Documentation
+
+Read on demand:
+
+- [clean-code.md](docs/agents/clean-code.md) — general clean-code guidelines: naming, functions, comments, error handling, classes, testing, and refactoring.
